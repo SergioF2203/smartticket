@@ -1,3 +1,4 @@
 Server/bin/*
 Server/obj/*
 .vs/*
+packages/*
