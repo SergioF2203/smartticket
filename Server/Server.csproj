@@ -55,11 +55,14 @@
     <Compile Include="lib\Bus.cs" />
     <Compile Include="lib\DB.cs" />
     <Compile Include="lib\Direction.cs" />
+    <Compile Include="lib\Trip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

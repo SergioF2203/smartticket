@@ -13,38 +13,23 @@ namespace Server
 		{
 			using (DB db = new DB())
 			{
-				Bus b1 = new Bus
+				db.Buses.AddRange(new List<Bus>
 				{
-					RegNumber = "АР3476ВА",
-					Capacity = 24,
-					Model = "Mercedes"
-				};
-				Bus b2 = new Bus
-				{
-					RegNumber = "АР6012ВА",
-					Capacity = 12,
-					Model = "Wolksvagen"
-				};
+					new Bus {RegNumber = "АР6012ВА", Capacity = 12, Model = "Wolksvagen"},
+					new Bus {RegNumber = "АР3476ВА", Capacity = 24, Model = "Mercedes"},
+					new Bus {RegNumber = "АР5478ВА", Capacity = 18, Model = "Wolksvagen"}
+				});
 
-				db.Buses.Add(b1);
-				db.Buses.Add(b2);
+				db.Directions.AddRange(new List<Direction>
+				{
+					new Direction {City = "Dnepr", Distance = 60, Price = 65.0},
+					new Direction {City = "Kiev", Distance = 700, Price = 580.0},
+					new Direction {City = "Kharkov", Distance = 610, Price = 650.0},
+				});
 
 
-				Direction d1 = new Direction
-				{
-					City = "Dnepr",
-					Distance = 60,
-					Price = 65.0
-				};
-				Direction d2 = new Direction
-				{
-					City = "Kiev",
-					Distance = 700,
-					Price = 580
-				};
 
-				db.Directions.Add(d1);
-				db.Directions.Add(d2);
+
 				db.SaveChanges();
 
 
