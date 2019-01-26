@@ -16,5 +16,7 @@ namespace Server.lib
 		public DbSet<Bus> Buses { get; set; }
 		public DbSet<Direction> Directions { get; set; }
 		public DbSet<Trip> Trips { get; set; }
+		public DbSet<Customer> Customers { get; set; }
+		public DbSet<Order> Orders { get; set; } 
 	}
 }

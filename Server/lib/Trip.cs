@@ -8,6 +8,11 @@ namespace Server.lib
 {
 	public class Trip
 	{
+		public Trip()
+		{
+			Orders = new List<Order>();
+		}
+
 		public int Id { get; set; }
 		public int? DirectionId { get; set; }
 		public int? BusId { get; set; }
@@ -16,5 +21,6 @@ namespace Server.lib
 
 		public Direction Direction { get; set; }
 		public Bus Bus { get; set; }
+		public ICollection<Order> Orders;
 	}
 }

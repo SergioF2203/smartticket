@@ -53,8 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="lib\Bus.cs" />
+    <Compile Include="lib\Customer.cs" />
     <Compile Include="lib\DB.cs" />
     <Compile Include="lib\Direction.cs" />
+    <Compile Include="lib\Order.cs" />
     <Compile Include="lib\Trip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
