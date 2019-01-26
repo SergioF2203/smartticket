@@ -49,6 +49,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\project_interface\ApplicationInterface\ApplicationInterface\ApplicationInterface.csproj">
+      <Project>{4d895478-edc1-4af1-943c-f52b89b771f0}</Project>
+      <Name>ApplicationInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
