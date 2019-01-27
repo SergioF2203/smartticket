@@ -10,23 +10,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client.Properties;
+
 
 namespace Client
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
-			InitializeComponent();
-
-            OrderWindow orderWindow = new OrderWindow();
-            orderWindow.Show();
-            //это для тестирования
+    /// <summary>
+    /// Логика взаимодействия для QRWindow.xaml
+    /// </summary>
+    public partial class QRWindow : Window
+    {
+        public QRWindow()
+        {
+            InitializeComponent();
         }
-	}
+    }
 }
