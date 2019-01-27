@@ -2,3 +2,5 @@ Server/bin/*
 Server/obj/*
 .vs/*
 packages/*
+Client/bin/*
+Client/obj/*
