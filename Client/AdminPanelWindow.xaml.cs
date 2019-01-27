@@ -10,23 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Client
 {
-	/// <summary>
-	/// Interaction logic for MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
-			InitializeComponent();
-
-            AdminAuthorizationWindow aaw = new AdminAuthorizationWindow();
-            aaw.Show();
-            //это для тестирования
+    /// <summary>
+    /// Логика взаимодействия для AdminPanelWindow.xaml
+    /// </summary>
+    public partial class AdminPanelWindow : Window
+    {
+        public AdminPanelWindow()
+        {
+            InitializeComponent();
         }
-	}
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+    }
 }
