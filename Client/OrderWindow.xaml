@@ -1,0 +1,22 @@
+﻿<Window x:Class="Client.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d" Height="450" Width="600" ResizeMode="NoResize" Title="Valide purchase">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="NameTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,50,0,0"/>
+        <TextBox Name="PhoneNumberTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,155,0,0"/>
+        <TextBox Name="EmailTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,255,0,0"/>
+        <TextBlock Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">куда едем</TextBlock>
+        <TextBlock Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,100,0,0">сколько билетов</TextBlock>
+        <TextBlock Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,150,0,0">сума $$</TextBlock>
+        <Button Grid.Column="0" Name="CancelButton" Content="Cancel" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,355,0,0" Click="CancelButton_Click"/>
+        <Button Grid.Column="0" Name="OkButton" Content="Buy" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="175,355,0,0" Click="OkButton_Click"/>
+    </Grid>
+</Window>
