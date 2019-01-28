@@ -7,10 +7,11 @@ using System.Text;
 
 namespace BusStationService
 {
-	[ServiceContract]
-	public interface IAdminService
+	public class CustomerService : ICustomerService
 	{
-		[OperationContract]
-		string DoWork();
+		public string CustomerDoWork()
+		{
+			return "All ok in customer service!";
+		}
 	}
 }

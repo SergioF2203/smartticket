@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestServices.AdminService {
+namespace TestServices.AdminServiceClient {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminService.IAdminService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminServiceClient.IAdminService")]
     public interface IAdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DoWork", ReplyAction="http://tempuri.org/IAdminService/DoWorkResponse")]
@@ -23,12 +23,12 @@ namespace TestServices.AdminService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAdminServiceChannel : TestServices.AdminService.IAdminService, System.ServiceModel.IClientChannel {
+    public interface IAdminServiceChannel : TestServices.AdminServiceClient.IAdminService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AdminServiceClient : System.ServiceModel.ClientBase<TestServices.AdminService.IAdminService>, TestServices.AdminService.IAdminService {
+    public partial class AdminServiceClient : System.ServiceModel.ClientBase<TestServices.AdminServiceClient.IAdminService>, TestServices.AdminServiceClient.IAdminService {
         
         public AdminServiceClient() {
         }

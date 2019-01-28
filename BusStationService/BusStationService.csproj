@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminService.svc" />
+    <Content Include="CustomerService.svc" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Service1.svc" />
@@ -108,7 +109,11 @@
     <Compile Include="AdminService.svc.cs">
       <DependentUpon>AdminService.svc</DependentUpon>
     </Compile>
+    <Compile Include="CustomerService.svc.cs">
+      <DependentUpon>CustomerService.svc</DependentUpon>
+    </Compile>
     <Compile Include="IAdminService.cs" />
+    <Compile Include="ICustomerService.cs" />
     <Compile Include="Lib\Bus.cs" />
     <Compile Include="Lib\Customer.cs" />
     <Compile Include="Lib\DB.cs" />
@@ -135,6 +140,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -13,7 +13,7 @@ namespace BusStationService
 	{
 		public string DoWork()
 		{
-			return "All work!";
+			return "All work in Admin service!";
 		}
 	}
 }

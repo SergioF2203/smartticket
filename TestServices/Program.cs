@@ -10,10 +10,11 @@ namespace TestServices
 	{
 		static void Main(string[] args)
 		{
-			var admin  = new AdminService.AdminServiceClient();
+			var cs = new CustomerService.CustomerServiceClient();
+			Console.WriteLine(cs.CustomerDoWork());
 
-			Console.WriteLine(admin.DoWork());
-
+			var aser = new AdminServiceClient.AdminServiceClient();
+			Console.WriteLine(aser.DoWork());
 		}
 	}
 }

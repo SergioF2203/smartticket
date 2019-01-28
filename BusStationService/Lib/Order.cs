@@ -11,6 +11,7 @@ namespace BusStationService.Lib
 		public int Id { get; set; }
 		public int? CustomerId { get; set; }
 		public int? TripId { get; set; }
+		public int PlaceNumber { get; set; }
 
 		public Customer Customer { get; set; }
 		public Trip Trip { get; set; }
