@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="" Height="350" Width="525">
+    <Grid Background="#FF6d4f16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="291*"></RowDefinition>
+            <RowDefinition Height="28*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="Resources/mapUkraine.png"/>
+        <StackPanel Grid.Row="1">
+            <Button Width="50" Content="NEXT" RenderTransformOrigin="2.907,0.966" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,4,13,0" FontFamily="Calibri" FontSize="10" Height="20"/>
+        </StackPanel>
     </Grid>
 </Window>
