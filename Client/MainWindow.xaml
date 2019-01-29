@@ -5,15 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="" Height="350" Width="525">
+        Title="" Height="600" Width="800" ShowInTaskbar="False" ResizeMode="NoResize">
+    <Window.Resources>
+    </Window.Resources>
     <Grid Background="#FF6d4f16">
         <Grid.RowDefinitions>
             <RowDefinition Height="291*"></RowDefinition>
             <RowDefinition Height="28*"></RowDefinition>
         </Grid.RowDefinitions>
         <Image Source="Resources/mapUkraine.png"/>
+        <Canvas Grid.Row="0">
+            <RadioButton Canvas.Top="205" Canvas.Left="13" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="143" Canvas.Left="93" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="201" Canvas.Left="117" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="90" Canvas.Left="150" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="163" Canvas.Left="158" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="244" Canvas.Left="167" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="97" Canvas.Left="192" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="178" Canvas.Left="215" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="191" Canvas.Left="278" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="123" Canvas.Left="290" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="360" Canvas.Left="378" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="Kiev" Style="{StaticResource customRadio}" Canvas.Left="365" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="51" Canvas.Left="394" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="182" Canvas.Left="424" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="337" Canvas.Left="428" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="358" Canvas.Left="456" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="471" Canvas.Left="520" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="170" Canvas.Left="534" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="241" Canvas.Left="436" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="83" Canvas.Left="536" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="237" Canvas.Left="556" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="143" Canvas.Left="594" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="267" Canvas.Left="670" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Canvas.Top="222" Canvas.Left="737" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Canvas>
         <StackPanel Grid.Row="1">
-            <Button Width="50" Content="NEXT" RenderTransformOrigin="2.907,0.966" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,4,13,0" FontFamily="Calibri" FontSize="10" Height="20"/>
+            <Button Width="78" Content="NEXT" RenderTransformOrigin="2.907,0.966" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,9,20,0" FontFamily="Calibri" FontSize="10" Height="29"/>
         </StackPanel>
+
     </Grid>
 </Window>

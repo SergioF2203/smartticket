@@ -24,8 +24,8 @@ namespace Client
 		{
 			InitializeComponent();
 
-            OrderWindow orderWindow = new OrderWindow();
-            orderWindow.Show();
+            //OrderWindow orderWindow = new OrderWindow();
+            //orderWindow.Show();
             //это для тестирования
         }
 	}
