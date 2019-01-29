@@ -9,7 +9,102 @@
 //------------------------------------------------------------------------------
 
 namespace TestServices.AdminServiceClient {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Bus", Namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib")]
+    [System.SerializableAttribute()]
+    public partial class Bus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CapacityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RegNumberField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Capacity {
+            get {
+                return this.CapacityField;
+            }
+            set {
+                if ((this.CapacityField.Equals(value) != true)) {
+                    this.CapacityField = value;
+                    this.RaisePropertyChanged("Capacity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Model {
+            get {
+                return this.ModelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModelField, value) != true)) {
+                    this.ModelField = value;
+                    this.RaisePropertyChanged("Model");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RegNumber {
+            get {
+                return this.RegNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RegNumberField, value) != true)) {
+                    this.RegNumberField = value;
+                    this.RaisePropertyChanged("RegNumber");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminServiceClient.IAdminService")]
@@ -20,6 +115,12 @@ namespace TestServices.AdminServiceClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DoWork", ReplyAction="http://tempuri.org/IAdminService/DoWorkResponse")]
         System.Threading.Tasks.Task<string> DoWorkAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SecondOperation", ReplyAction="http://tempuri.org/IAdminService/SecondOperationResponse")]
+        TestServices.AdminServiceClient.Bus SecondOperation();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SecondOperation", ReplyAction="http://tempuri.org/IAdminService/SecondOperationResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,6 +156,14 @@ namespace TestServices.AdminServiceClient {
         
         public System.Threading.Tasks.Task<string> DoWorkAsync() {
             return base.Channel.DoWorkAsync();
+        }
+        
+        public TestServices.AdminServiceClient.Bus SecondOperation() {
+            return base.Channel.SecondOperation();
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync() {
+            return base.Channel.SecondOperationAsync();
         }
     }
 }

@@ -22,6 +22,7 @@
     <MetadataSource Address="http://localhost:8733/BusStationService/AdminService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="608aca26-5fdf-4795-9037-71f99a765905" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd2" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="fc0836fd-d3b5-47fb-8ad2-ff61722a1cff" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?disco" />
     <MetadataFile FileName="AdminService.wsdl" MetadataType="Wsdl" ID="aab90cd0-6f46-4678-92ae-bf9b50f97be1" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?wsdl" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="978b64be-5f5e-430e-a1d8-fa57581141b6" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd1" />

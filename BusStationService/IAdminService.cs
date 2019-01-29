@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using BusStationService.Lib;
 
 namespace BusStationService
 {
@@ -12,5 +13,8 @@ namespace BusStationService
 	{
 		[OperationContract]
 		string DoWork();
+
+		[OperationContract]
+		Bus SecondOperation();
 	}
 }

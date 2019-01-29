@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,9 @@ namespace TestServices
 
 			var aser = new AdminServiceClient.AdminServiceClient();
 			Console.WriteLine(aser.DoWork());
+
+			var bus = aser.SecondOperation();
+			Console.WriteLine(bus.Capacity);
 		}
 	}
 }
