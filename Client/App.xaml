@@ -37,5 +37,30 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="customKievStyle" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="KievState" Source="Resources/KievStartState.png" Height="20"/>
+                            <ContentPresenter/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="KievState" Property="Source" Value="Resources/KievIsChecked.png"/>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="true"/>
+                                    <Condition Property="IsChecked" Value="false"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="KievState" Property="Source" Value="Resources/KievMouseOver.png"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

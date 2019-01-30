@@ -26,7 +26,7 @@
             <RadioButton Canvas.Top="191" Canvas.Left="278" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton Canvas.Top="123" Canvas.Left="290" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton Canvas.Top="360" Canvas.Left="378" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Kiev" Style="{StaticResource customRadio}" Canvas.Left="365" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="Kiev" Style="{StaticResource customKievStyle}" Canvas.Left="383" Canvas.Top="102" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="63" />
             <RadioButton Canvas.Top="51" Canvas.Left="394" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton Canvas.Top="182" Canvas.Left="424" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <RadioButton Canvas.Top="337" Canvas.Left="428" Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
