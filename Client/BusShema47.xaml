@@ -15,7 +15,8 @@
             <Image Margin="10" Source="Resources/Bus_47.png"/>
         </StackPanel>
         <Canvas Grid.Row="0" Panel.ZIndex="1">
-            <CheckBox Style="{StaticResource customCheckBoxPlace}" Canvas.Left="667" Canvas.Top="26" Height="36" Width="41"></CheckBox>
+            <CheckBox Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="67" Opacity="0.5"/>
         </Canvas>
     </Grid>
 </Window>
