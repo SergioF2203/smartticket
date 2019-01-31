@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using BusStationService.Lib;
+using System.Data.Entity;
 
 namespace BusStationService
 {
@@ -23,6 +24,25 @@ namespace BusStationService
 				Model = "Jiguli",
 				RegNumber = "FH87458745",
 			};
+		}
+
+		public void AddBus()
+		{
+			//var ensureDLLIsCopied = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
+			using (DB db = new DB())
+			{
+				Bus bus = new Bus()
+				{
+					Capacity = 100,
+					Model = "rrrrrrrrrrr"
+				};
+
+				db.Buses.Add(bus);
+
+				db.SaveChanges();
+
+				Console.WriteLine("Data pushed to db");
+			}
 		}
 	}
 }

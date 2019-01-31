@@ -16,5 +16,8 @@ namespace BusStationService
 
 		[OperationContract]
 		Bus SecondOperation();
+
+		[OperationContract]
+		void AddBus();
 	}
 }

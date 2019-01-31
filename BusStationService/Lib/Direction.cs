@@ -23,6 +23,8 @@ namespace BusStationService.Lib
 		public int Distance { get; set; }
 		[DataMember]
 		public double Price { get; set; }
+		[DataMember]
+		public string Coordinates { get; set; }
 
 		[DataMember]
 		public ICollection<Trip> Trips { get; set; } 

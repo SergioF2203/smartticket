@@ -34,6 +34,9 @@ namespace TestServices.AdminServiceClient {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string RegNumberField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Trip[] TripsField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -96,6 +99,519 @@ namespace TestServices.AdminServiceClient {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Trip[] Trips {
+            get {
+                return this.TripsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TripsField, value) != true)) {
+                    this.TripsField = value;
+                    this.RaisePropertyChanged("Trips");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Trip", Namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib")]
+    [System.SerializableAttribute()]
+    public partial class Trip : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Bus BusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> BusIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DepartureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Direction DirectionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> DirectionIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FillingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Order[] OrdersField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Bus Bus {
+            get {
+                return this.BusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BusField, value) != true)) {
+                    this.BusField = value;
+                    this.RaisePropertyChanged("Bus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> BusId {
+            get {
+                return this.BusIdField;
+            }
+            set {
+                if ((this.BusIdField.Equals(value) != true)) {
+                    this.BusIdField = value;
+                    this.RaisePropertyChanged("BusId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Departure {
+            get {
+                return this.DepartureField;
+            }
+            set {
+                if ((this.DepartureField.Equals(value) != true)) {
+                    this.DepartureField = value;
+                    this.RaisePropertyChanged("Departure");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Direction Direction {
+            get {
+                return this.DirectionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DirectionField, value) != true)) {
+                    this.DirectionField = value;
+                    this.RaisePropertyChanged("Direction");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> DirectionId {
+            get {
+                return this.DirectionIdField;
+            }
+            set {
+                if ((this.DirectionIdField.Equals(value) != true)) {
+                    this.DirectionIdField = value;
+                    this.RaisePropertyChanged("DirectionId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Filling {
+            get {
+                return this.FillingField;
+            }
+            set {
+                if ((this.FillingField.Equals(value) != true)) {
+                    this.FillingField = value;
+                    this.RaisePropertyChanged("Filling");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Order[] Orders {
+            get {
+                return this.OrdersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrdersField, value) != true)) {
+                    this.OrdersField = value;
+                    this.RaisePropertyChanged("Orders");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Direction", Namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib")]
+    [System.SerializableAttribute()]
+    public partial class Direction : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DistanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Trip[] TripsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Distance {
+            get {
+                return this.DistanceField;
+            }
+            set {
+                if ((this.DistanceField.Equals(value) != true)) {
+                    this.DistanceField = value;
+                    this.RaisePropertyChanged("Distance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Trip[] Trips {
+            get {
+                return this.TripsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TripsField, value) != true)) {
+                    this.TripsField = value;
+                    this.RaisePropertyChanged("Trips");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Order", Namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib")]
+    [System.SerializableAttribute()]
+    public partial class Order : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Customer CustomerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CustomerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PlaceNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Trip TripField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> TripIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Customer Customer {
+            get {
+                return this.CustomerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerField, value) != true)) {
+                    this.CustomerField = value;
+                    this.RaisePropertyChanged("Customer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> CustomerId {
+            get {
+                return this.CustomerIdField;
+            }
+            set {
+                if ((this.CustomerIdField.Equals(value) != true)) {
+                    this.CustomerIdField = value;
+                    this.RaisePropertyChanged("CustomerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PlaceNumber {
+            get {
+                return this.PlaceNumberField;
+            }
+            set {
+                if ((this.PlaceNumberField.Equals(value) != true)) {
+                    this.PlaceNumberField = value;
+                    this.RaisePropertyChanged("PlaceNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Trip Trip {
+            get {
+                return this.TripField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TripField, value) != true)) {
+                    this.TripField = value;
+                    this.RaisePropertyChanged("Trip");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> TripId {
+            get {
+                return this.TripIdField;
+            }
+            set {
+                if ((this.TripIdField.Equals(value) != true)) {
+                    this.TripIdField = value;
+                    this.RaisePropertyChanged("TripId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib")]
+    [System.SerializableAttribute()]
+    public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private TestServices.AdminServiceClient.Order[] OrdersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public TestServices.AdminServiceClient.Order[] Orders {
+            get {
+                return this.OrdersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OrdersField, value) != true)) {
+                    this.OrdersField = value;
+                    this.RaisePropertyChanged("Orders");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -121,6 +637,12 @@ namespace TestServices.AdminServiceClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SecondOperation", ReplyAction="http://tempuri.org/IAdminService/SecondOperationResponse")]
         System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddBus", ReplyAction="http://tempuri.org/IAdminService/AddBusResponse")]
+        void AddBus();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddBus", ReplyAction="http://tempuri.org/IAdminService/AddBusResponse")]
+        System.Threading.Tasks.Task AddBusAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -164,6 +686,14 @@ namespace TestServices.AdminServiceClient {
         
         public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync() {
             return base.Channel.SecondOperationAsync();
+        }
+        
+        public void AddBus() {
+            base.Channel.AddBus();
+        }
+        
+        public System.Threading.Tasks.Task AddBusAsync() {
+            return base.Channel.AddBusAsync();
         }
     }
 }

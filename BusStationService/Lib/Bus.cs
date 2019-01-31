@@ -23,6 +23,7 @@ namespace BusStationService.Lib
 		[DataMember]
 		public int Capacity { get; set; }
 
+		[DataMember]
 		public ICollection<Trip> Trips { get; set; } 
 	}
 }
