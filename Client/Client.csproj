@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusShema47.xaml.cs">
+      <DependentUpon>BusShema47.xaml</DependentUpon>
+    </Compile>
     <Compile Include="QRWindow.xaml.cs">
       <DependentUpon>QRWindow.xaml</DependentUpon>
     </Compile>
@@ -63,6 +66,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AdminPanelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BusShema47.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,6 +140,84 @@
     <Resource Include="Resources\KievIsChecked.png" />
     <Resource Include="Resources\KievMouseOver.png" />
     <Resource Include="Resources\KievStartState.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CherkIsChecked.png" />
+    <Resource Include="Resources\CherkMouseOver.png" />
+    <Resource Include="Resources\CherkStartState.png" />
+    <Resource Include="Resources\ChernihivIsChecked.png" />
+    <Resource Include="Resources\ChernihivMouseOver.png" />
+    <Resource Include="Resources\ChernihivStartState.png" />
+    <Resource Include="Resources\ChernIsChecked.png" />
+    <Resource Include="Resources\ChernMouseOver.png" />
+    <Resource Include="Resources\ChernStartState.png" />
+    <Resource Include="Resources\DniproIsChecked.png" />
+    <Resource Include="Resources\DniproMouseOver.png" />
+    <Resource Include="Resources\DniproStartState.png" />
+    <Resource Include="Resources\DonetskIsChecked.png" />
+    <Resource Include="Resources\DonetskMouseOver.png" />
+    <Resource Include="Resources\DonetskStartState.png" />
+    <Resource Include="Resources\IfIsChecked.png" />
+    <Resource Include="Resources\IfMouseOver.png" />
+    <Resource Include="Resources\IfStartState.png" />
+    <Resource Include="Resources\KharkIsChecked.png" />
+    <Resource Include="Resources\KharkMouseOver.png" />
+    <Resource Include="Resources\KharkStartState.png" />
+    <Resource Include="Resources\KhersonIsChecked.png" />
+    <Resource Include="Resources\KhersonMouseOver.png" />
+    <Resource Include="Resources\KhersonStartState.png" />
+    <Resource Include="Resources\KhmIsChecked.png" />
+    <Resource Include="Resources\KhmStartState.png" />
+    <Resource Include="Resources\KnmMouseOver.png" />
+    <Resource Include="Resources\KropIsChecked.png" />
+    <Resource Include="Resources\KropMouseOver.png" />
+    <Resource Include="Resources\KropStartState.png" />
+    <Resource Include="Resources\LuhIsChecked.png" />
+    <Resource Include="Resources\LuhMouseOver.png" />
+    <Resource Include="Resources\LuhStartState.png" />
+    <Resource Include="Resources\LutskIsChecked.png" />
+    <Resource Include="Resources\LutskMouseOver.png" />
+    <Resource Include="Resources\LutskStartState.png" />
+    <Resource Include="Resources\LvivIsChecked.png" />
+    <Resource Include="Resources\LvivMouseOver.png" />
+    <Resource Include="Resources\LvivStartState.png" />
+    <Resource Include="Resources\MykIsChecked.png" />
+    <Resource Include="Resources\MykMouseOver.png" />
+    <Resource Include="Resources\MykStartState.png" />
+    <Resource Include="Resources\OdesaIsChecked.png" />
+    <Resource Include="Resources\OdesaMouseOver.png" />
+    <Resource Include="Resources\OdesaStartState.png" />
+    <Resource Include="Resources\PoltavaIsChecked.png" />
+    <Resource Include="Resources\PoltavaMouseOver.png" />
+    <Resource Include="Resources\PoltavaStartState.png" />
+    <Resource Include="Resources\RivneIsChecked.png" />
+    <Resource Include="Resources\RivneMouseOver.png" />
+    <Resource Include="Resources\RivneStartState.png" />
+    <Resource Include="Resources\SimfIsChecked.png" />
+    <Resource Include="Resources\SimfMouseOver.png" />
+    <Resource Include="Resources\SimfStartState.png" />
+    <Resource Include="Resources\SumyIsChecked.png" />
+    <Resource Include="Resources\SumyMouseOver.png" />
+    <Resource Include="Resources\SumyStartState.png" />
+    <Resource Include="Resources\TernopilIsChecked.png" />
+    <Resource Include="Resources\TernopilMouseOver.png" />
+    <Resource Include="Resources\TernopilStartState.png" />
+    <Resource Include="Resources\UzhIsChecked.png" />
+    <Resource Include="Resources\UzhMouseOver.png" />
+    <Resource Include="Resources\UzhStartState.png" />
+    <Resource Include="Resources\VinnIsChecked.png" />
+    <Resource Include="Resources\VinnMouseOver.png" />
+    <Resource Include="Resources\VinnStartState.png" />
+    <Resource Include="Resources\ZhtIsChecked.png" />
+    <Resource Include="Resources\ZhtMouseOver.png" />
+    <Resource Include="Resources\ZhtStartState.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BusyPlace.png" />
+    <Resource Include="Resources\Bus_29.png" />
+    <Resource Include="Resources\Bus_47.png" />
+    <Resource Include="Resources\HoverPlace.png" />
+    <Resource Include="Resources\ReadyPlace.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
