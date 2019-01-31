@@ -1,0 +1,21 @@
+﻿<Window x:Class="Client.BusShema47"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Bus 47 places" Height="399.248" Width="909.962">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="337*"></RowDefinition>
+            <RowDefinition Height="82*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Image Margin="10" Source="Resources/Bus_47.png"/>
+        </StackPanel>
+        <Canvas Grid.Row="0" Panel.ZIndex="1">
+            <CheckBox Style="{StaticResource customCheckBoxPlace}" Canvas.Left="667" Canvas.Top="26" Height="36" Width="41"></CheckBox>
+        </Canvas>
+    </Grid>
+</Window>
