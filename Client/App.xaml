@@ -49,6 +49,18 @@
                                 </Grid>
                             </BulletDecorator.Bullet>
                         </BulletDecorator>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="StartState" Property="Source" Value="Resources/BusyPlace.png"/>
+                            </Trigger>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                    <Condition Property="IsChecked" Value="False"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="StartState" Property="Source" Value="Resources/HoverPlace.png"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
