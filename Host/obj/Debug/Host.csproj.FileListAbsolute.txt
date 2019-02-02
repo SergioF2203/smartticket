@@ -1,0 +1,13 @@
+D:\MyProjects\SmartTicket\Host\bin\Debug\Host.exe.config
+D:\MyProjects\SmartTicket\Host\bin\Debug\ApplicationInsights.config
+D:\MyProjects\SmartTicket\Host\bin\Debug\Host.exe
+D:\MyProjects\SmartTicket\Host\bin\Debug\Host.pdb
+D:\MyProjects\SmartTicket\Host\bin\Debug\BusStationService.dll
+D:\MyProjects\SmartTicket\Host\bin\Debug\EntityFramework.dll
+D:\MyProjects\SmartTicket\Host\bin\Debug\BusStationService.pdb
+D:\MyProjects\SmartTicket\Host\bin\Debug\EntityFramework.xml
+D:\MyProjects\SmartTicket\Host\obj\Debug\Host.csprojResolveAssemblyReference.cache
+D:\MyProjects\SmartTicket\Host\obj\Debug\Host.exe
+D:\MyProjects\SmartTicket\Host\obj\Debug\Host.pdb
+D:\MyProjects\SmartTicket\Host\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyProjects\SmartTicket\Host\bin\Debug\EntityFramework.SqlServer.xml
