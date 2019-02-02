@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestServices.AdminServiceClient {
+namespace Client.AdminService {
     using System.Runtime.Serialization;
     using System;
     
@@ -35,7 +35,7 @@ namespace TestServices.AdminServiceClient {
         private string RegNumberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Trip[] TripsField;
+        private Client.AdminService.Trip[] TripsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -100,7 +100,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Trip[] Trips {
+        public Client.AdminService.Trip[] Trips {
             get {
                 return this.TripsField;
             }
@@ -132,7 +132,7 @@ namespace TestServices.AdminServiceClient {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Bus BusField;
+        private Client.AdminService.Bus BusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> BusIdField;
@@ -141,7 +141,7 @@ namespace TestServices.AdminServiceClient {
         private System.DateTime DepartureField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Direction DirectionField;
+        private Client.AdminService.Direction DirectionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> DirectionIdField;
@@ -153,7 +153,7 @@ namespace TestServices.AdminServiceClient {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Order[] OrdersField;
+        private Client.AdminService.Order[] OrdersField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -166,7 +166,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Bus Bus {
+        public Client.AdminService.Bus Bus {
             get {
                 return this.BusField;
             }
@@ -205,7 +205,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Direction Direction {
+        public Client.AdminService.Direction Direction {
             get {
                 return this.DirectionField;
             }
@@ -257,7 +257,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Order[] Orders {
+        public Client.AdminService.Order[] Orders {
             get {
                 return this.OrdersField;
             }
@@ -304,7 +304,7 @@ namespace TestServices.AdminServiceClient {
         private double PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Trip[] TripsField;
+        private Client.AdminService.Trip[] TripsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -382,7 +382,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Trip[] Trips {
+        public Client.AdminService.Trip[] Trips {
             get {
                 return this.TripsField;
             }
@@ -414,7 +414,7 @@ namespace TestServices.AdminServiceClient {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Customer CustomerField;
+        private Client.AdminService.Customer CustomerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> CustomerIdField;
@@ -426,7 +426,7 @@ namespace TestServices.AdminServiceClient {
         private int PlaceNumberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Trip TripField;
+        private Client.AdminService.Trip TripField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> TripIdField;
@@ -442,7 +442,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Customer Customer {
+        public Client.AdminService.Customer Customer {
             get {
                 return this.CustomerField;
             }
@@ -494,7 +494,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Trip Trip {
+        public Client.AdminService.Trip Trip {
             get {
                 return this.TripField;
             }
@@ -548,7 +548,7 @@ namespace TestServices.AdminServiceClient {
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestServices.AdminServiceClient.Order[] OrdersField;
+        private Client.AdminService.Order[] OrdersField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PhoneField;
@@ -603,7 +603,7 @@ namespace TestServices.AdminServiceClient {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestServices.AdminServiceClient.Order[] Orders {
+        public Client.AdminService.Order[] Orders {
             get {
                 return this.OrdersField;
             }
@@ -639,7 +639,7 @@ namespace TestServices.AdminServiceClient {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminServiceClient.IAdminService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminService.IAdminService")]
     public interface IAdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DoWork", ReplyAction="http://tempuri.org/IAdminService/DoWorkResponse")]
@@ -649,25 +649,25 @@ namespace TestServices.AdminServiceClient {
         System.Threading.Tasks.Task<string> DoWorkAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SecondOperation", ReplyAction="http://tempuri.org/IAdminService/SecondOperationResponse")]
-        TestServices.AdminServiceClient.Bus SecondOperation();
+        Client.AdminService.Bus SecondOperation();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SecondOperation", ReplyAction="http://tempuri.org/IAdminService/SecondOperationResponse")]
-        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync();
+        System.Threading.Tasks.Task<Client.AdminService.Bus> SecondOperationAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddBus", ReplyAction="http://tempuri.org/IAdminService/AddBusResponse")]
-        void AddBus(TestServices.AdminServiceClient.Bus bus);
+        void AddBus(Client.AdminService.Bus bus);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddBus", ReplyAction="http://tempuri.org/IAdminService/AddBusResponse")]
-        System.Threading.Tasks.Task AddBusAsync(TestServices.AdminServiceClient.Bus bus);
+        System.Threading.Tasks.Task AddBusAsync(Client.AdminService.Bus bus);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAdminServiceChannel : TestServices.AdminServiceClient.IAdminService, System.ServiceModel.IClientChannel {
+    public interface IAdminServiceChannel : Client.AdminService.IAdminService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AdminServiceClient : System.ServiceModel.ClientBase<TestServices.AdminServiceClient.IAdminService>, TestServices.AdminServiceClient.IAdminService {
+    public partial class AdminServiceClient : System.ServiceModel.ClientBase<Client.AdminService.IAdminService>, Client.AdminService.IAdminService {
         
         public AdminServiceClient() {
         }
@@ -696,19 +696,19 @@ namespace TestServices.AdminServiceClient {
             return base.Channel.DoWorkAsync();
         }
         
-        public TestServices.AdminServiceClient.Bus SecondOperation() {
+        public Client.AdminService.Bus SecondOperation() {
             return base.Channel.SecondOperation();
         }
         
-        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync() {
+        public System.Threading.Tasks.Task<Client.AdminService.Bus> SecondOperationAsync() {
             return base.Channel.SecondOperationAsync();
         }
         
-        public void AddBus(TestServices.AdminServiceClient.Bus bus) {
+        public void AddBus(Client.AdminService.Bus bus) {
             base.Channel.AddBus(bus);
         }
         
-        public System.Threading.Tasks.Task AddBusAsync(TestServices.AdminServiceClient.Bus bus) {
+        public System.Threading.Tasks.Task AddBusAsync(Client.AdminService.Bus bus) {
             return base.Channel.AddBusAsync(bus);
         }
     }

@@ -28,7 +28,14 @@ namespace TestServices
 			//};
 			//aser.AddBus(bus);
 
-			aser.AddBus();
+			Bus bus = new Bus()
+			{
+				Capacity = 100,
+				Model = "rrrrrrrrrrr"
+			};
+
+			aser.AddBus(bus);
+			//aser.AddBus(bus);
 
 
 

@@ -26,22 +26,28 @@ namespace BusStationService
 			};
 		}
 
-		public void AddBus()
+		public void AddBus(Bus bus)
 		{
 			//var ensureDLLIsCopied = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
 			using (DB db = new DB())
 			{
-				Bus bus = new Bus()
-				{
-					Capacity = 100,
-					Model = "rrrrrrrrrrr"
-				};
+				//Bus bus = new Bus()
+				//{
+				//	Capacity = 100,
+				//	Model = "rrrrrrrrrrr"
+				//};
 
 				db.Buses.Add(bus);
 
 				db.SaveChanges();
 
 				Console.WriteLine("Data pushed to db");
+
+				//db.Buses.Add(bus);
+
+				//db.SaveChanges();
+
+				//Console.WriteLine("Data pushed to db");
 			}
 		}
 	}

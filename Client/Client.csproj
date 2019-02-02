@@ -58,6 +58,7 @@
     <Compile Include="BusShema47.xaml.cs">
       <DependentUpon>BusShema47.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DL.cs" />
     <Compile Include="QRWindow.xaml.cs">
       <DependentUpon>QRWindow.xaml</DependentUpon>
     </Compile>
