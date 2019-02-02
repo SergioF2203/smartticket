@@ -2,10 +2,6 @@ Server/bin/*
 Server/obj/*
 Client/bin/*
 Client/obj/*
-Host/bin/*
-Host/obj/*
-TestServices/bin/*
-TestServices/obj/*
 BusStationService/bin/*
 BusStationService/obj/*
 .vs/*

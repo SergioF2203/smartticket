@@ -1,0 +1,6 @@
+D:\MyProjects\SmartTicket\TestServices\bin\Debug\TestServices.exe.config
+D:\MyProjects\SmartTicket\TestServices\bin\Debug\TestServices.exe
+D:\MyProjects\SmartTicket\TestServices\bin\Debug\TestServices.pdb
+D:\MyProjects\SmartTicket\TestServices\obj\Debug\TestServices.exe
+D:\MyProjects\SmartTicket\TestServices\obj\Debug\TestServices.pdb
+D:\MyProjects\SmartTicket\TestServices\obj\Debug\TestServices.csprojResolveAssemblyReference.cache
