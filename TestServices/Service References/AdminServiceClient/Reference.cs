@@ -659,6 +659,12 @@ namespace TestServices.AdminServiceClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddBus", ReplyAction="http://tempuri.org/IAdminService/AddBusResponse")]
         System.Threading.Tasks.Task AddBusAsync(TestServices.AdminServiceClient.Bus bus);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetDirections", ReplyAction="http://tempuri.org/IAdminService/GetDirectionsResponse")]
+        TestServices.AdminServiceClient.Direction[] GetDirections();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetDirections", ReplyAction="http://tempuri.org/IAdminService/GetDirectionsResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Direction[]> GetDirectionsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -710,6 +716,14 @@ namespace TestServices.AdminServiceClient {
         
         public System.Threading.Tasks.Task AddBusAsync(TestServices.AdminServiceClient.Bus bus) {
             return base.Channel.AddBusAsync(bus);
+        }
+        
+        public TestServices.AdminServiceClient.Direction[] GetDirections() {
+            return base.Channel.GetDirections();
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Direction[]> GetDirectionsAsync() {
+            return base.Channel.GetDirectionsAsync();
         }
     }
 }

@@ -120,6 +120,7 @@
     <Compile Include="Lib\DbInitializer.cs" />
     <Compile Include="Lib\Direction.cs" />
     <Compile Include="Lib\Order.cs" />
+    <Compile Include="Lib\Helper.cs" />
     <Compile Include="Lib\Trip.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>

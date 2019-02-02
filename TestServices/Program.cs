@@ -28,15 +28,21 @@ namespace TestServices
 			//};
 			//aser.AddBus(bus);
 
-			Bus bus = new Bus()
-			{
-				Capacity = 100,
-				Model = "rrrrrrrrrrr"
-			};
+			//Bus bus = new Bus()
+			//{
+			//	Capacity = 100,
+			//	Model = "rrrrrrrrrrr"
+			//};
 
-			aser.AddBus(bus);
+			//aser.AddBus(bus);
 			//aser.AddBus(bus);
 
+
+			var res = aser.GetDirections();
+			foreach (var x in res)
+			{
+				Console.WriteLine($"{x.Coordinates} --- {x.City}");
+			}
 
 
 

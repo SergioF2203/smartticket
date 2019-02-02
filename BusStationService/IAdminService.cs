@@ -19,5 +19,8 @@ namespace BusStationService
 
 		[OperationContract]
 		void AddBus(Bus bus);
+
+		[OperationContract]
+		List<Direction> GetDirections();
 	}
 }

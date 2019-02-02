@@ -50,5 +50,19 @@ namespace BusStationService
 				//Console.WriteLine("Data pushed to db");
 			}
 		}
+
+		public List<Direction> GetDirections()
+		{
+			using (DB db = new DB())
+			{
+				var coords = db.Directions
+					.Where(d => d.Coordinates != "")
+					.ToList();
+
+				Helper.ShowMessage("AdminService", "called GetDirections");
+
+				return coords;
+			}
+		}
 	}
 }
