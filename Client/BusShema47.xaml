@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="Bus 47 places" Height="399.248" Width="909.962">
+        Title="Bus 47 places" Height="399.248" Width="909.962" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="337*"></RowDefinition>
@@ -15,8 +15,20 @@
             <Image Margin="10" Source="Resources/Bus_47.png"/>
         </StackPanel>
         <Canvas Grid.Row="0" Panel.ZIndex="1">
-            <CheckBox Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="67" Opacity="0.5"/>
+            <CheckBox x:Name="place1" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="152" Opacity="0.5"/>
+            <CheckBox x:Name="place2" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="195" Opacity="0.5"/>
+            <CheckBox x:Name="place3" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place4" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="67" Opacity="0.5"/>
+            <CheckBox x:Name="place5" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place6" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="67" Opacity="0.5"/>
+            <CheckBox x:Name="place7" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="152" Opacity="0.5"/>
+            <CheckBox x:Name="place8" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="195" Opacity="0.5"/>
+            <CheckBox x:Name="place9" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="549" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place13" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="492" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place17" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="435" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place21" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="378" Canvas.Top="24" Opacity="0.5"/>
+
+
         </Canvas>
     </Grid>
 </Window>
