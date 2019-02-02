@@ -27,6 +27,10 @@
             <CheckBox x:Name="place13" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="492" Canvas.Top="24" Opacity="0.5"/>
             <CheckBox x:Name="place17" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="435" Canvas.Top="24" Opacity="0.5"/>
             <CheckBox x:Name="place21" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="378" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place25" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="321" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place27" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="264" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place31" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="207" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place35" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="150" Canvas.Top="24" Opacity="0.5"/>
 
 
         </Canvas>
