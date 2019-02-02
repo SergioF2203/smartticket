@@ -1,8 +1,2 @@
-Server/bin/*
-Server/obj/*
-Client/bin/*
-Client/obj/*
-BusStationService/bin/*
-BusStationService/obj/*
 .vs/*
 packages/*
