@@ -18,6 +18,6 @@ namespace BusStationService
 		Bus SecondOperation();
 
 		[OperationContract]
-		void AddBus();
+		void AddBus(Bus bus);
 	}
 }
