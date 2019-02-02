@@ -10,7 +10,7 @@ namespace BusStationService.Lib
 		public static void ShowMessage(string serviceName, string msg)
 		{
 			Console.ForegroundColor = ConsoleColor.DarkGreen;
-			Console.WriteLine($"{serviceName} say >> {msg}");
+			Console.Write($"\n{serviceName} say >> {msg}");
 			Console.ForegroundColor = ConsoleColor.White;
 		}
 	}
