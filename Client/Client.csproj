@@ -220,6 +220,12 @@
     <Resource Include="Resources\HoverPlace.png" />
     <Resource Include="Resources\ReadyPlace.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestServices\TestServices.csproj">
+      <Project>{F2852532-557F-4FA1-BE3D-624174714D9D}</Project>
+      <Name>TestServices</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
