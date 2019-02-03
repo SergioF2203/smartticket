@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -45,6 +46,18 @@ namespace BusStationService
 
 					Helper.ShowMessage("AdminService", "SaveBus(Bus bus)");
 				}
+			}
+		}
+
+		public List<Bus> GetAllBusses()
+		{
+			using (DB db = new DB())
+			{
+				var result = db.Buses.ToList();
+
+				Helper.ShowMessage("AdminService", "GetAllBusses()");
+
+				return result;
 			}
 		}
 	}
