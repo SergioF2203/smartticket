@@ -35,5 +35,10 @@ namespace Client
             BusShema47 windowBus47 = new BusShema47();
             windowBus47.Show();
         }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
