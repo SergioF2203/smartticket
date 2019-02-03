@@ -5,18 +5,16 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Client.AdminService;
-using Client.CustomerService;
+
 
 namespace Client
 {
-	public class DL
+	public class DLAdmin
 	{
 		public AdminServiceClient adminProxy;
-		public CustomerServiceClient customerProxy;
-		public DL()
+		public DLAdmin()
 		{
 			adminProxy = new AdminServiceClient();
-			customerProxy = new CustomerServiceClient();
 		}
 
 		public void AddBus()

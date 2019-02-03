@@ -71,18 +71,15 @@
     <None Include="Service References\AdminServiceClient\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\AdminServiceClient\TestServices.AdminServiceClient.Bus.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\AdminServiceClient\TestServices.AdminServiceClient.Direction.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\CustomerService\CustomerService.wsdl" />
     <None Include="Service References\CustomerService\item.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CustomerService\item1.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerService\TestServices.CustomerService.Direction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +99,9 @@
     <None Include="Service References\CustomerService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\CustomerService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CustomerService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

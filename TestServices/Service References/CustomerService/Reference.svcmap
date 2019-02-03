@@ -26,6 +26,7 @@
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="887255d8-005f-4507-9788-3861379006b6" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd1" />
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="ebfa6631-31bb-4f97-9b50-1ebf8f3cba69" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?disco" />
     <MetadataFile FileName="CustomerService.wsdl" MetadataType="Wsdl" ID="4042933c-8f6a-4c2a-8c78-bc9ae97044ad" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="e91c94d1-4afb-4d63-b66a-910286f9caf6" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
