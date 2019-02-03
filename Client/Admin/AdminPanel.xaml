@@ -15,9 +15,12 @@
             </Grid>
             <TabControl>
                 <TabItem Header="Bus">
-                    <DataGrid ItemsSource="{Binding Buses}">
+                    <DataGrid Name="MainGrid" HorizontalContentAlignment="Center" ItemsSource="{Binding _buses}" AutoGenerateColumns="False" CanUserAddRows="False">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="reg" Binding="{Binding RegNumber, Mode=TwoWay}"/>
+                            <DataGridTextColumn Width="250" Header="Id" Binding="{Binding Id}" ClipboardContentBinding="{x:Null}"/>
+                            <DataGridTextColumn  Width="250" Header="Number" Binding="{Binding RegNumber}" ClipboardContentBinding="{x:Null}"/>
+                            <DataGridTextColumn  Width="250" Header="Model" Binding="{Binding Model}" ClipboardContentBinding="{x:Null}"/>
+                            <DataGridTextColumn  Width="250" Header="Capacity" Binding="{Binding Capacity}" ClipboardContentBinding="{x:Null}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>

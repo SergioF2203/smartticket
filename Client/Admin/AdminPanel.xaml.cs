@@ -7,33 +7,30 @@ namespace Client.Admin
 {
     public partial class AdminPanel : Window
     {
-	    private DLAdmin _dlAdmin;
-		private ObservableCollection<Bus> _buses;
+        public DLAdmin _dlAdmin;
+		public ObservableCollection<Bus> _buses;
+
+        
 
         public AdminPanel()
         {
             InitializeComponent();
-			InitFunction();
+            MainGrid.ItemsSource = _buses;
+			
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(_dlAdmin.GetBusById(1).Model);
+            InitFunction();
+            //this.Close();
         }
 
         private void InitFunction()
         {
-			_dlAdmin = new DLAdmin();
-			_buses = new ObservableCollection<Bus>();
+            _buses = _dlAdmin.GetAllBuses();
 		}
 
-        //private void ShowFunction()
-        //{
-        //    foreach (var id in _buses)
-        //    {
-        //        MessageBox.Show(_dlAdmin.GetBusById(Convert.ToInt16(id)).Model);
-        //    }
-        //}
+
 
 
 

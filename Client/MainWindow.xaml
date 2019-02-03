@@ -47,7 +47,7 @@
         </StackPanel>
         <Menu Grid.Row="0" HorizontalAlignment="Left" Height="16" Margin="10,0,0,0" VerticalAlignment="Top" Width="38" Background="{x:Null}" FontSize="10" FontWeight="Bold">
             <MenuItem Header="Menu" FontWeight="Bold">
-                <MenuItem Header="Admin" FontWeight="Normal"/>
+                <MenuItem Header="Admin" FontWeight="Normal" Click="MenuItem_Click"/>
                 <Separator/>
                 <MenuItem x:Name="exitButton" Header="Exit" FontWeight="Normal" Click="ExitButton_Click"/>
             </MenuItem>
