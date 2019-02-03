@@ -1,0 +1,38 @@
+﻿<Window x:Class="Client.Admin.AdminLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Admin"
+        mc:Ignorable="d"
+        Title="AdminLogin" Height="500" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Background="Pink">
+        <Rectangle Height="280" VerticalAlignment="Top">
+        <Rectangle.Fill>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                    <GradientStop Color="White" Offset="0.3"/>
+                    <GradientStop Color="White" Offset="0.5"/>
+                    <GradientStop Color="Pink" Offset="1"/>
+            </LinearGradientBrush>
+        </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="images\IconForLogin2.jpg" Width="100" Height="100" VerticalAlignment="Top" Margin="10"></Image>
+        <Rectangle Height="180" Width="240" OpacityMask="Black" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect  RenderingBias="Quality" Color="Gray"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid Height="280" Width="240" VerticalAlignment="Bottom" Margin="0,100">
+            <TextBlock  Text="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5" Foreground="Gray" FontSize="20"></TextBlock>
+            <StackPanel>
+                <TextBox Name="LoginTextBox" HorizontalAlignment="Center" Margin="0,85,0,0" Width="200"/>
+                <PasswordBox Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,5,0,0" Width="200"/>
+            </StackPanel>
+        </Grid>
+        <Button  Background="White" Name="LoginButton" VerticalAlignment="Bottom" Margin="0,85" Width="150" Content="LOGIN" Foreground="Gray" Click="LoginButton_Click"></Button>
+        <Button Background="White" Name="Exit" VerticalAlignment="Bottom" Margin="0,65" Width="150" Content="EXIT" Foreground="Gray" Click="Exit_Click"></Button>
+        <TextBlock Name="ForgotTextBlock" Text="Forgott password?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50"  ToolTip="Try to remember faggot!"/>
+    </Grid>
+
+</Window>

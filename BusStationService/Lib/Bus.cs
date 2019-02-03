@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -24,6 +25,7 @@ namespace BusStationService.Lib
 		public int Capacity { get; set; }
 
 		[DataMember]
-		public ICollection<Trip> Trips { get; set; } 
-	}
+		public ICollection<Trip> Trips { get; set; }
+
+    }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client.Admin;
 
 namespace Client
 {
@@ -27,13 +28,17 @@ namespace Client
             //OrderWindow orderWindow = new OrderWindow();
             //orderWindow.Show();
             //это для тестирования
+            //Admin.AdminLogin al = new Admin.AdminLogin();
+            //al.Show();
             
         }
         //test 47 places Bus window
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BusShema47 windowBus47 = new BusShema47();
-            windowBus47.Show();
+            //BusShema47 windowBus47 = new BusShema47();
+            //windowBus47.Show();
+            Admin.AdminLogin al = new AdminLogin();
+            al.Show();
         }
     }
 }
