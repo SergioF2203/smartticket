@@ -21,5 +21,31 @@ namespace BusStationService
 				Helper.ShowMessage("AdminService", "called AddBus()");
 			}
 		}
+
+		public Bus GetBusById(int id)
+		{
+			using (DB db = new DB())
+			{
+				Bus bus = db.Buses.Find(id);
+
+				Helper.ShowMessage("AdminService", "GetBusById(int id)");
+
+				return bus;
+			}
+		}
+
+		public void SaveBus(Bus bus)
+		{
+			if (bus != null)
+			{
+				using (DB db = new DB())
+				{
+					db.Entry(bus).State = EntityState.Modified;
+					db.SaveChanges();
+
+					Helper.ShowMessage("AdminService", "SaveBus(Bus bus)");
+				}
+			}
+		}
 	}
 }

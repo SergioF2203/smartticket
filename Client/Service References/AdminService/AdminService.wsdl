@@ -13,16 +13,54 @@
   <wsdl:message name="IAdminService_AddBus_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddBusResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_GetBusById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusById" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetBusById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SaveBus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBus" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SaveBus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBusResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAdminService">
     <wsdl:operation name="AddBus">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddBus" message="tns:IAdminService_AddBus_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddBusResponse" message="tns:IAdminService_AddBus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetBusById" message="tns:IAdminService_GetBusById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetBusByIdResponse" message="tns:IAdminService_GetBusById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/SaveBus" message="tns:IAdminService_SaveBus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/SaveBusResponse" message="tns:IAdminService_SaveBus_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="AddBus">
       <soap:operation soapAction="http://tempuri.org/IAdminService/AddBus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBusById">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetBusById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBus">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/SaveBus" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

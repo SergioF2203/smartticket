@@ -663,6 +663,18 @@ namespace Client.AdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddBus", ReplyAction="http://tempuri.org/IAdminService/AddBusResponse")]
         System.Threading.Tasks.Task AddBusAsync(Client.AdminService.Bus bus);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetBusById", ReplyAction="http://tempuri.org/IAdminService/GetBusByIdResponse")]
+        Client.AdminService.Bus GetBusById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetBusById", ReplyAction="http://tempuri.org/IAdminService/GetBusByIdResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Bus> GetBusByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveBus", ReplyAction="http://tempuri.org/IAdminService/SaveBusResponse")]
+        void SaveBus(Client.AdminService.Bus bus);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveBus", ReplyAction="http://tempuri.org/IAdminService/SaveBusResponse")]
+        System.Threading.Tasks.Task SaveBusAsync(Client.AdminService.Bus bus);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -698,6 +710,22 @@ namespace Client.AdminService {
         
         public System.Threading.Tasks.Task AddBusAsync(Client.AdminService.Bus bus) {
             return base.Channel.AddBusAsync(bus);
+        }
+        
+        public Client.AdminService.Bus GetBusById(int id) {
+            return base.Channel.GetBusById(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Bus> GetBusByIdAsync(int id) {
+            return base.Channel.GetBusByIdAsync(id);
+        }
+        
+        public void SaveBus(Client.AdminService.Bus bus) {
+            base.Channel.SaveBus(bus);
+        }
+        
+        public System.Threading.Tasks.Task SaveBusAsync(Client.AdminService.Bus bus) {
+            return base.Channel.SaveBusAsync(bus);
         }
     }
 }

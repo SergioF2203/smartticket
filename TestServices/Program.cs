@@ -15,11 +15,17 @@ namespace TestServices
 			var customer = new CustomerService.CustomerServiceClient();
 			var admin = new AdminServiceClient.AdminServiceClient();
 
-			var res = customer.GetDirections();
-			foreach (var d in res)
-			{
-				Console.WriteLine(d.Coordinates);
-			}
+			//var res = customer.GetDirections();
+			//foreach (var d in res)
+			//{
+			//	Console.WriteLine(d.Coordinates);
+			//}
+
+			Bus bus = admin.GetBusById(2);
+
+			bus.RegNumber = "9999xxxx9999";
+
+			admin.SaveBus(bus);
 
 
 		}

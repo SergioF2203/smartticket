@@ -21,6 +21,5 @@ namespace Client
 			return result.ToList<Direction>();
 		}
 
-
 	}
 }

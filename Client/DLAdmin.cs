@@ -17,16 +17,24 @@ namespace Client
 			adminProxy = new AdminServiceClient();
 		}
 
-		public void AddBus()
+		public void AddBus(Bus bus)
 		{
-			Bus bus = new Bus
-			{
-				Capacity = 47,
-				Model = "Lexus",
-				RegNumber = "АР7654ВЕ"
-			};
-
-			this.adminProxy.AddBus(bus);
+			adminProxy.AddBus(bus);
 		}
+
+		public Bus GetBusById(int id)
+		{
+			Bus bus = adminProxy.GetBusById(id);
+			return bus;
+		}
+
+		public void SaveBus(Bus bus)
+		{
+			if (bus != null)
+			{
+				adminProxy.SaveBus(bus);
+			}
+		}
+
 	}
 }

@@ -13,5 +13,11 @@ namespace BusStationService
 	{
 		[OperationContract]
 		void AddBus(Bus bus);
+
+		[OperationContract]
+		Bus GetBusById(int id);
+
+		[OperationContract]
+		void SaveBus(Bus bus);
 	}
 }
