@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\RepoVS\smartticket\Client\obj\Debug\
+D:\MyProjects\SmartTicket\Client\obj\Debug\
 Client
 none
 false
 DEBUG;TRACE
-D:\RepoVS\smartticket\Client\App.xaml
-6-1347875609
+D:\MyProjects\SmartTicket\Client\App.xaml
+6-1547203600
 
-14964649422
-151560689069
-AdminAuthorizationWindow.xaml;AdminPanelWindow.xaml;BusShema47.xaml;MainWindow.xaml;OrderWindow.xaml;QRWindow.xaml;
+14-1606411417
+17-1592119538
+Admin\AdminLogin.xaml;Admin\AdminPanel.xaml;BusShema47.xaml;MainWindow.xaml;OrderWindow.xaml;QRWindow.xaml;
 
 False
 

@@ -142,6 +142,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BusStationService.Lib.Bus.datasource" />
+    <None Include="Properties\DataSources\BusStationService.Lib.Direction.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,6 +170,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CustomerService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -267,6 +272,11 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Admin\images\IconForLogin1.png" />
+    <Resource Include="Admin\images\IconForLogin2.jpg" />
+    <Resource Include="Admin\images\IconForLogin3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Service References\AdminService\" />
     <WCFMetadataStorage Include="Service References\CustomerService\" />
   </ItemGroup>
@@ -295,24 +305,10 @@
     <None Include="Service References\CustomerService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\CustomerService\item2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\CustomerService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusStationService\BusStationService.csproj">
-      <Project>{617004b4-89c6-4676-878b-54576aa4ec1b}</Project>
-      <Name>BusStationService</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Admin\images\IconForLogin1.png" />
-    <Resource Include="Admin\images\IconForLogin2.jpg" />
-    <Resource Include="Admin\images\IconForLogin3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

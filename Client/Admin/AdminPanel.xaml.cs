@@ -12,28 +12,19 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using BusStationService.Lib;
+using Client.AdminService;
 
 namespace Client.Admin
 {
     public partial class AdminPanel : Window
     {
-        private ObservableCollection<Bus> _buses;
-        private DL _dl;
-        public ObservableCollection<Bus> Buses
-        {
-            get { return _buses; }
-            set { _buses = value; }
-        }
-
+	    private DLAdmin _dlAdmin;
+		private ObservableCollection<Bus> _buses;
 
         public AdminPanel()
         {
             InitializeComponent();
-            _buses = new ObservableCollection<Bus>();
-            _dl = new DL();
-            InitFunction();
-
+			InitFunction();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -43,11 +34,12 @@ namespace Client.Admin
 
         private void InitFunction()
         {
-            //var buses = _dl.
-        }
+			_dlAdmin = new DLAdmin();
+			_buses = new ObservableCollection<Bus>();
+		}
 
 
 
 
-    }
+	}
 }

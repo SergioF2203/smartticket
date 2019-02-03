@@ -17,6 +17,7 @@ namespace Client
 			adminProxy = new AdminServiceClient();
 		}
 
+		// FUNCTIONS
 		public void AddBus(Bus bus)
 		{
 			adminProxy.AddBus(bus);

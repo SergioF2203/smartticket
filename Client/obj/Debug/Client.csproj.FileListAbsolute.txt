@@ -12,12 +12,8 @@ D:\MyProjects\SmartTicket\Client\obj\Debug\Client.Properties.Resources.resources
 D:\MyProjects\SmartTicket\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 D:\MyProjects\SmartTicket\Client\obj\Debug\Client.exe
 D:\MyProjects\SmartTicket\Client\obj\Debug\Client.pdb
-D:\MyProjects\SmartTicket\Client\obj\Debug\AdminAuthorizationWindow.g.cs
-D:\MyProjects\SmartTicket\Client\obj\Debug\AdminPanelWindow.g.cs
 D:\MyProjects\SmartTicket\Client\obj\Debug\OrderWindow.g.cs
 D:\MyProjects\SmartTicket\Client\obj\Debug\QRWindow.g.cs
-D:\MyProjects\SmartTicket\Client\obj\Debug\AdminAuthorizationWindow.baml
-D:\MyProjects\SmartTicket\Client\obj\Debug\AdminPanelWindow.baml
 D:\MyProjects\SmartTicket\Client\obj\Debug\OrderWindow.baml
 D:\MyProjects\SmartTicket\Client\obj\Debug\QRWindow.baml
 D:\MyProjects\SmartTicket\Client\obj\Debug\App.baml
@@ -49,3 +45,11 @@ D:\RepoVS\smartticket\Client\obj\Debug\Client.csproj.GenerateResource.cache
 D:\RepoVS\smartticket\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 D:\RepoVS\smartticket\Client\obj\Debug\Client.exe
 D:\RepoVS\smartticket\Client\obj\Debug\Client.pdb
+D:\MyProjects\SmartTicket\Client\obj\Debug\Admin\AdminLogin.g.cs
+D:\MyProjects\SmartTicket\Client\obj\Debug\Admin\AdminPanel.g.cs
+D:\MyProjects\SmartTicket\Client\bin\Debug\MaterialDesignColors.dll
+D:\MyProjects\SmartTicket\Client\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\MyProjects\SmartTicket\Client\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\MyProjects\SmartTicket\Client\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\MyProjects\SmartTicket\Client\obj\Debug\Admin\AdminLogin.baml
+D:\MyProjects\SmartTicket\Client\obj\Debug\Admin\AdminPanel.baml

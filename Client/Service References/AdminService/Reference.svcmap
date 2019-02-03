@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="333acf64-2fce-49a2-b298-d4d4c9074d02" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="15e4e380-e2bb-43b6-af12-7ea7037d61f0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/BusStationService/AdminService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="3fbe8523-f0e9-4ce4-a761-3ffde7aa6e19" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd2" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="02d3a747-ec5d-4c06-a910-d9b15c7cf576" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?disco" />
-    <MetadataFile FileName="AdminService.wsdl" MetadataType="Wsdl" ID="d1ce3df7-ab3d-4144-8388-26199bbbd49b" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?wsdl" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="e0dba650-d2ef-438a-9fff-0a3a3f7ccbb8" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd1" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="2a30f49d-c2a2-43de-a109-96e5a4610f1e" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd0" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="9e58e4a4-b985-447f-bcb8-04ea1d04de81" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="e2d5d9b3-c19c-44da-9680-203c6e21bb75" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?disco" />
+    <MetadataFile FileName="AdminService.wsdl" MetadataType="Wsdl" ID="f42c6fc8-6206-477b-ab13-a542a37383ff" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?wsdl" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="8f0b7d83-fa09-494f-8684-b89ffaa25ae8" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="807f993b-95fc-42a5-80ba-10c950b1d4a0" SourceId="1" SourceUrl="http://localhost:8733/BusStationService/AdminService/?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

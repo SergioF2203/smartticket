@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3883d036-8e3d-46f6-b575-0218c883534c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1f2d0610-dcc6-4c4b-956c-de11ad1a663e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8734/BusStationService/CustomerService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="b7b5b5b5-bb5d-4090-8aa1-c0b8a24e825b" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd0" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="b23b78c5-fade-46e1-b0e7-41db5816d0f2" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd1" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="4490dbf6-0bd3-4b5a-ab36-f7e750824eae" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?disco" />
-    <MetadataFile FileName="CustomerService.wsdl" MetadataType="Wsdl" ID="e9dfb897-260e-4006-bff1-2ad143ed0ef5" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?wsdl" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="b9a72c14-5138-467e-bc88-660dc07db8b1" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd2" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="1136a537-724f-4a27-bcf2-ba14d499f57d" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="d2a25699-5e4a-49d5-8137-afc41c661408" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="074ec267-2ec0-4bcf-a616-a60eae202c7b" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?disco" />
+    <MetadataFile FileName="CustomerService.wsdl" MetadataType="Wsdl" ID="e400dc21-caea-479e-ab5b-f2e7f37d934c" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="69ae3b9a-2f0b-4b71-aafe-7563da22e3dc" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

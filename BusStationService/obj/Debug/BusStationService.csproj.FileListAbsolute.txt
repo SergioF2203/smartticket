@@ -18,7 +18,6 @@ D:\MyProjects\SmartTicket\BusStationService\bin\Microsoft.AI.ServerTelemetryChan
 D:\MyProjects\SmartTicket\BusStationService\bin\Microsoft.AI.Web.xml
 D:\MyProjects\SmartTicket\BusStationService\bin\Microsoft.AI.WindowsServer.xml
 D:\MyProjects\SmartTicket\BusStationService\bin\Microsoft.ApplicationInsights.xml
-D:\MyProjects\SmartTicket\BusStationService\obj\Debug\BusStationService.csprojResolveAssemblyReference.cache
 D:\MyProjects\SmartTicket\BusStationService\obj\Debug\BusStationService.dll
 D:\MyProjects\SmartTicket\BusStationService\obj\Debug\BusStationService.pdb
 D:\RepoVS\smartticket\BusStationService\bin\ApplicationInsights.config
@@ -46,3 +45,4 @@ D:\RepoVS\smartticket\BusStationService\obj\Debug\BusStationService.csproj.CoreC
 D:\RepoVS\smartticket\BusStationService\obj\Debug\BusStationService.csproj.CopyComplete
 D:\RepoVS\smartticket\BusStationService\obj\Debug\BusStationService.dll
 D:\RepoVS\smartticket\BusStationService\obj\Debug\BusStationService.pdb
+D:\MyProjects\SmartTicket\BusStationService\obj\Debug\BusStationService.csprojResolveAssemblyReference.cache

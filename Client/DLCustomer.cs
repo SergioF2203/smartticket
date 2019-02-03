@@ -15,6 +15,7 @@ namespace Client
 			customerProxy = new CustomerServiceClient();
 		}
 
+		// FUNCTIONS
 		public List<Direction> GetDirections()
 		{
 			Direction[] result = customerProxy.GetDirections();
