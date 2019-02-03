@@ -68,4 +68,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="ArrayOfBus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Bus" nillable="true" type="tns:Bus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBus" nillable="true" type="tns:ArrayOfBus" />
 </xs:schema>

@@ -675,6 +675,12 @@ namespace Client.AdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveBus", ReplyAction="http://tempuri.org/IAdminService/SaveBusResponse")]
         System.Threading.Tasks.Task SaveBusAsync(Client.AdminService.Bus bus);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllBusses", ReplyAction="http://tempuri.org/IAdminService/GetAllBussesResponse")]
+        Client.AdminService.Bus[] GetAllBusses();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllBusses", ReplyAction="http://tempuri.org/IAdminService/GetAllBussesResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Bus[]> GetAllBussesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -726,6 +732,14 @@ namespace Client.AdminService {
         
         public System.Threading.Tasks.Task SaveBusAsync(Client.AdminService.Bus bus) {
             return base.Channel.SaveBusAsync(bus);
+        }
+        
+        public Client.AdminService.Bus[] GetAllBusses() {
+            return base.Channel.GetAllBusses();
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Bus[]> GetAllBussesAsync() {
+            return base.Channel.GetAllBussesAsync();
         }
     }
 }

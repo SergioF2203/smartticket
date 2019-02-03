@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -37,5 +38,16 @@ namespace Client
 			}
 		}
 
+		public ObservableCollection<Bus> GetAllBuses()
+		{
+			List<Bus> importData = adminProxy.GetAllBusses().ToList();
+			ObservableCollection<Bus>result = new ObservableCollection<Bus>();
+			foreach (var bus in importData)
+			{
+				result.Add(bus);
+			}
+
+			return result;
+		}
 	}
 }
