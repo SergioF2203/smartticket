@@ -60,7 +60,8 @@
     <Compile Include="BusShema47.xaml.cs">
       <DependentUpon>BusShema47.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DL.cs" />
+    <Compile Include="DLAdmin.cs" />
+    <Compile Include="DLCustomer.cs" />
     <Compile Include="QRWindow.xaml.cs">
       <DependentUpon>QRWindow.xaml</DependentUpon>
     </Compile>
@@ -140,9 +141,6 @@
     </None>
     <AppDesigner Include="Properties\" />
     <None Include="Service References\AdminService\AdminService.wsdl" />
-    <None Include="Service References\AdminService\Client.AdminService.Bus.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\AdminService\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -151,6 +149,9 @@
     </None>
     <None Include="Service References\AdminService\item2.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerService\Client.CustomerService.Direction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\CustomerService\CustomerService.wsdl" />
     <None Include="Service References\CustomerService\item.xsd">
@@ -284,6 +285,9 @@
     <None Include="Service References\CustomerService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\CustomerService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CustomerService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="CustomerDoWork">
+  <xs:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib" />
+  <xs:element name="GetDirections">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="CustomerDoWorkResponse">
+  <xs:element name="GetDirectionsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CustomerDoWorkResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BusStationService.Lib" minOccurs="0" name="GetDirectionsResult" nillable="true" type="q1:ArrayOfDirection" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

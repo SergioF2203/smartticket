@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using BusStationService.Lib;
 
 namespace BusStationService
 {
@@ -12,6 +13,7 @@ namespace BusStationService
 	public interface ICustomerService
 	{
 		[OperationContract]
-		string CustomerDoWork();
+		List<Direction> GetDirections();
+
 	}
 }

@@ -12,12 +12,6 @@ namespace BusStationService
 	public interface IAdminService
 	{
 		[OperationContract]
-		string DoWork();
-
-		[OperationContract]
-		Bus SecondOperation();
-
-		[OperationContract]
 		void AddBus(Bus bus);
 	}
 }

@@ -102,7 +102,6 @@
     <Content Include="CustomerService.svc" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Service1.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,13 +116,11 @@
     <Compile Include="Lib\Bus.cs" />
     <Compile Include="Lib\Customer.cs" />
     <Compile Include="Lib\DB.cs" />
+    <Compile Include="Lib\DbInitializer.cs" />
     <Compile Include="Lib\Direction.cs" />
     <Compile Include="Lib\Order.cs" />
+    <Compile Include="Lib\Helper.cs" />
     <Compile Include="Lib\Trip.cs" />
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>Service1.svc</DependentUpon>
-    </Compile>
-    <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

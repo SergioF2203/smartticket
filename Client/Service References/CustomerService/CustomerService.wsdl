@@ -4,24 +4,25 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ICustomerService_CustomerDoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:CustomerDoWork" />
+  <wsdl:message name="ICustomerService_GetDirections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirections" />
   </wsdl:message>
-  <wsdl:message name="ICustomerService_CustomerDoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CustomerDoWorkResponse" />
+  <wsdl:message name="ICustomerService_GetDirections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectionsResponse" />
   </wsdl:message>
   <wsdl:portType name="ICustomerService">
-    <wsdl:operation name="CustomerDoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerService/CustomerDoWork" message="tns:ICustomerService_CustomerDoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerService/CustomerDoWorkResponse" message="tns:ICustomerService_CustomerDoWork_OutputMessage" />
+    <wsdl:operation name="GetDirections">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerService/GetDirections" message="tns:ICustomerService_GetDirections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerService/GetDirectionsResponse" message="tns:ICustomerService_GetDirections_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICustomerService" type="tns:ICustomerService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="CustomerDoWork">
-      <soap:operation soapAction="http://tempuri.org/ICustomerService/CustomerDoWork" style="document" />
+    <wsdl:operation name="GetDirections">
+      <soap:operation soapAction="http://tempuri.org/ICustomerService/GetDirections" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

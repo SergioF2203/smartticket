@@ -25,6 +25,8 @@ namespace BusStationService.Lib
 		public double Price { get; set; }
 		[DataMember]
 		public string Coordinates { get; set; }
+		[DataMember]
+		public bool IsActive { get; set; }
 
 		[DataMember]
 		public ICollection<Trip> Trips { get; set; } 

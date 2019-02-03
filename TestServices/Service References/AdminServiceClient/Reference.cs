@@ -301,6 +301,9 @@ namespace TestServices.AdminServiceClient {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double PriceField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -364,6 +367,19 @@ namespace TestServices.AdminServiceClient {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
                 }
             }
         }
@@ -642,18 +658,6 @@ namespace TestServices.AdminServiceClient {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AdminServiceClient.IAdminService")]
     public interface IAdminService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DoWork", ReplyAction="http://tempuri.org/IAdminService/DoWorkResponse")]
-        string DoWork();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DoWork", ReplyAction="http://tempuri.org/IAdminService/DoWorkResponse")]
-        System.Threading.Tasks.Task<string> DoWorkAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SecondOperation", ReplyAction="http://tempuri.org/IAdminService/SecondOperationResponse")]
-        TestServices.AdminServiceClient.Bus SecondOperation();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SecondOperation", ReplyAction="http://tempuri.org/IAdminService/SecondOperationResponse")]
-        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddBus", ReplyAction="http://tempuri.org/IAdminService/AddBusResponse")]
         void AddBus(TestServices.AdminServiceClient.Bus bus);
         
@@ -686,22 +690,6 @@ namespace TestServices.AdminServiceClient {
         
         public AdminServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        public string DoWork() {
-            return base.Channel.DoWork();
-        }
-        
-        public System.Threading.Tasks.Task<string> DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
-        }
-        
-        public TestServices.AdminServiceClient.Bus SecondOperation() {
-            return base.Channel.SecondOperation();
-        }
-        
-        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus> SecondOperationAsync() {
-            return base.Channel.SecondOperationAsync();
         }
         
         public void AddBus(TestServices.AdminServiceClient.Bus bus) {

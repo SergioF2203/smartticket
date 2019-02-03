@@ -12,32 +12,14 @@ namespace TestServices
 	{
 		static void Main(string[] args)
 		{
-			var cs = new CustomerService.CustomerServiceClient();
-			Console.WriteLine(cs.CustomerDoWork());
+			var customer = new CustomerService.CustomerServiceClient();
+			var admin = new AdminServiceClient.AdminServiceClient();
 
-			var aser = new AdminServiceClient.AdminServiceClient();
-			Console.WriteLine(aser.DoWork());
-
-			//var bus = aser.SecondOperation();
-			//Console.WriteLine(bus.Capacity);
-
-			//Bus bus = new Bus()
-			//{
-			//	Capacity = 100,
-			//	Model = "rrrrrrrrrrr"
-			//};
-			//aser.AddBus(bus);
-
-			Bus bus = new Bus()
+			var res = customer.GetDirections();
+			foreach (var d in res)
 			{
-				Capacity = 100,
-				Model = "rrrrrrrrrrr"
-			};
-
-			aser.AddBus(bus);
-			//aser.AddBus(bus);
-
-
+				Console.WriteLine(d.Coordinates);
+			}
 
 
 		}

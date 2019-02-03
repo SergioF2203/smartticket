@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace BusStationService.Lib
 {
-	class DB : DbContext
+	public class DB : DbContext
 	{
+		static DB()
+		{
+			Database.SetInitializer<DB>(new DbInitializer());
+		}
+
 		public DB() : base("BusesStore")
 		{
 		}
