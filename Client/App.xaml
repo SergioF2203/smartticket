@@ -53,6 +53,9 @@
                             <Trigger Property="IsChecked" Value="True">
                                 <Setter TargetName="StartState" Property="Source" Value="Resources/BusyPlace.png"/>
                             </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="StartState" Property="Source" Value="Resources/BusyPlace.png"/>
+                            </Trigger>
                             <MultiTrigger>
                                 <MultiTrigger.Conditions>
                                     <Condition Property="IsMouseOver" Value="True"/>

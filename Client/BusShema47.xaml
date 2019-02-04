@@ -5,46 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="Bus 47 places" Height="399.248" Width="909.962" ResizeMode="NoResize">
+        Title="Bus 47 places" Height="400" Width="950" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="337*"></RowDefinition>
             <RowDefinition Height="82*"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="0">
-            <Image Margin="10" Source="Resources/Bus_47.png"/>
-        </StackPanel>
-        <Canvas Grid.Row="0" Panel.ZIndex="1">
-            <CheckBox x:Name="place1" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="152" Opacity="0.5"/>
-            <CheckBox x:Name="place2" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="195" Opacity="0.5"/>
-            <CheckBox x:Name="place3" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place4" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="665" Canvas.Top="67" Opacity="0.5"/>
-            <CheckBox x:Name="place5" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place6" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="67" Opacity="0.5"/>
-            <CheckBox x:Name="place7" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="152" Opacity="0.5"/>
-            <CheckBox x:Name="place8" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="607" Canvas.Top="195" Opacity="0.5"/>
-            
-            <CheckBox x:Name="place9" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="549" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place10" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="549" Canvas.Top="67" Opacity="0.5"/>
-            <CheckBox x:Name="place11" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="549" Canvas.Top="152" Opacity="0.5"/>
-            <CheckBox x:Name="place12" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="549" Canvas.Top="195" Opacity="0.5"/>
+        <Canvas Grid.Row="0" Panel.ZIndex="1" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Image Margin="10" Source="Resources/Bus_47.png" Height="245" Width="899"/>
 
+            <CheckBox x:Name="place1" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="684" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place2" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="684" Canvas.Top="200" Opacity="0.5"/>
+            <CheckBox x:Name="place3" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="684" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place4" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="684" Canvas.Top="69" Opacity="0.5"/>
 
-            <CheckBox x:Name="place13" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="492" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place14" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="492" Canvas.Top="67" Opacity="0.5"/>
-            <CheckBox x:Name="place15" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="492" Canvas.Top="152" Opacity="0.5"/>
-            <CheckBox x:Name="place16" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="492" Canvas.Top="195" Opacity="0.5"/>
+            <CheckBox x:Name="place5" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="625" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place6" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="625" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place7" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="625" Canvas.Top="156" Opacity="0.5" IsEnabled="False"/>
+            <CheckBox x:Name="place8" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="625" Canvas.Top="200" Opacity="0.5" IsEnabled="False"/>
 
-            <CheckBox x:Name="place17" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="435" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place21" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="378" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place25" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="321" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place27" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="264" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place31" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="207" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place35" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="150" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place39" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="93" Canvas.Top="24" Opacity="0.5"/>
-            <CheckBox x:Name="place43" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="36" Canvas.Top="24" Opacity="0.5"/>
+            <CheckBox x:Name="place9" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="567" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place10" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="567" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place11" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="567" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place12" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="567" Canvas.Top="200" Opacity="0.5"/>
 
+            <CheckBox x:Name="place13" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="508" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place14" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="508" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place15" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="508" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place16" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="508" Canvas.Top="200" Opacity="0.5"/>
 
+            <CheckBox x:Name="place17" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="449" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place18" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="449" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place19" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="449" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place20" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="449" Canvas.Top="200" Opacity="0.5"/>
+
+            <CheckBox x:Name="place21" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="390" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place22" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="390" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place23" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="390" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place24" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="390" Canvas.Top="200" Opacity="0.5"/>
+
+            <CheckBox x:Name="place25" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="331" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place26" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="331" Canvas.Top="69" Opacity="0.5"/>
+
+            <CheckBox x:Name="place27" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="273" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place28" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="273" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place29" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="273" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place30" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="273" Canvas.Top="200" Opacity="0.5"/>
+
+            <CheckBox x:Name="place31" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="214" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place32" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="214" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place33" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="214" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place34" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="214" Canvas.Top="200" Opacity="0.5"/>
+
+            <CheckBox x:Name="place35" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="155" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place36" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="155" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place37" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="155" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place38" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="155" Canvas.Top="200" Opacity="0.5"/>
+
+            <CheckBox x:Name="place39" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="97" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place40" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="97" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place41" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="97" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place42" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="97" Canvas.Top="200" Opacity="0.5"/>
+
+            <CheckBox x:Name="place43" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="37" Canvas.Top="25" Opacity="0.5"/>
+            <CheckBox x:Name="place44" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="37" Canvas.Top="69" Opacity="0.5"/>
+            <CheckBox x:Name="place45" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="37" Canvas.Top="113" Opacity="0.5"/>
+            <CheckBox x:Name="place46" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="37" Canvas.Top="156" Opacity="0.5"/>
+            <CheckBox x:Name="place47" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="37" Canvas.Top="200" Opacity="0.5"/>
         </Canvas>
     </Grid>
 </Window>
