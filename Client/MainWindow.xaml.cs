@@ -35,15 +35,20 @@ namespace Client
         //test 47 places Bus window
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //BusShema47 windowBus47 = new BusShema47();
-            //windowBus47.Show();
-            Admin.AdminLogin al = new AdminLogin();
-            al.Show();
+            BusShema47 windowBus47 = new BusShema47();
+            windowBus47.Show();
+            
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Admin.AdminLogin al = new AdminLogin();
+            al.Show();
         }
     }
 }
