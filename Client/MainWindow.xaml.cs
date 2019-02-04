@@ -35,8 +35,13 @@ namespace Client
         //test 47 places Bus window
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             //BusShema47 windowBus47 = new BusShema47();
             //windowBus47.Show();
+=======
+            BusShema47 windowBus47 = new BusShema47();
+            windowBus47.Show();
+>>>>>>> upstream/master
             
         }
 
