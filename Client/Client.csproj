@@ -69,6 +69,7 @@
     <Compile Include="Admin\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin\MyBuses.cs" />
     <Compile Include="BusShema47.xaml.cs">
       <DependentUpon>BusShema47.xaml</DependentUpon>
     </Compile>
@@ -305,6 +306,9 @@
     <None Include="Service References\CustomerService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\CustomerService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CustomerService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

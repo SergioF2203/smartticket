@@ -663,6 +663,12 @@ namespace Client.CustomerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetDirections", ReplyAction="http://tempuri.org/ICustomerService/GetDirectionsResponse")]
         System.Threading.Tasks.Task<Client.CustomerService.Direction[]> GetDirectionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetOccupiedPlaces", ReplyAction="http://tempuri.org/ICustomerService/GetOccupiedPlacesResponse")]
+        int[] GetOccupiedPlaces(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetOccupiedPlaces", ReplyAction="http://tempuri.org/ICustomerService/GetOccupiedPlacesResponse")]
+        System.Threading.Tasks.Task<int[]> GetOccupiedPlacesAsync(int tripId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -698,6 +704,14 @@ namespace Client.CustomerService {
         
         public System.Threading.Tasks.Task<Client.CustomerService.Direction[]> GetDirectionsAsync() {
             return base.Channel.GetDirectionsAsync();
+        }
+        
+        public int[] GetOccupiedPlaces(int tripId) {
+            return base.Channel.GetOccupiedPlaces(tripId);
+        }
+        
+        public System.Threading.Tasks.Task<int[]> GetOccupiedPlacesAsync(int tripId) {
+            return base.Channel.GetOccupiedPlacesAsync(tripId);
         }
     }
 }
