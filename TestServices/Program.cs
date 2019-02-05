@@ -28,19 +28,27 @@ namespace TestServices
 
 			//admin.SaveBus(bus);
 
-			Direction[] dirs = customer.GetDirections();
-			foreach (var d in dirs)
+			
+
+			//Direction[] dirs = customer.GetDirections();
+			//foreach (var d in dirs)
+			//{
+			//	string coord = d.Coordinates;
+			//	coord = coord.Replace("{", "");
+			//	coord = coord.Replace("}", "");
+
+			//	string[] arr = coord.Split(',');
+
+			//	int x = Int32.Parse(arr[0].Split(':')[1]);
+			//	int y = Int32.Parse(arr[1].Split(':')[1]);
+
+			//	Console.WriteLine($"{x} - {y}");
+			//}
+
+			var places = customer.GetOccupiedPlaces(1);
+			foreach (int p in places)
 			{
-				string coord = d.Coordinates;
-				coord = coord.Replace("{", "");
-				coord = coord.Replace("}", "");
-
-				string[] arr = coord.Split(',');
-
-				int x = Int32.Parse(arr[0].Split(':')[1]);
-				int y = Int32.Parse(arr[1].Split(':')[1]);
-
-				Console.WriteLine($"{x} - {y}");
+				Console.WriteLine(p);
 			}
 
 

@@ -46,10 +46,28 @@ namespace BusStationService.Lib
 
                 });
 
+	        db.Trips.AddRange(new List<Trip>
+	        {
+		        new Trip {DirectionId = 21, BusId = 1, Departure = new DateTime(2019, 02, 05, 10, 00, 00)},
+				new Trip {DirectionId = 21, BusId = 2, Departure = new DateTime(2019, 02, 05, 12, 00, 00)},
+			});
+
+			db.Customers.AddRange(new List<Customer>
+			{
+				new Customer {Name = "Ivan", Email = "hgfhgf@mail.ru", Phone = "0956542145"},
+			});
 
 
+			db.SaveChanges();
 
-            db.SaveChanges();
-        }
+			Order order = new Order
+			{
+				TripId = 1,
+				CustomerId = 1,
+				PlaceNumber = 1
+			};
+			db.Orders.Add(order);
+			db.SaveChanges();
+		}
     }
 }

@@ -15,5 +15,8 @@ namespace BusStationService
 		[OperationContract]
 		List<Direction> GetDirections();
 
+		[OperationContract]
+		List<int> GetOccupiedPlaces(int tripId);
+
 	}
 }

@@ -81,6 +81,9 @@
     <None Include="Service References\CustomerService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\CustomerService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CustomerService\TestServices.CustomerService.Direction.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
