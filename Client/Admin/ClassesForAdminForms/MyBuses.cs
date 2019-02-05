@@ -21,13 +21,7 @@ namespace Client.Admin
 
         public MyBuses()
         {
-            mBus = new ObservableCollection<Bus>();
-
-            var buses = dl.GetAllBuses();
-            foreach(var b in buses)
-            {
-                mBus.Add(new Bus { Id = b.Id, Model = b.Model, RegNumber = b.RegNumber, Capacity = b.Capacity });
-            }
+            mBus = dl.GetAllBuses();
         }
     }
 }
