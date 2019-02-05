@@ -17,7 +17,7 @@
             </Grid>
             <TabControl BorderBrush="Pink">
                 <TabItem Header="Bus">
-                    <ListView Name="BuListView" HorizontalContentAlignment="Center" ItemsSource="{Binding mBus, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" >
+                    <ListView Name="BuListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Buses, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">ID</GridViewColumn>

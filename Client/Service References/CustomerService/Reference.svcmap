@@ -27,7 +27,11 @@
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="1136a537-724f-4a27-bcf2-ba14d499f57d" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd0" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="d2a25699-5e4a-49d5-8137-afc41c661408" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd1" />
     <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="69ae3b9a-2f0b-4b71-aafe-7563da22e3dc" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd2" />
+<<<<<<< HEAD
     <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="27ff6b7a-1741-414d-ae52-e3a2ae665e19" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd3" />
+=======
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="3f6138f5-1f85-453c-a3fa-92ead54c445a" SourceId="1" SourceUrl="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd3" />
+>>>>>>> upstream/master
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
