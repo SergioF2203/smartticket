@@ -8,36 +8,50 @@
         Title="AdminPanel" Height="600" Width="1000" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <StackPanel Background="White">
+            
             <Grid Height="50">
                 <StackPanel Orientation="Horizontal">
-                    <Button Name="ExitButton" HorizontalAlignment="Left" Content="EXIT" FontSize="20" Background="White" Width="100" FontWeight="Bold" Foreground="Gray" Click="ExitButton_Click"></Button>
+                    <Button Name="RefreshButton" BorderBrush="Pink" HorizontalAlignment="Left" Content="Refresh" FontSize="20" Background="White" Width="100" FontWeight="Bold" Foreground="Gray" Click="RefreshButton_Click"></Button>
+                    <Button Name="ExitButton" BorderBrush="Pink" HorizontalAlignment="Right" Content="EXIT" FontSize="20" Background="White" Width="100" FontWeight="Bold" Foreground="Gray" Click="ExitButton_Click"></Button>
                 </StackPanel>
             </Grid>
-            <TabControl>
+            <TabControl BorderBrush="Pink">
                 <TabItem Header="Bus">
-                    <DataGrid Name="MainGrid" HorizontalContentAlignment="Center" ItemsSource="{Binding _buses}" AutoGenerateColumns="False" CanUserAddRows="False">
+                    <ListView Name="BuListView" HorizontalContentAlignment="Center" ItemsSource="{Binding mBus, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">ID</GridViewColumn>
+                                <GridViewColumn Width="310" DisplayMemberBinding="{Binding Path=Model}" >Model</GridViewColumn>
+                                <GridViewColumn Width="310" DisplayMemberBinding="{Binding Path=RegNumber}" >RegNumber</GridViewColumn>
+                                <GridViewColumn Width="300" DisplayMemberBinding="{Binding Path=Capacity}" >Capacity</GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </TabItem>
+                <TabItem Header="Direction">
+                    <ListBox Name="DirectionListBox">
+                    </ListBox>
+                </TabItem>
+                <TabItem Header="Trip">
+                </TabItem>
+                <TabItem Header="Order">
+                    <DataGrid Name="OrderDataGrid">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="250" Header="Id" Binding="{Binding Id}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridTextColumn  Width="250" Header="Number" Binding="{Binding RegNumber}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridTextColumn  Width="250" Header="Model" Binding="{Binding Model}" ClipboardContentBinding="{x:Null}"/>
-                            <DataGridTextColumn  Width="250" Header="Capacity" Binding="{Binding Capacity}" ClipboardContentBinding="{x:Null}"/>
+                            <DataGridTextColumn  Width="250" Header="Id"/>
+                            <DataGridTextColumn   Width="250" Header="CustomerId"/>
+                            <DataGridTextColumn  Width="250" Header="TripId"/>
+                            <DataGridTextColumn  Width="250" Header="PlaceNumber"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
-                <TabItem Header="Destination">
-                    
-                </TabItem>
-                <TabItem Header="Trip">
-                    
-                </TabItem>
-                <TabItem Header="Order">
-                    <DataGrid>
-                        
-                    </DataGrid>
-                </TabItem>
                 <TabItem Header="Customer">
-                    <DataGrid>
-                        
+                    <DataGrid Name="CustomerDataGrid">
+                        <DataGrid.Columns>
+                        <DataGridTextColumn  Width="250" Header="Id"/>
+                        <DataGridTextColumn   Width="250" Header="Name"/>
+                        <DataGridTextColumn  Width="250" Header="Phone"/>
+                        <DataGridTextColumn  Width="250" Header="Email"/>
+                        </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
             </TabControl>
