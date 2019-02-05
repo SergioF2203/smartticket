@@ -69,7 +69,6 @@
     <Compile Include="Admin\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ClassesForAdminForms\MyBuses.cs" />
     <Compile Include="BusShema47.xaml.cs">
       <DependentUpon>BusShema47.xaml</DependentUpon>
     </Compile>
