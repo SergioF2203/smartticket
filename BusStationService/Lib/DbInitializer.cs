@@ -10,14 +10,14 @@ namespace BusStationService.Lib
     {
         protected override void Seed(DB db)
         {
-            db.Buses.AddRange(new List<Bus>
-                {
-                    new Bus {RegNumber = "АР6012ВА", Capacity = 12, Model = "Wolksvagen"},
-                    new Bus {RegNumber = "АР3476ВА", Capacity = 24, Model = "Mercedes"},
-                    new Bus {RegNumber = "АР5478ВА", Capacity = 18, Model = "Wolksvagen"}
-                });
+			db.Buses.AddRange(new List<Bus>
+				{
+					new Bus {RegNumber = "АР6012ВА", Capacity = 12, Model = "Wolksvagen"},
+					new Bus {RegNumber = "АР3476ВА", Capacity = 24, Model = "Mercedes"},
+					new Bus {RegNumber = "АР5478ВА", Capacity = 18, Model = "Wolksvagen"}
+				});
 
-            db.Directions.AddRange(new List<Direction>
+			db.Directions.AddRange(new List<Direction>
                 {
                     new Direction {City = "Uzhorod", Distance = 1321, Price = 65.0, Coordinates = "{x:16,y:204}"},
                     new Direction {City = "Lutsk", Distance = 913, Price = 580.0, Coordinates = "{x:116,y:71}"},

@@ -25,6 +25,12 @@
   <wsdl:message name="IAdminService_SaveBus_OutputMessage">
     <wsdl:part name="parameters" element="tns:SaveBusResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_GetAllBusses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBusses" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAllBusses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBussesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAdminService">
     <wsdl:operation name="AddBus">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddBus" message="tns:IAdminService_AddBus_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="SaveBus">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/SaveBus" message="tns:IAdminService_SaveBus_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/SaveBusResponse" message="tns:IAdminService_SaveBus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBusses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetAllBusses" message="tns:IAdminService_GetAllBusses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetAllBussesResponse" message="tns:IAdminService_GetAllBusses_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="SaveBus">
       <soap:operation soapAction="http://tempuri.org/IAdminService/SaveBus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBusses">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetAllBusses" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

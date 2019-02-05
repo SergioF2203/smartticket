@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestServices.AdminServiceClient;
+using Direction = TestServices.CustomerService.Direction;
 
 namespace TestServices
 {
@@ -21,11 +22,27 @@ namespace TestServices
 			//	Console.WriteLine(d.Coordinates);
 			//}
 
-			Bus bus = admin.GetBusById(2);
+			//Bus bus = admin.GetBusById(2);
 
-			bus.RegNumber = "9999xxxx9999";
+			//bus.RegNumber = "9999xxxx9999";
 
-			admin.SaveBus(bus);
+			//admin.SaveBus(bus);
+
+			Direction[] dirs = customer.GetDirections();
+			foreach (var d in dirs)
+			{
+				string coord = d.Coordinates;
+				coord = coord.Replace("{", "");
+				coord = coord.Replace("}", "");
+
+				string[] arr = coord.Split(',');
+
+				int x = Int32.Parse(arr[0].Split(':')[1]);
+				int y = Int32.Parse(arr[1].Split(':')[1]);
+
+				Console.WriteLine($"{x} - {y}");
+			}
+
 
 
 		}

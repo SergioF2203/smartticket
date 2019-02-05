@@ -22,5 +22,22 @@ namespace Client
 			return result.ToList<Direction>();
 		}
 
+
+
+
+		// Service functions
+		public int[] ToCoordinates(string coord)
+		{
+			coord = coord.Replace("{", "");
+			coord = coord.Replace("}", "");
+
+			string[] arr = coord.Split(',');
+
+			int x = Int32.Parse(arr[0].Split(':')[1]);
+			int y = Int32.Parse(arr[1].Split(':')[1]);
+
+			return new[] {x, y};
+		}
+
 	}
 }
