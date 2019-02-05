@@ -1,30 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Client.AdminService;
 
 namespace Client.Admin
 {
     public partial class AdminPanel : Window
     {
-	    private DLAdmin _dlAdmin;
-		private ObservableCollection<Bus> _buses;
+        public ObservableCollection<Bus> mBus;
+
+
 
         public AdminPanel()
         {
-            InitializeComponent();
-			InitFunction();
+            InitializeComponent();  
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -32,14 +21,10 @@ namespace Client.Admin
             this.Close();
         }
 
-        private void InitFunction()
+
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
-			_dlAdmin = new DLAdmin();
-			_buses = new ObservableCollection<Bus>();
-		}
-
-
-
-
-	}
+            this.DataContext = new MyBuses();
+        }
+    }
 }
