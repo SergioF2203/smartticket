@@ -13,11 +13,12 @@
                 <StackPanel Orientation="Horizontal">
                     <Button Name="RefreshButton" BorderBrush="Pink" HorizontalAlignment="Left" Content="Refresh" FontSize="20" Background="White" Width="100" FontWeight="Bold" Foreground="Gray" Click="RefreshButton_Click"></Button>
                     <Button Name="ExitButton" BorderBrush="Pink" HorizontalAlignment="Right" Content="EXIT" FontSize="20" Background="White" Width="100" FontWeight="Bold" Foreground="Gray" Click="ExitButton_Click"></Button>
+                    
                 </StackPanel>
             </Grid>
             <TabControl BorderBrush="Pink">
                 <TabItem Header="Bus">
-                    <ListView Name="BuListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Buses, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" >
+                    <ListView Name="BuListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Buses, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}" MouseDoubleClick="BuListView_MouseDoubleClick" Height="300"  >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">ID</GridViewColumn>
