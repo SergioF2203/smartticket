@@ -179,27 +179,66 @@ namespace BusStationService
 		#region === Orders ===
 		public List<Order> GetAllOrders()
 		{
-			throw new NotImplementedException();
+			using (DB db = new DB())
+			{
+				var result = db.Orders.ToList();
+
+				Helper.ShowMessage("AdminService", "GetAllOrders()");
+
+				return result;
+			}
 		}
 
 		public Order GetOrderById(int id)
 		{
-			throw new NotImplementedException();
+			using (DB db = new DB())
+			{
+				Order order = db.Orders.Find(id);
+
+				Helper.ShowMessage("AdminService", "GetOrderById(int id)");
+
+				return order;
+			}
 		}
 
 		public void AddOrder(Order order)
 		{
-			throw new NotImplementedException();
+			using (DB db = new DB())
+			{
+				db.Orders.Add(order);
+				db.SaveChanges();
+
+				Helper.ShowMessage("AdminService", "AddOrder(Order order)");
+			}
 		}
 
 		public void SaveOrder(Order order)
 		{
-			throw new NotImplementedException();
+			if (order != null)
+			{
+				using (DB db = new DB())
+				{
+					db.Entry(order).State = EntityState.Modified;
+					db.SaveChanges();
+
+					Helper.ShowMessage("AdminService", "SaveOrder(Order order)");
+				}
+			}
 		}
 
 		public void DeleteOrder(int id)
 		{
-			throw new NotImplementedException();
+			using (DB db = new DB())
+			{
+				Order order = db.Orders.Find(id);
+				if (order != null)
+				{
+					db.Orders.Remove(order);
+					db.SaveChanges();
+				}
+
+				Helper.ShowMessage("AdminService", "DeleteOrder(int id)");
+			}
 		}
 		#endregion
 	}

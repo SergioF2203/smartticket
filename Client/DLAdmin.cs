@@ -112,5 +112,41 @@ namespace Client
 			adminProxy.DeleteCustomer(id);
 		}
 
+		// === Orders ===
+		public void AddOrder(Order order)
+		{
+			adminProxy.AddOrder(order);
+		}
+
+		public Order GetOrderById(int id)
+		{
+			Order order = adminProxy.GetOrderById(id);
+			return order;
+		}
+
+		public void SaveOrder(Order order)
+		{
+			if (order != null)
+			{
+				adminProxy.SaveOrder(order);
+			}
+		}
+
+		public ObservableCollection<Order> GetAllOrders()
+		{
+			List<Order> importData = adminProxy.GetAllOrders().ToList();
+			ObservableCollection<Order> result = new ObservableCollection<Order>();
+			foreach (var order in importData)
+			{
+				result.Add(order);
+			}
+
+			return result;
+		}
+
+		public void DeleteOrder(int id)
+		{
+			adminProxy.DeleteOrder(id);
+		}
 	}
 }
