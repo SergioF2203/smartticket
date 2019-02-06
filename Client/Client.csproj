@@ -63,11 +63,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin\AddBusWindow.xaml.cs">
+      <DependentUpon>AddBusWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BusCrud.xaml.cs">
+      <DependentUpon>BusCrud.xaml</DependentUpon>
     </Compile>
     <Compile Include="BusShema47.xaml.cs">
       <DependentUpon>BusShema47.xaml</DependentUpon>
@@ -87,11 +93,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Page Include="Admin\AddBusWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin\AdminLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Admin\AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\BusCrud.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

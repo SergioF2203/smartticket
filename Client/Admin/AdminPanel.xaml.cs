@@ -10,9 +10,20 @@ namespace Client.Admin
 	public partial class AdminPanel : Window, INotifyPropertyChanged
 	{
 
-		private readonly DLAdmin _dlAdmin;
+		private  DLAdmin _dlAdmin;
 		private ObservableCollection<Bus> _buses;
 		public event PropertyChangedEventHandler PropertyChanged;
+        //private Bus selectedItem = null;
+        //public Bus SelectedItem
+        //{
+        //    get => selectedItem;
+        //    set
+        //    {
+        //        //if (selectedItem == value) return;
+        //        selectedItem = value;
+        //        OnPropertyChanged(nameof(SelectedItem));
+        //    }
+        //}
 
 
 		public AdminPanel()
@@ -49,6 +60,31 @@ namespace Client.Admin
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
-	}
+
+        //private void deleteBus()
+        //{
+        //    Buses.Remove(selectedItem);
+        //}
+
+        //public void addBus(Bus bus)
+        //{
+        //    Buses.Add(bus);
+        //}
+
+        private void BuListView_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            BusCrud bc = new BusCrud();
+            bc.Show();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Bus b = new Bus { RegNumber = "АР5065CP", Capacity = 40, Model = "Ikarus" };
+            //_dlAdmin.AddBus(b);
+            //_dlAdmin.SaveBus(b);
+
+
+        }
+    }
 
 }
