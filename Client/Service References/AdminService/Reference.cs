@@ -687,6 +687,18 @@ namespace Client.AdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteBus", ReplyAction="http://tempuri.org/IAdminService/DeleteBusResponse")]
         System.Threading.Tasks.Task DeleteBusAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllDirections", ReplyAction="http://tempuri.org/IAdminService/GetAllDirectionsResponse")]
+        Client.AdminService.Direction[] GetAllDirections();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllDirections", ReplyAction="http://tempuri.org/IAdminService/GetAllDirectionsResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Direction[]> GetAllDirectionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveDirections", ReplyAction="http://tempuri.org/IAdminService/SaveDirectionsResponse")]
+        void SaveDirections(Client.AdminService.Direction[] directions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveDirections", ReplyAction="http://tempuri.org/IAdminService/SaveDirectionsResponse")]
+        System.Threading.Tasks.Task SaveDirectionsAsync(Client.AdminService.Direction[] directions);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -754,6 +766,22 @@ namespace Client.AdminService {
         
         public System.Threading.Tasks.Task DeleteBusAsync(int id) {
             return base.Channel.DeleteBusAsync(id);
+        }
+        
+        public Client.AdminService.Direction[] GetAllDirections() {
+            return base.Channel.GetAllDirections();
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Direction[]> GetAllDirectionsAsync() {
+            return base.Channel.GetAllDirectionsAsync();
+        }
+        
+        public void SaveDirections(Client.AdminService.Direction[] directions) {
+            base.Channel.SaveDirections(directions);
+        }
+        
+        public System.Threading.Tasks.Task SaveDirectionsAsync(Client.AdminService.Direction[] directions) {
+            return base.Channel.SaveDirectionsAsync(directions);
         }
     }
 }

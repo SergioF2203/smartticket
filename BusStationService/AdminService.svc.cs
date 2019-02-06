@@ -12,6 +12,7 @@ namespace BusStationService
 {
 	public class AdminService : IAdminService
 	{
+		#region === Buses ===
 		public void AddBus(Bus bus)
 		{
 			using (DB db = new DB())
@@ -75,5 +76,40 @@ namespace BusStationService
 				Helper.ShowMessage("AdminService", "DeleteBus(int id)");
 			}
 		}
+		#endregion
+
+		#region === Directions ===
+
+		public List<Direction> GetAllDirections()
+		{
+			using (DB db = new DB())
+			{
+				var result = db.Directions.ToList();
+
+				Helper.ShowMessage("AdminService", "GetAllDirections()");
+
+				return result;
+			}
+		}
+
+		public void SaveDirections(List<Direction> directions)
+		{
+			using (DB db = new DB())
+			{
+				foreach (var d in directions)
+				{
+					if (d != null)
+					{
+						db.Entry(d).State = EntityState.Modified;
+					}
+				}
+
+				db.SaveChanges();
+
+				Helper.ShowMessage("AdminService", "SaveDirections(List<Direction> directions)");
+			}
+		}
+
+		#endregion
 	}
 }

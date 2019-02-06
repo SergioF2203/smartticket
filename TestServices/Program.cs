@@ -45,11 +45,25 @@ namespace TestServices
 			//	Console.WriteLine($"{x} - {y}");
 			//}
 
-			var places = customer.GetOccupiedPlaces(1);
-			foreach (int p in places)
+			//var places = customer.GetOccupiedPlaces(1);
+			//foreach (int p in places)
+			//{
+			//	Console.WriteLine(p);
+			//}
+
+			//var directions = admin.GetAllDirections();
+			//foreach (var d in directions)
+			//{
+			//	Console.WriteLine($"{d.City} - {d.Coordinates}");
+			//}
+
+			var directions = admin.GetAllDirections();
+			foreach (var d in directions)
 			{
-				Console.WriteLine(p);
+				d.IsActive = true;
 			}
+
+			admin.SaveDirections(directions);
 
 
 

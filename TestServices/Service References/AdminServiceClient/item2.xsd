@@ -74,4 +74,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfBus" nillable="true" type="tns:ArrayOfBus" />
+  <xs:complexType name="ArrayOfDirection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Direction" nillable="true" type="tns:Direction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDirection" nillable="true" type="tns:ArrayOfDirection" />
 </xs:schema>

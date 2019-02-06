@@ -153,6 +153,9 @@
     <None Include="Service References\AdminService\Client.AdminService.Bus.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\AdminService\Client.AdminService.Direction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AdminService\item.xsd">
       <SubType>Designer</SubType>
     </None>
