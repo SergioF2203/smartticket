@@ -79,7 +79,6 @@ namespace BusStationService
 		#endregion
 
 		#region === Directions ===
-
 		public List<Direction> GetAllDirections()
 		{
 			using (DB db = new DB())
@@ -109,7 +108,99 @@ namespace BusStationService
 				Helper.ShowMessage("AdminService", "SaveDirections(List<Direction> directions)");
 			}
 		}
+		#endregion
 
+		#region === Customers ===
+		public List<Customer> GetAllCustomers()
+		{
+			using (DB db = new DB())
+			{
+				var result = db.Customers.ToList();
+
+				Helper.ShowMessage("AdminService", "GetAllCustomers()");
+
+				return result;
+			}
+		}
+
+		public Customer GetCustomerById(int id)
+		{
+			using (DB db = new DB())
+			{
+				Customer customer = db.Customers.Find(id);
+
+				Helper.ShowMessage("AdminService", "GetCustomerById(int id)");
+
+				return customer;
+			}
+		}
+
+		public void AddCustomer(Customer customer)
+		{
+			using (DB db = new DB())
+			{
+				db.Customers.Add(customer);
+				db.SaveChanges();
+
+				Helper.ShowMessage("AdminService", "AddCustomer(Customer customer)");
+			}
+		}
+
+		public void SaveCustomer(Customer customer)
+		{
+			if (customer != null)
+			{
+				using (DB db = new DB())
+				{
+					db.Entry(customer).State = EntityState.Modified;
+					db.SaveChanges();
+
+					Helper.ShowMessage("AdminService", "SaveCustomer(Customer customer)");
+				}
+			}
+		}
+
+		public void DeleteCustomer(int id)
+		{
+			using (DB db = new DB())
+			{
+				Customer customer = db.Customers.Find(id);
+				if (customer != null)
+				{
+					db.Customers.Remove(customer);
+					db.SaveChanges();
+				}
+
+				Helper.ShowMessage("AdminService", "DeleteCustomer(int id)");
+			}
+		}
+		#endregion
+
+		#region === Orders ===
+		public List<Order> GetAllOrders()
+		{
+			throw new NotImplementedException();
+		}
+
+		public Order GetOrderById(int id)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void AddOrder(Order order)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void SaveOrder(Order order)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void DeleteOrder(int id)
+		{
+			throw new NotImplementedException();
+		}
 		#endregion
 	}
 }

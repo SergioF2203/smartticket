@@ -27,10 +27,52 @@ namespace BusStationService
 		[OperationContract]
 		void DeleteBus(int id);
 
+
 		[OperationContract]
 		List<Direction> GetAllDirections();
 
 		[OperationContract]
 		void SaveDirections(List<Direction> directions);
+
+
+		[OperationContract]
+		List<Customer> GetAllCustomers();
+
+		[OperationContract]
+		Customer GetCustomerById(int id);
+
+		[OperationContract]
+		void AddCustomer(Customer customer);
+
+		[OperationContract]
+		void SaveCustomer(Customer customer);
+
+		[OperationContract]
+		void DeleteCustomer(int id);
+
+
+		[OperationContract]
+		List<Order> GetAllOrders();
+
+		[OperationContract]
+		Order GetOrderById(int id);
+
+		[OperationContract]
+		void AddOrder(Order order);
+
+		[OperationContract]
+		void SaveOrder(Order order);
+
+		[OperationContract]
+		void DeleteOrder(int id);
+
+
+		//[OperationContract]
+		//List<Direction> GetAvailableDirections();
+
+		//[OperationContract]
+		//List<Bus> GetAvailableBuses();
+
+
 	}
 }
