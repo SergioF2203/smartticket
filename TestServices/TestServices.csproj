@@ -74,11 +74,17 @@
     <None Include="Service References\AdminServiceClient\TestServices.AdminServiceClient.Bus.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\AdminServiceClient\TestServices.AdminServiceClient.Direction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\CustomerService\CustomerService.wsdl" />
     <None Include="Service References\CustomerService\item.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CustomerService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CustomerService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\CustomerService\TestServices.CustomerService.Direction.datasource">

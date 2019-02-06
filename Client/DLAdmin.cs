@@ -19,6 +19,7 @@ namespace Client
 		}
 
 		// FUNCTIONS
+		// === Buses ===
 		public void AddBus(Bus bus)
 		{
 			adminProxy.AddBus(bus);
@@ -49,5 +50,31 @@ namespace Client
 
 			return result;
 		}
+
+		public void DeleteBus(int id)
+		{
+			adminProxy.DeleteBus(id);
+		}
+
+
+		// === Directions ===
+		public ObservableCollection<Direction> GetAllDirections()
+		{
+			List<Direction> importData = adminProxy.GetAllDirections().ToList();
+			ObservableCollection<Direction> directions = new ObservableCollection<Direction>();
+			foreach (var d in importData)
+			{
+				directions.Add(d);
+			}
+
+			return directions;
+		}
+
+		public void SaveDirections(List<Direction> directions)
+		{
+			adminProxy.SaveDirections(directions.ToArray());
+		}
+
+
 	}
 }

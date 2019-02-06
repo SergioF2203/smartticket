@@ -32,7 +32,7 @@
         </Grid>
         <Button  Background="White" Name="LoginButton" VerticalAlignment="Bottom" Margin="0,85" Width="150" Content="LOGIN" Foreground="Gray" Click="LoginButton_Click"></Button>
         <Button Background="White" Name="Exit" VerticalAlignment="Bottom" Margin="0,65" Width="150" Content="EXIT" Foreground="Gray" Click="Exit_Click"></Button>
-        <TextBlock Name="ForgotTextBlock" Text="Forgott password?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50"  ToolTip="Try to remember faggot!"/>
+        <TextBlock Name="ForgotTextBlock" Text="Forgott password?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="50"  ToolTip="Total recall"/>
     </Grid>
 
 </Window>

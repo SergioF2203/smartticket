@@ -23,5 +23,14 @@ namespace BusStationService
 
 		[OperationContract]
 		List<Bus> GetAllBusses();
+
+		[OperationContract]
+		void DeleteBus(int id);
+
+		[OperationContract]
+		List<Direction> GetAllDirections();
+
+		[OperationContract]
+		void SaveDirections(List<Direction> directions);
 	}
 }

@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BusStationService.Lib" />
+      <xsd:import schemaLocation="http://localhost:8734/BusStationService/CustomerService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICustomerService_GetDirections_InputMessage">
@@ -13,16 +14,35 @@
   <wsdl:message name="ICustomerService_GetDirections_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDirectionsResponse" />
   </wsdl:message>
+  <wsdl:message name="ICustomerService_GetOccupiedPlaces_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOccupiedPlaces" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetOccupiedPlaces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOccupiedPlacesResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICustomerService">
     <wsdl:operation name="GetDirections">
       <wsdl:input wsaw:Action="http://tempuri.org/ICustomerService/GetDirections" message="tns:ICustomerService_GetDirections_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICustomerService/GetDirectionsResponse" message="tns:ICustomerService_GetDirections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOccupiedPlaces">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerService/GetOccupiedPlaces" message="tns:ICustomerService_GetOccupiedPlaces_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerService/GetOccupiedPlacesResponse" message="tns:ICustomerService_GetOccupiedPlaces_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICustomerService" type="tns:ICustomerService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetDirections">
       <soap:operation soapAction="http://tempuri.org/ICustomerService/GetDirections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOccupiedPlaces">
+      <soap:operation soapAction="http://tempuri.org/ICustomerService/GetOccupiedPlaces" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

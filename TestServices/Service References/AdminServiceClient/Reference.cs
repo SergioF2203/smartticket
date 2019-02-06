@@ -675,6 +675,30 @@ namespace TestServices.AdminServiceClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveBus", ReplyAction="http://tempuri.org/IAdminService/SaveBusResponse")]
         System.Threading.Tasks.Task SaveBusAsync(TestServices.AdminServiceClient.Bus bus);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllBusses", ReplyAction="http://tempuri.org/IAdminService/GetAllBussesResponse")]
+        TestServices.AdminServiceClient.Bus[] GetAllBusses();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllBusses", ReplyAction="http://tempuri.org/IAdminService/GetAllBussesResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus[]> GetAllBussesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteBus", ReplyAction="http://tempuri.org/IAdminService/DeleteBusResponse")]
+        void DeleteBus(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteBus", ReplyAction="http://tempuri.org/IAdminService/DeleteBusResponse")]
+        System.Threading.Tasks.Task DeleteBusAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllDirections", ReplyAction="http://tempuri.org/IAdminService/GetAllDirectionsResponse")]
+        TestServices.AdminServiceClient.Direction[] GetAllDirections();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllDirections", ReplyAction="http://tempuri.org/IAdminService/GetAllDirectionsResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Direction[]> GetAllDirectionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveDirections", ReplyAction="http://tempuri.org/IAdminService/SaveDirectionsResponse")]
+        void SaveDirections(TestServices.AdminServiceClient.Direction[] directions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveDirections", ReplyAction="http://tempuri.org/IAdminService/SaveDirectionsResponse")]
+        System.Threading.Tasks.Task SaveDirectionsAsync(TestServices.AdminServiceClient.Direction[] directions);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -726,6 +750,38 @@ namespace TestServices.AdminServiceClient {
         
         public System.Threading.Tasks.Task SaveBusAsync(TestServices.AdminServiceClient.Bus bus) {
             return base.Channel.SaveBusAsync(bus);
+        }
+        
+        public TestServices.AdminServiceClient.Bus[] GetAllBusses() {
+            return base.Channel.GetAllBusses();
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus[]> GetAllBussesAsync() {
+            return base.Channel.GetAllBussesAsync();
+        }
+        
+        public void DeleteBus(int id) {
+            base.Channel.DeleteBus(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteBusAsync(int id) {
+            return base.Channel.DeleteBusAsync(id);
+        }
+        
+        public TestServices.AdminServiceClient.Direction[] GetAllDirections() {
+            return base.Channel.GetAllDirections();
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Direction[]> GetAllDirectionsAsync() {
+            return base.Channel.GetAllDirectionsAsync();
+        }
+        
+        public void SaveDirections(TestServices.AdminServiceClient.Direction[] directions) {
+            base.Channel.SaveDirections(directions);
+        }
+        
+        public System.Threading.Tasks.Task SaveDirectionsAsync(TestServices.AdminServiceClient.Direction[] directions) {
+            return base.Channel.SaveDirectionsAsync(directions);
         }
     }
 }

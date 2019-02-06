@@ -31,6 +31,24 @@
   <wsdl:message name="IAdminService_GetAllBusses_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBussesResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteBus_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBus" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteBus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAllDirections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDirections" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAllDirections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDirectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SaveDirections_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDirections" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SaveDirections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveDirectionsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAdminService">
     <wsdl:operation name="AddBus">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddBus" message="tns:IAdminService_AddBus_InputMessage" />
@@ -47,6 +65,18 @@
     <wsdl:operation name="GetAllBusses">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetAllBusses" message="tns:IAdminService_GetAllBusses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetAllBussesResponse" message="tns:IAdminService_GetAllBusses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/DeleteBus" message="tns:IAdminService_DeleteBus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/DeleteBusResponse" message="tns:IAdminService_DeleteBus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDirections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetAllDirections" message="tns:IAdminService_GetAllDirections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetAllDirectionsResponse" message="tns:IAdminService_GetAllDirections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDirections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/SaveDirections" message="tns:IAdminService_SaveDirections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/SaveDirectionsResponse" message="tns:IAdminService_SaveDirections_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
@@ -80,6 +110,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllBusses">
       <soap:operation soapAction="http://tempuri.org/IAdminService/GetAllBusses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBus">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/DeleteBus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDirections">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetAllDirections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDirections">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/SaveDirections" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
