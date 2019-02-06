@@ -60,5 +60,20 @@ namespace BusStationService
 				return result;
 			}
 		}
+
+		public void DeleteBus(int id)
+		{
+			using (DB db = new DB())
+			{
+				Bus bus = db.Buses.Find(id);
+				if (bus != null)
+				{
+					db.Buses.Remove(bus);
+					db.SaveChanges();
+				}
+
+				Helper.ShowMessage("AdminService", "DeleteBus(int id)");
+			}
+		}
 	}
 }

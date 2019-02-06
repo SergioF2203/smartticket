@@ -49,5 +49,10 @@ namespace Client
 
 			return result;
 		}
+
+		public void DeleteBus(int id)
+		{
+			adminProxy.DeleteBus(id);
+		}
 	}
 }

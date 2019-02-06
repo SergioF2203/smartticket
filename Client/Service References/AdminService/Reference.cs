@@ -681,6 +681,12 @@ namespace Client.AdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllBusses", ReplyAction="http://tempuri.org/IAdminService/GetAllBussesResponse")]
         System.Threading.Tasks.Task<Client.AdminService.Bus[]> GetAllBussesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteBus", ReplyAction="http://tempuri.org/IAdminService/DeleteBusResponse")]
+        void DeleteBus(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteBus", ReplyAction="http://tempuri.org/IAdminService/DeleteBusResponse")]
+        System.Threading.Tasks.Task DeleteBusAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -740,6 +746,14 @@ namespace Client.AdminService {
         
         public System.Threading.Tasks.Task<Client.AdminService.Bus[]> GetAllBussesAsync() {
             return base.Channel.GetAllBussesAsync();
+        }
+        
+        public void DeleteBus(int id) {
+            base.Channel.DeleteBus(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteBusAsync(int id) {
+            return base.Channel.DeleteBusAsync(id);
         }
     }
 }
