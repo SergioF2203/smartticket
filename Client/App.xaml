@@ -4,39 +4,6 @@
              xmlns:local="clr-namespace:Client"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!--<Style x:Key="customRadio" TargetType="{x:Type RadioButton}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type RadioButton}">
-                        <BulletDecorator Background="Transparent" Cursor="Arrow">
-                            <BulletDecorator.Bullet>
-                                <Grid>
-                                    <Border Name="RadioOuter" Background="Transparent" BorderBrush="Red"  BorderThickness="2" CornerRadius="15">
-                                        <Ellipse Width="15" Height="15" Fill="WhiteSmoke"></Ellipse>
-                                    </Border>
-                                    <Border Name="RadioMark" Background="Transparent" Visibility="Hidden" Margin="4" CornerRadius="0">
-                                        <Ellipse Width="10" Height="10" Fill="Red"></Ellipse>
-                                    </Border>
-                                </Grid>
-                            </BulletDecorator.Bullet>
-                        </BulletDecorator>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsChecked" Value="true">
-                                <Setter TargetName="RadioMark" Property="Visibility" Value="Visible"/>
-                                <Setter TargetName="RadioOuter" Property="BorderBrush" Value="Green"/>
-                            </Trigger>
-                            <MultiTrigger>
-                                <MultiTrigger.Conditions>
-                                    <Condition Property="IsMouseOver" Value="true"/>
-                                    <Condition Property="IsChecked" Value="false"/>
-                                </MultiTrigger.Conditions>
-                                <Setter TargetName="RadioOuter" Property="BorderBrush" Value="Blue"/>
-                            </MultiTrigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
 
         <Style x:Key="customCheckBoxPlace" TargetType="{x:Type CheckBox}">
             <Setter Property="Template">
@@ -68,6 +35,31 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="customButton" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="ButtonState" Source="Resources/backStartStateButton.png" Height="56"/>
+                            <ContentPresenter/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="IsMouseOver" Value="True"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="ButtonState" Property="Source" Value="Resources/backHoverButton.png"/>
+                            </MultiTrigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonState" Property="Source" Value="Resources/backClickButton.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
 
         <Style x:Key="customKievStyle" TargetType="{x:Type RadioButton}">
             <Setter Property="Template">
