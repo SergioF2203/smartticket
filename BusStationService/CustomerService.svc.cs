@@ -33,7 +33,7 @@ namespace BusStationService
 					.Select(o => o.PlaceNumber)
 					.ToList();
 
-				Helper.ShowMessage("CustomerService", "called GetFreePlaces(int tripId)");
+				Helper.ShowMessage("CustomerService", "called GetOccupiedPlaces(int tripId)");
 
 				return places;
 			}

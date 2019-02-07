@@ -22,6 +22,12 @@ namespace Client
 			return result.ToList<Direction>();
 		}
 
+		public List<int> GetOccupiedPlaces(int tripId)
+		{
+			List<int> places = customerProxy.GetOccupiedPlaces(tripId).ToList();
+			return places;
+		}
+
 
 
 
