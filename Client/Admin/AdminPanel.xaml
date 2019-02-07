@@ -18,7 +18,7 @@
             </Grid>
             <TabControl BorderBrush="Pink">
                 <TabItem Header="Bus">
-                    <ListView Name="BuListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Buses, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}" MouseDoubleClick="BuListView_MouseDoubleClick" Height="300"  >
+                    <ListView Name="BusListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Buses, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}" MouseDoubleClick="BuListView_MouseDoubleClick" Height="400"  >
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">ID</GridViewColumn>
@@ -30,30 +30,41 @@
                     </ListView>
                 </TabItem>
                 <TabItem Header="Direction">
-                    <ListBox Name="DirectionListBox">
-                    </ListBox>
+                    <ListView Name="DirectionListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Directions, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}"  Height="400" MouseDoubleClick="DirectionListView_MouseDoubleClick"  >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
+                                <GridViewColumn Width="310" DisplayMemberBinding="{Binding Path=IsActive}" >IsActive</GridViewColumn>
+                                <GridViewColumn Width="620" DisplayMemberBinding="{Binding Path=City}" >City</GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </TabItem>
                 <TabItem Header="Trip">
                 </TabItem>
                 <TabItem Header="Order">
-                    <DataGrid Name="OrderDataGrid">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn  Width="250" Header="Id"/>
-                            <DataGridTextColumn   Width="250" Header="CustomerId"/>
-                            <DataGridTextColumn  Width="250" Header="TripId"/>
-                            <DataGridTextColumn  Width="250" Header="PlaceNumber"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                    <ListView Name="OrderListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Orders, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}" Height="400" MouseDoubleClick="OrderListView_MouseDoubleClick"  >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">ID</GridViewColumn>
+                                <GridViewColumn Width="310" DisplayMemberBinding="{Binding Path=CustomerId}" >CustomerID</GridViewColumn>
+                                <GridViewColumn Width="310" DisplayMemberBinding="{Binding Path=TripId}" >TripId</GridViewColumn>
+                                <GridViewColumn Width="300" DisplayMemberBinding="{Binding Path=PlaceNumber}" >PlaceNumber</GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </TabItem>
                 <TabItem Header="Customer">
-                    <DataGrid Name="CustomerDataGrid">
-                        <DataGrid.Columns>
-                        <DataGridTextColumn  Width="250" Header="Id"/>
-                        <DataGridTextColumn   Width="250" Header="Name"/>
-                        <DataGridTextColumn  Width="250" Header="Phone"/>
-                        <DataGridTextColumn  Width="250" Header="Email"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                    <ListView Name="CustomersListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Customers, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}"  Height="400" MouseDoubleClick="CustomersListView_MouseDoubleClick"  >
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">ID</GridViewColumn>
+                                <GridViewColumn Width="310" DisplayMemberBinding="{Binding Path=Name}" >Name</GridViewColumn>
+                                <GridViewColumn Width="310" DisplayMemberBinding="{Binding Path=Phone}" >Phone</GridViewColumn>
+                                <GridViewColumn Width="300" DisplayMemberBinding="{Binding Path=Email}" >Email</GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </TabItem>
             </TabControl>
         </StackPanel>

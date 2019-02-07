@@ -9,8 +9,8 @@
     <Grid>
         <StackPanel>
         <Button Content="Add" Height="50" Name="AddButton" BorderBrush="gray" Click="AddButton_Click" Background="Pink" Foreground="Gray"></Button>
-        <Button Content="Delete" Height="50" Name="DeleteButton"  BorderBrush="gray" Background="Pink" Foreground="Gray"></Button>
-        <Button Content="Edit"  Height="50" Name="EditButton"  BorderBrush="gray" Background="Pink" Foreground="Gray"></Button>
+        <Button Content="Delete" Height="50" Name="DeleteButton"  BorderBrush="gray" Background="Pink" Foreground="Gray" Click="DeleteButton_Click"></Button>
+        <Button Content="Edit"  Height="50" Name="EditButton"  BorderBrush="gray" Background="Pink" Foreground="Gray" Click="EditButton_Click"></Button>
         <Button Content="Exit"  Height="50" Name="ExitButton"  BorderBrush="gray" Background="Pink" Foreground="Gray" Click="ExitButton_Click"></Button>
         </StackPanel>
     </Grid>
