@@ -67,12 +67,28 @@ namespace BusStationService
 		void DeleteOrder(int id);
 
 
-		//[OperationContract]
-		//List<Direction> GetAvailableDirections();
+		[OperationContract]
+		string GetAllTrips();
 
-		//[OperationContract]
-		//List<Bus> GetAvailableBuses();
+		[OperationContract]
+		List<Trip> GetTripsByDate(DateTime date);
 
+		[OperationContract]
+		void DeleteTrip(int tripId);
 
+		[OperationContract]
+		void AddTrip(Trip trip);
+
+		[OperationContract]
+		Trip GetTripById(int tripId);
+
+		[OperationContract]
+		void SaveTrip(Trip trip);
+
+		[OperationContract]
+		List<Direction> GetAvailableDirections();
+
+		[OperationContract]
+		List<Bus> GetAvailableBuses(DateTime date);
 	}
 }

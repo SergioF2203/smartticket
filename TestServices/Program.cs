@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using TestServices.AdminServiceClient;
-using Direction = TestServices.CustomerService.Direction;
+using Newtonsoft.Json;
+
 
 namespace TestServices
 {
@@ -65,12 +62,21 @@ namespace TestServices
 
 			//admin.SaveDirections(directions);
 
-			var places = customer.GetOccupiedPlaces(1);
-			foreach (int p in places)
-			{
-				Console.WriteLine(p);
-			}
+			//var places = customer.GetOccupiedPlaces(1);
+			//foreach (int p in places)
+			//{
+			//	Console.WriteLine(p);
+			//}
 
+			var str = admin.GetAllTrips();
+
+			var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(str);
+
+			foreach (var t in trips)
+			{
+				Trip trip = t as Trip;
+				Console.WriteLine($"{trip.Bus.Model}");
+			}
 
 
 		}

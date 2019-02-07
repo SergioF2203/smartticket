@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 using BusStationService.Lib;
 using System.Data.Entity;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace BusStationService
 {
@@ -241,5 +239,68 @@ namespace BusStationService
 			}
 		}
 		#endregion
+
+		#region === Trips ===
+		public string GetAllTrips()
+		{
+			using (DB db = new DB())
+			{
+				var result = db.Trips
+					.Include(t => t.Bus)
+					.Include(t => t.Direction)
+					.AsEnumerable()
+					.ToList();
+
+				string json = JsonConvert.SerializeObject(result,
+					Formatting.Indented,
+					new JsonSerializerSettings
+						{
+							ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+						});
+				
+
+				Helper.ShowMessage("AdminService", "GetAllTrips()");
+
+				return json;
+			}
+		}
+
+		public List<Trip> GetTripsByDate(DateTime date)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void DeleteTrip(int tripId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void AddTrip(Trip trip)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Trip GetTripById(int tripId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void SaveTrip(Trip trip)
+		{
+			throw new NotImplementedException();
+		}
+
+		public List<Direction> GetAvailableDirections()
+		{
+			throw new NotImplementedException();
+		}
+
+		public List<Bus> GetAvailableBuses(DateTime date)
+		{
+			throw new NotImplementedException();
+		}
+		#endregion
+
+
 	}
 }
