@@ -19,6 +19,10 @@ namespace Client.Admin
     /// </summary>
     public partial class AdminLogin : Window
     {
+        private readonly string adminlogin = "admin";
+        private readonly string adminpassword = "admin";
+
+
         public AdminLogin()
         {
             InitializeComponent();
@@ -31,7 +35,7 @@ namespace Client.Admin
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            if(LoginTextBox.Text == "admin" && PasswordTextBox.Password.ToString() == "admin")
+            if(LoginTextBox.Text == adminlogin && PasswordTextBox.Password.ToString() == adminpassword)
             {
                 Admin.AdminPanel ap = new AdminPanel();
                 ap.Show();
