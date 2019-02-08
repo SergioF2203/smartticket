@@ -699,6 +699,66 @@ namespace Client.AdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveDirections", ReplyAction="http://tempuri.org/IAdminService/SaveDirectionsResponse")]
         System.Threading.Tasks.Task SaveDirectionsAsync(Client.AdminService.Direction[] directions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCustomers", ReplyAction="http://tempuri.org/IAdminService/GetAllCustomersResponse")]
+        Client.AdminService.Customer[] GetAllCustomers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCustomers", ReplyAction="http://tempuri.org/IAdminService/GetAllCustomersResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Customer[]> GetAllCustomersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetCustomerById", ReplyAction="http://tempuri.org/IAdminService/GetCustomerByIdResponse")]
+        Client.AdminService.Customer GetCustomerById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetCustomerById", ReplyAction="http://tempuri.org/IAdminService/GetCustomerByIdResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Customer> GetCustomerByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCustomer", ReplyAction="http://tempuri.org/IAdminService/AddCustomerResponse")]
+        void AddCustomer(Client.AdminService.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCustomer", ReplyAction="http://tempuri.org/IAdminService/AddCustomerResponse")]
+        System.Threading.Tasks.Task AddCustomerAsync(Client.AdminService.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveCustomer", ReplyAction="http://tempuri.org/IAdminService/SaveCustomerResponse")]
+        void SaveCustomer(Client.AdminService.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveCustomer", ReplyAction="http://tempuri.org/IAdminService/SaveCustomerResponse")]
+        System.Threading.Tasks.Task SaveCustomerAsync(Client.AdminService.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteCustomer", ReplyAction="http://tempuri.org/IAdminService/DeleteCustomerResponse")]
+        void DeleteCustomer(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteCustomer", ReplyAction="http://tempuri.org/IAdminService/DeleteCustomerResponse")]
+        System.Threading.Tasks.Task DeleteCustomerAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllOrders", ReplyAction="http://tempuri.org/IAdminService/GetAllOrdersResponse")]
+        Client.AdminService.Order[] GetAllOrders();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllOrders", ReplyAction="http://tempuri.org/IAdminService/GetAllOrdersResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Order[]> GetAllOrdersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetOrderById", ReplyAction="http://tempuri.org/IAdminService/GetOrderByIdResponse")]
+        Client.AdminService.Order GetOrderById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetOrderById", ReplyAction="http://tempuri.org/IAdminService/GetOrderByIdResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Order> GetOrderByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddOrder", ReplyAction="http://tempuri.org/IAdminService/AddOrderResponse")]
+        void AddOrder(Client.AdminService.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddOrder", ReplyAction="http://tempuri.org/IAdminService/AddOrderResponse")]
+        System.Threading.Tasks.Task AddOrderAsync(Client.AdminService.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveOrder", ReplyAction="http://tempuri.org/IAdminService/SaveOrderResponse")]
+        void SaveOrder(Client.AdminService.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveOrder", ReplyAction="http://tempuri.org/IAdminService/SaveOrderResponse")]
+        System.Threading.Tasks.Task SaveOrderAsync(Client.AdminService.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteOrder", ReplyAction="http://tempuri.org/IAdminService/DeleteOrderResponse")]
+        void DeleteOrder(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteOrder", ReplyAction="http://tempuri.org/IAdminService/DeleteOrderResponse")]
+        System.Threading.Tasks.Task DeleteOrderAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -782,6 +842,86 @@ namespace Client.AdminService {
         
         public System.Threading.Tasks.Task SaveDirectionsAsync(Client.AdminService.Direction[] directions) {
             return base.Channel.SaveDirectionsAsync(directions);
+        }
+        
+        public Client.AdminService.Customer[] GetAllCustomers() {
+            return base.Channel.GetAllCustomers();
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Customer[]> GetAllCustomersAsync() {
+            return base.Channel.GetAllCustomersAsync();
+        }
+        
+        public Client.AdminService.Customer GetCustomerById(int id) {
+            return base.Channel.GetCustomerById(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Customer> GetCustomerByIdAsync(int id) {
+            return base.Channel.GetCustomerByIdAsync(id);
+        }
+        
+        public void AddCustomer(Client.AdminService.Customer customer) {
+            base.Channel.AddCustomer(customer);
+        }
+        
+        public System.Threading.Tasks.Task AddCustomerAsync(Client.AdminService.Customer customer) {
+            return base.Channel.AddCustomerAsync(customer);
+        }
+        
+        public void SaveCustomer(Client.AdminService.Customer customer) {
+            base.Channel.SaveCustomer(customer);
+        }
+        
+        public System.Threading.Tasks.Task SaveCustomerAsync(Client.AdminService.Customer customer) {
+            return base.Channel.SaveCustomerAsync(customer);
+        }
+        
+        public void DeleteCustomer(int id) {
+            base.Channel.DeleteCustomer(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteCustomerAsync(int id) {
+            return base.Channel.DeleteCustomerAsync(id);
+        }
+        
+        public Client.AdminService.Order[] GetAllOrders() {
+            return base.Channel.GetAllOrders();
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Order[]> GetAllOrdersAsync() {
+            return base.Channel.GetAllOrdersAsync();
+        }
+        
+        public Client.AdminService.Order GetOrderById(int id) {
+            return base.Channel.GetOrderById(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Order> GetOrderByIdAsync(int id) {
+            return base.Channel.GetOrderByIdAsync(id);
+        }
+        
+        public void AddOrder(Client.AdminService.Order order) {
+            base.Channel.AddOrder(order);
+        }
+        
+        public System.Threading.Tasks.Task AddOrderAsync(Client.AdminService.Order order) {
+            return base.Channel.AddOrderAsync(order);
+        }
+        
+        public void SaveOrder(Client.AdminService.Order order) {
+            base.Channel.SaveOrder(order);
+        }
+        
+        public System.Threading.Tasks.Task SaveOrderAsync(Client.AdminService.Order order) {
+            return base.Channel.SaveOrderAsync(order);
+        }
+        
+        public void DeleteOrder(int id) {
+            base.Channel.DeleteOrder(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteOrderAsync(int id) {
+            return base.Channel.DeleteOrderAsync(id);
         }
     }
 }

@@ -75,6 +75,78 @@ namespace Client
 			adminProxy.SaveDirections(directions.ToArray());
 		}
 
+		// === Customers ===
+		public void AddCustomer(Customer customer)
+		{
+			adminProxy.AddCustomer(customer);
+		}
 
+		public Customer GetCustomerById(int id)
+		{
+			Customer customer = adminProxy.GetCustomerById(id);
+			return customer;
+		}
+
+		public void SaveCustomer(Customer customer)
+		{
+			if (customer != null)
+			{
+				adminProxy.SaveCustomer(customer);
+			}
+		}
+
+		public ObservableCollection<Customer> GetAllCustomers()
+		{
+			List<Customer> importData = adminProxy.GetAllCustomers().ToList();
+			ObservableCollection<Customer> result = new ObservableCollection<Customer>();
+			foreach (var customer in importData)
+			{
+				result.Add(customer);
+			}
+
+			return result;
+		}
+
+		public void DeleteCustomer(int id)
+		{
+			adminProxy.DeleteCustomer(id);
+		}
+
+		// === Orders ===
+		public void AddOrder(Order order)
+		{
+			adminProxy.AddOrder(order);
+		}
+
+		public Order GetOrderById(int id)
+		{
+			Order order = adminProxy.GetOrderById(id);
+			return order;
+		}
+
+		public void SaveOrder(Order order)
+		{
+			if (order != null)
+			{
+				adminProxy.SaveOrder(order);
+			}
+		}
+
+		public ObservableCollection<Order> GetAllOrders()
+		{
+			List<Order> importData = adminProxy.GetAllOrders().ToList();
+			ObservableCollection<Order> result = new ObservableCollection<Order>();
+			foreach (var order in importData)
+			{
+				result.Add(order);
+			}
+
+			return result;
+		}
+
+		public void DeleteOrder(int id)
+		{
+			adminProxy.DeleteOrder(id);
+		}
 	}
 }

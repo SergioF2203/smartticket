@@ -27,10 +27,68 @@ namespace BusStationService
 		[OperationContract]
 		void DeleteBus(int id);
 
+
 		[OperationContract]
 		List<Direction> GetAllDirections();
 
 		[OperationContract]
 		void SaveDirections(List<Direction> directions);
+
+
+		[OperationContract]
+		List<Customer> GetAllCustomers();
+
+		[OperationContract]
+		Customer GetCustomerById(int id);
+
+		[OperationContract]
+		void AddCustomer(Customer customer);
+
+		[OperationContract]
+		void SaveCustomer(Customer customer);
+
+		[OperationContract]
+		void DeleteCustomer(int id);
+
+
+		[OperationContract]
+		List<Order> GetAllOrders();
+
+		[OperationContract]
+		Order GetOrderById(int id);
+
+		[OperationContract]
+		void AddOrder(Order order);
+
+		[OperationContract]
+		void SaveOrder(Order order);
+
+		[OperationContract]
+		void DeleteOrder(int id);
+
+
+		[OperationContract]
+		string GetAllTrips();
+
+		[OperationContract]
+		List<Trip> GetTripsByDate(DateTime date);
+
+		[OperationContract]
+		void DeleteTrip(int tripId);
+
+		[OperationContract]
+		void AddTrip(Trip trip);
+
+		[OperationContract]
+		Trip GetTripById(int tripId);
+
+		[OperationContract]
+		void SaveTrip(Trip trip);
+
+		[OperationContract]
+		List<Direction> GetAvailableDirections();
+
+		[OperationContract]
+		List<Bus> GetAvailableBuses(DateTime date);
 	}
 }

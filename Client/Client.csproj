@@ -63,11 +63,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Admin\Buses\AddBusWindow.xaml.cs">
+      <DependentUpon>AddBusWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminLogin.xaml.cs">
       <DependentUpon>AdminLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Buses\BusCrud.xaml.cs">
+      <DependentUpon>BusCrud.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Buses\EditBusWindow.xaml.cs">
+      <DependentUpon>EditBusWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customers\CrudCustomerWindow.xaml.cs">
+      <DependentUpon>CrudCustomerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customers\AddCustomerWindow.xaml.cs">
+      <DependentUpon>AddCustomerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customers\EditCustomerWindow.xaml.cs">
+      <DependentUpon>EditCustomerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Directions\DirectionsWindow.xaml.cs">
+      <DependentUpon>DirectionsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Orders\AddOrderWindow.xaml.cs">
+      <DependentUpon>AddOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Orders\CrudOrderWindow.xaml.cs">
+      <DependentUpon>CrudOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Orders\EditOrderWindow.xaml.cs">
+      <DependentUpon>EditOrderWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="BusShema47.xaml.cs">
       <DependentUpon>BusShema47.xaml</DependentUpon>
@@ -87,11 +117,51 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Page Include="Admin\Buses\AddBusWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin\AdminLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Admin\AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Buses\BusCrud.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Buses\EditBusWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Customers\CrudCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Customers\AddCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Customers\EditCustomerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Directions\DirectionsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Orders\AddOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Orders\CrudOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Orders\EditOrderWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,7 +223,13 @@
     <None Include="Service References\AdminService\Client.AdminService.Bus.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\AdminService\Client.AdminService.Customer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AdminService\Client.AdminService.Direction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AdminService\Client.AdminService.Order.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AdminService\item.xsd">
@@ -320,6 +396,9 @@
     <Resource Include="Resources\backClickButton.png" />
     <Resource Include="Resources\backHoverButton.png" />
     <Resource Include="Resources\backStartStateButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\Trips\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

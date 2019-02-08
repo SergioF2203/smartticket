@@ -699,6 +699,114 @@ namespace TestServices.AdminServiceClient {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveDirections", ReplyAction="http://tempuri.org/IAdminService/SaveDirectionsResponse")]
         System.Threading.Tasks.Task SaveDirectionsAsync(TestServices.AdminServiceClient.Direction[] directions);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCustomers", ReplyAction="http://tempuri.org/IAdminService/GetAllCustomersResponse")]
+        TestServices.AdminServiceClient.Customer[] GetAllCustomers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllCustomers", ReplyAction="http://tempuri.org/IAdminService/GetAllCustomersResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Customer[]> GetAllCustomersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetCustomerById", ReplyAction="http://tempuri.org/IAdminService/GetCustomerByIdResponse")]
+        TestServices.AdminServiceClient.Customer GetCustomerById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetCustomerById", ReplyAction="http://tempuri.org/IAdminService/GetCustomerByIdResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Customer> GetCustomerByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCustomer", ReplyAction="http://tempuri.org/IAdminService/AddCustomerResponse")]
+        void AddCustomer(TestServices.AdminServiceClient.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddCustomer", ReplyAction="http://tempuri.org/IAdminService/AddCustomerResponse")]
+        System.Threading.Tasks.Task AddCustomerAsync(TestServices.AdminServiceClient.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveCustomer", ReplyAction="http://tempuri.org/IAdminService/SaveCustomerResponse")]
+        void SaveCustomer(TestServices.AdminServiceClient.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveCustomer", ReplyAction="http://tempuri.org/IAdminService/SaveCustomerResponse")]
+        System.Threading.Tasks.Task SaveCustomerAsync(TestServices.AdminServiceClient.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteCustomer", ReplyAction="http://tempuri.org/IAdminService/DeleteCustomerResponse")]
+        void DeleteCustomer(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteCustomer", ReplyAction="http://tempuri.org/IAdminService/DeleteCustomerResponse")]
+        System.Threading.Tasks.Task DeleteCustomerAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllOrders", ReplyAction="http://tempuri.org/IAdminService/GetAllOrdersResponse")]
+        TestServices.AdminServiceClient.Order[] GetAllOrders();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllOrders", ReplyAction="http://tempuri.org/IAdminService/GetAllOrdersResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Order[]> GetAllOrdersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetOrderById", ReplyAction="http://tempuri.org/IAdminService/GetOrderByIdResponse")]
+        TestServices.AdminServiceClient.Order GetOrderById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetOrderById", ReplyAction="http://tempuri.org/IAdminService/GetOrderByIdResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Order> GetOrderByIdAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddOrder", ReplyAction="http://tempuri.org/IAdminService/AddOrderResponse")]
+        void AddOrder(TestServices.AdminServiceClient.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddOrder", ReplyAction="http://tempuri.org/IAdminService/AddOrderResponse")]
+        System.Threading.Tasks.Task AddOrderAsync(TestServices.AdminServiceClient.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveOrder", ReplyAction="http://tempuri.org/IAdminService/SaveOrderResponse")]
+        void SaveOrder(TestServices.AdminServiceClient.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveOrder", ReplyAction="http://tempuri.org/IAdminService/SaveOrderResponse")]
+        System.Threading.Tasks.Task SaveOrderAsync(TestServices.AdminServiceClient.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteOrder", ReplyAction="http://tempuri.org/IAdminService/DeleteOrderResponse")]
+        void DeleteOrder(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteOrder", ReplyAction="http://tempuri.org/IAdminService/DeleteOrderResponse")]
+        System.Threading.Tasks.Task DeleteOrderAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllTrips", ReplyAction="http://tempuri.org/IAdminService/GetAllTripsResponse")]
+        string GetAllTrips();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllTrips", ReplyAction="http://tempuri.org/IAdminService/GetAllTripsResponse")]
+        System.Threading.Tasks.Task<string> GetAllTripsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripsByDate", ReplyAction="http://tempuri.org/IAdminService/GetTripsByDateResponse")]
+        TestServices.AdminServiceClient.Trip[] GetTripsByDate(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripsByDate", ReplyAction="http://tempuri.org/IAdminService/GetTripsByDateResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Trip[]> GetTripsByDateAsync(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteTrip", ReplyAction="http://tempuri.org/IAdminService/DeleteTripResponse")]
+        void DeleteTrip(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteTrip", ReplyAction="http://tempuri.org/IAdminService/DeleteTripResponse")]
+        System.Threading.Tasks.Task DeleteTripAsync(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddTrip", ReplyAction="http://tempuri.org/IAdminService/AddTripResponse")]
+        void AddTrip(TestServices.AdminServiceClient.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddTrip", ReplyAction="http://tempuri.org/IAdminService/AddTripResponse")]
+        System.Threading.Tasks.Task AddTripAsync(TestServices.AdminServiceClient.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripById", ReplyAction="http://tempuri.org/IAdminService/GetTripByIdResponse")]
+        TestServices.AdminServiceClient.Trip GetTripById(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripById", ReplyAction="http://tempuri.org/IAdminService/GetTripByIdResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Trip> GetTripByIdAsync(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveTrip", ReplyAction="http://tempuri.org/IAdminService/SaveTripResponse")]
+        void SaveTrip(TestServices.AdminServiceClient.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveTrip", ReplyAction="http://tempuri.org/IAdminService/SaveTripResponse")]
+        System.Threading.Tasks.Task SaveTripAsync(TestServices.AdminServiceClient.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableDirections", ReplyAction="http://tempuri.org/IAdminService/GetAvailableDirectionsResponse")]
+        TestServices.AdminServiceClient.Direction[] GetAvailableDirections();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableDirections", ReplyAction="http://tempuri.org/IAdminService/GetAvailableDirectionsResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Direction[]> GetAvailableDirectionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableBuses", ReplyAction="http://tempuri.org/IAdminService/GetAvailableBusesResponse")]
+        TestServices.AdminServiceClient.Bus[] GetAvailableBuses(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableBuses", ReplyAction="http://tempuri.org/IAdminService/GetAvailableBusesResponse")]
+        System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus[]> GetAvailableBusesAsync(System.DateTime date);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -782,6 +890,150 @@ namespace TestServices.AdminServiceClient {
         
         public System.Threading.Tasks.Task SaveDirectionsAsync(TestServices.AdminServiceClient.Direction[] directions) {
             return base.Channel.SaveDirectionsAsync(directions);
+        }
+        
+        public TestServices.AdminServiceClient.Customer[] GetAllCustomers() {
+            return base.Channel.GetAllCustomers();
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Customer[]> GetAllCustomersAsync() {
+            return base.Channel.GetAllCustomersAsync();
+        }
+        
+        public TestServices.AdminServiceClient.Customer GetCustomerById(int id) {
+            return base.Channel.GetCustomerById(id);
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Customer> GetCustomerByIdAsync(int id) {
+            return base.Channel.GetCustomerByIdAsync(id);
+        }
+        
+        public void AddCustomer(TestServices.AdminServiceClient.Customer customer) {
+            base.Channel.AddCustomer(customer);
+        }
+        
+        public System.Threading.Tasks.Task AddCustomerAsync(TestServices.AdminServiceClient.Customer customer) {
+            return base.Channel.AddCustomerAsync(customer);
+        }
+        
+        public void SaveCustomer(TestServices.AdminServiceClient.Customer customer) {
+            base.Channel.SaveCustomer(customer);
+        }
+        
+        public System.Threading.Tasks.Task SaveCustomerAsync(TestServices.AdminServiceClient.Customer customer) {
+            return base.Channel.SaveCustomerAsync(customer);
+        }
+        
+        public void DeleteCustomer(int id) {
+            base.Channel.DeleteCustomer(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteCustomerAsync(int id) {
+            return base.Channel.DeleteCustomerAsync(id);
+        }
+        
+        public TestServices.AdminServiceClient.Order[] GetAllOrders() {
+            return base.Channel.GetAllOrders();
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Order[]> GetAllOrdersAsync() {
+            return base.Channel.GetAllOrdersAsync();
+        }
+        
+        public TestServices.AdminServiceClient.Order GetOrderById(int id) {
+            return base.Channel.GetOrderById(id);
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Order> GetOrderByIdAsync(int id) {
+            return base.Channel.GetOrderByIdAsync(id);
+        }
+        
+        public void AddOrder(TestServices.AdminServiceClient.Order order) {
+            base.Channel.AddOrder(order);
+        }
+        
+        public System.Threading.Tasks.Task AddOrderAsync(TestServices.AdminServiceClient.Order order) {
+            return base.Channel.AddOrderAsync(order);
+        }
+        
+        public void SaveOrder(TestServices.AdminServiceClient.Order order) {
+            base.Channel.SaveOrder(order);
+        }
+        
+        public System.Threading.Tasks.Task SaveOrderAsync(TestServices.AdminServiceClient.Order order) {
+            return base.Channel.SaveOrderAsync(order);
+        }
+        
+        public void DeleteOrder(int id) {
+            base.Channel.DeleteOrder(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteOrderAsync(int id) {
+            return base.Channel.DeleteOrderAsync(id);
+        }
+        
+        public string GetAllTrips() {
+            return base.Channel.GetAllTrips();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetAllTripsAsync() {
+            return base.Channel.GetAllTripsAsync();
+        }
+        
+        public TestServices.AdminServiceClient.Trip[] GetTripsByDate(System.DateTime date) {
+            return base.Channel.GetTripsByDate(date);
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Trip[]> GetTripsByDateAsync(System.DateTime date) {
+            return base.Channel.GetTripsByDateAsync(date);
+        }
+        
+        public void DeleteTrip(int tripId) {
+            base.Channel.DeleteTrip(tripId);
+        }
+        
+        public System.Threading.Tasks.Task DeleteTripAsync(int tripId) {
+            return base.Channel.DeleteTripAsync(tripId);
+        }
+        
+        public void AddTrip(TestServices.AdminServiceClient.Trip trip) {
+            base.Channel.AddTrip(trip);
+        }
+        
+        public System.Threading.Tasks.Task AddTripAsync(TestServices.AdminServiceClient.Trip trip) {
+            return base.Channel.AddTripAsync(trip);
+        }
+        
+        public TestServices.AdminServiceClient.Trip GetTripById(int tripId) {
+            return base.Channel.GetTripById(tripId);
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Trip> GetTripByIdAsync(int tripId) {
+            return base.Channel.GetTripByIdAsync(tripId);
+        }
+        
+        public void SaveTrip(TestServices.AdminServiceClient.Trip trip) {
+            base.Channel.SaveTrip(trip);
+        }
+        
+        public System.Threading.Tasks.Task SaveTripAsync(TestServices.AdminServiceClient.Trip trip) {
+            return base.Channel.SaveTripAsync(trip);
+        }
+        
+        public TestServices.AdminServiceClient.Direction[] GetAvailableDirections() {
+            return base.Channel.GetAvailableDirections();
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Direction[]> GetAvailableDirectionsAsync() {
+            return base.Channel.GetAvailableDirectionsAsync();
+        }
+        
+        public TestServices.AdminServiceClient.Bus[] GetAvailableBuses(System.DateTime date) {
+            return base.Channel.GetAvailableBuses(date);
+        }
+        
+        public System.Threading.Tasks.Task<TestServices.AdminServiceClient.Bus[]> GetAvailableBusesAsync(System.DateTime date) {
+            return base.Channel.GetAvailableBusesAsync(date);
         }
     }
 }

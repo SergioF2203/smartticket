@@ -11,8 +11,8 @@ namespace BusStationService.Lib
 	{
 		static DB()
 		{
-			Database.SetInitializer<DB>(new DbInitializer());
-		}
+            Database.SetInitializer<DB>(new DbInitializer());
+        }
 
 		public DB() : base("BusesStore")
 		{

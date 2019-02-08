@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 using BusStationService.Lib;
 using System.Data.Entity;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
 
 namespace BusStationService
 {
@@ -79,7 +77,6 @@ namespace BusStationService
 		#endregion
 
 		#region === Directions ===
-
 		public List<Direction> GetAllDirections()
 		{
 			using (DB db = new DB())
@@ -109,7 +106,201 @@ namespace BusStationService
 				Helper.ShowMessage("AdminService", "SaveDirections(List<Direction> directions)");
 			}
 		}
-
 		#endregion
+
+		#region === Customers ===
+		public List<Customer> GetAllCustomers()
+		{
+			using (DB db = new DB())
+			{
+				var result = db.Customers.ToList();
+
+				Helper.ShowMessage("AdminService", "GetAllCustomers()");
+
+				return result;
+			}
+		}
+
+		public Customer GetCustomerById(int id)
+		{
+			using (DB db = new DB())
+			{
+				Customer customer = db.Customers.Find(id);
+
+				Helper.ShowMessage("AdminService", "GetCustomerById(int id)");
+
+				return customer;
+			}
+		}
+
+		public void AddCustomer(Customer customer)
+		{
+			using (DB db = new DB())
+			{
+				db.Customers.Add(customer);
+				db.SaveChanges();
+
+				Helper.ShowMessage("AdminService", "AddCustomer(Customer customer)");
+			}
+		}
+
+		public void SaveCustomer(Customer customer)
+		{
+			if (customer != null)
+			{
+				using (DB db = new DB())
+				{
+					db.Entry(customer).State = EntityState.Modified;
+					db.SaveChanges();
+
+					Helper.ShowMessage("AdminService", "SaveCustomer(Customer customer)");
+				}
+			}
+		}
+
+		public void DeleteCustomer(int id)
+		{
+			using (DB db = new DB())
+			{
+				Customer customer = db.Customers.Find(id);
+				if (customer != null)
+				{
+					db.Customers.Remove(customer);
+					db.SaveChanges();
+				}
+
+				Helper.ShowMessage("AdminService", "DeleteCustomer(int id)");
+			}
+		}
+		#endregion
+
+		#region === Orders ===
+		public List<Order> GetAllOrders()
+		{
+			using (DB db = new DB())
+			{
+				var result = db.Orders.ToList();
+
+				Helper.ShowMessage("AdminService", "GetAllOrders()");
+
+				return result;
+			}
+		}
+
+		public Order GetOrderById(int id)
+		{
+			using (DB db = new DB())
+			{
+				Order order = db.Orders.Find(id);
+
+				Helper.ShowMessage("AdminService", "GetOrderById(int id)");
+
+				return order;
+			}
+		}
+
+		public void AddOrder(Order order)
+		{
+			using (DB db = new DB())
+			{
+				db.Orders.Add(order);
+				db.SaveChanges();
+
+				Helper.ShowMessage("AdminService", "AddOrder(Order order)");
+			}
+		}
+
+		public void SaveOrder(Order order)
+		{
+			if (order != null)
+			{
+				using (DB db = new DB())
+				{
+					db.Entry(order).State = EntityState.Modified;
+					db.SaveChanges();
+
+					Helper.ShowMessage("AdminService", "SaveOrder(Order order)");
+				}
+			}
+		}
+
+		public void DeleteOrder(int id)
+		{
+			using (DB db = new DB())
+			{
+				Order order = db.Orders.Find(id);
+				if (order != null)
+				{
+					db.Orders.Remove(order);
+					db.SaveChanges();
+				}
+
+				Helper.ShowMessage("AdminService", "DeleteOrder(int id)");
+			}
+		}
+		#endregion
+
+		#region === Trips ===
+		public string GetAllTrips()
+		{
+			using (DB db = new DB())
+			{
+				var result = db.Trips
+					.Include(t => t.Bus)
+					.Include(t => t.Direction)
+					.AsEnumerable()
+					.ToList();
+
+				string json = JsonConvert.SerializeObject(result,
+					Formatting.Indented,
+					new JsonSerializerSettings
+						{
+							ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+						});
+				
+
+				Helper.ShowMessage("AdminService", "GetAllTrips()");
+
+				return json;
+			}
+		}
+
+		public List<Trip> GetTripsByDate(DateTime date)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void DeleteTrip(int tripId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void AddTrip(Trip trip)
+		{
+			throw new NotImplementedException();
+		}
+
+		public Trip GetTripById(int tripId)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void SaveTrip(Trip trip)
+		{
+			throw new NotImplementedException();
+		}
+
+		public List<Direction> GetAvailableDirections()
+		{
+			throw new NotImplementedException();
+		}
+
+		public List<Bus> GetAvailableBuses(DateTime date)
+		{
+			throw new NotImplementedException();
+		}
+		#endregion
+
+
 	}
 }

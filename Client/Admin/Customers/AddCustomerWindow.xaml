@@ -1,0 +1,44 @@
+﻿<Window x:Class="Client.Admin.Customers.AddCustomerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client.Admin.Customers"
+        mc:Ignorable="d"
+        Title="AddCustomerWindow" Height="450" Width="800" WindowStyle="None">
+    <Grid >
+        <Grid.Effect>
+            <DropShadowEffect Color="#FFB6B6B6"/>
+        </Grid.Effect>
+        <Rectangle>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White" Offset="0.3"/>
+                    <GradientStop Color="Pink" Offset="0.7"/>
+                    <GradientStop Color="Pink" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <StackPanel>
+            <TextBlock Text="Name" Height="50" ></TextBlock>
+            <TextBox Name="NameTextBox" Height="50"></TextBox>
+            <TextBlock Text="Phone" Height="50"></TextBlock>
+            <TextBox Name="PhoneTextBox" Height="50"></TextBox>
+            <TextBlock Text="Email" Height="50"></TextBlock>
+            <TextBox Name="EmailTextBox" Height="50"></TextBox>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Cancel" Width="100" HorizontalAlignment="Center"  Background="Pink" Foreground="Gray"  BorderBrush="Gray" Name="ExitButton" Click="ExitButton_Click">
+                    <Button.Effect>
+                        <DropShadowEffect Color="#FF787878"/>
+                    </Button.Effect>
+                </Button>
+                <Button Content="Ok" Width="100" HorizontalAlignment="Center"  Background="Pink" Foreground="Gray"  BorderBrush="Gray" Name="OkButton"  Click="OkButton_Click">
+                    <Button.Effect>
+                        <DropShadowEffect Color="#FF7C7C7C"/>
+                    </Button.Effect>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
