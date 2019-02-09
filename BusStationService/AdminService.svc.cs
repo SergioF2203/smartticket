@@ -257,7 +257,6 @@ namespace BusStationService
 						{
 							ReferenceLoopHandling = ReferenceLoopHandling.Ignore
 						});
-				
 
 				Helper.ShowMessage("AdminService", "GetAllTrips()");
 
