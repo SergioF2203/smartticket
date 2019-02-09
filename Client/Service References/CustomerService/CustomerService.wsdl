@@ -20,6 +20,12 @@
   <wsdl:message name="ICustomerService_GetOccupiedPlaces_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetOccupiedPlacesResponse" />
   </wsdl:message>
+  <wsdl:message name="ICustomerService_GetTripsByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripsByDate" />
+  </wsdl:message>
+  <wsdl:message name="ICustomerService_GetTripsByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripsByDateResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICustomerService">
     <wsdl:operation name="GetDirections">
       <wsdl:input wsaw:Action="http://tempuri.org/ICustomerService/GetDirections" message="tns:ICustomerService_GetDirections_InputMessage" />
@@ -28,6 +34,10 @@
     <wsdl:operation name="GetOccupiedPlaces">
       <wsdl:input wsaw:Action="http://tempuri.org/ICustomerService/GetOccupiedPlaces" message="tns:ICustomerService_GetOccupiedPlaces_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICustomerService/GetOccupiedPlacesResponse" message="tns:ICustomerService_GetOccupiedPlaces_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTripsByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICustomerService/GetTripsByDate" message="tns:ICustomerService_GetTripsByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICustomerService/GetTripsByDateResponse" message="tns:ICustomerService_GetTripsByDate_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICustomerService" type="tns:ICustomerService">
@@ -43,6 +53,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetOccupiedPlaces">
       <soap:operation soapAction="http://tempuri.org/ICustomerService/GetOccupiedPlaces" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTripsByDate">
+      <soap:operation soapAction="http://tempuri.org/ICustomerService/GetTripsByDate" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

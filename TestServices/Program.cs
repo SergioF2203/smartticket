@@ -68,14 +68,24 @@ namespace TestServices
 			//	Console.WriteLine(p);
 			//}
 
-			var str = admin.GetAllTrips();
+			//var str = admin.GetAllTrips();
 
-			var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(str);
+			//var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(str);
+
+			//foreach (var t in trips)
+			//{
+			//	Trip trip = t as Trip;
+			//	Console.WriteLine($"{trip.Bus.Model}");
+			//}
+
+			DateTime date = new DateTime(2019, 02, 05, 0, 0, 0);
+			string jsonResult = customer.GetTripsByDate(date);
+
+			var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(jsonResult);
 
 			foreach (var t in trips)
 			{
-				Trip trip = t as Trip;
-				Console.WriteLine($"{trip.Bus.Model}");
+				Console.WriteLine($"{t.Departure} - {t.Bus.RegNumber} - {t.Direction.City}");
 			}
 
 
