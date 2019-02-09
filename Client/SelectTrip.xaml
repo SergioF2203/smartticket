@@ -1,0 +1,39 @@
+﻿<Window x:Class="Client.SelectTrip"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="SelectTrip" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"></RowDefinition>
+            <RowDefinition Height="315*"></RowDefinition>
+            <RowDefinition Height="56*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="184*"></ColumnDefinition>
+            <ColumnDefinition Width="415*"></ColumnDefinition>
+            <ColumnDefinition Width="193*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>-->
+        <DatePicker Grid.Row="0" x:Name="dateTrip" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Text="adddd" SelectedDateChanged="DateTrip_SelectedDateChanged" FirstDayOfWeek="Monday" Height="24" Width="102"/>
+        <ListView Grid.Row="1" HorizontalAlignment="Left" Height="300" Margin="5,5,0,0" VerticalAlignment="Top" Width="777" ItemsSource="{Binding Trips}" SelectedItem="{Binding Path=SelectedTrip}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="300" Header="Departure" DisplayMemberBinding="{Binding Departure}"/>
+                    <GridViewColumn Width="100" Header="RegNum" DisplayMemberBinding="{Binding Bus.RegNumber}"/>
+                    <GridViewColumn Width="70" Header="Capacity" DisplayMemberBinding="{Binding Bus.Capacity}"/>
+                    <GridViewColumn Width="170" Header="Model" DisplayMemberBinding="{Binding Bus.Model}"/>
+                    <GridViewColumn Width="60" Header="Free Pl"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>

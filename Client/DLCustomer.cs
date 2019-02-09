@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Client.CustomerService;
+using Newtonsoft.Json;
 
 namespace Client
 {
@@ -26,6 +28,15 @@ namespace Client
 		{
 			List<int> places = customerProxy.GetOccupiedPlaces(tripId).ToList();
 			return places;
+		}
+
+		public ObservableCollection<Trip> GetTripsByDate(DateTime date)
+		{
+			string jsonResult = customerProxy.GetTripsByDate(date);
+
+			var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(jsonResult);
+
+			return trips;
 		}
 
 

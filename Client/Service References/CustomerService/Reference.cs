@@ -669,6 +669,12 @@ namespace Client.CustomerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetOccupiedPlaces", ReplyAction="http://tempuri.org/ICustomerService/GetOccupiedPlacesResponse")]
         System.Threading.Tasks.Task<int[]> GetOccupiedPlacesAsync(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetTripsByDate", ReplyAction="http://tempuri.org/ICustomerService/GetTripsByDateResponse")]
+        string GetTripsByDate(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetTripsByDate", ReplyAction="http://tempuri.org/ICustomerService/GetTripsByDateResponse")]
+        System.Threading.Tasks.Task<string> GetTripsByDateAsync(System.DateTime date);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -712,6 +718,14 @@ namespace Client.CustomerService {
         
         public System.Threading.Tasks.Task<int[]> GetOccupiedPlacesAsync(int tripId) {
             return base.Channel.GetOccupiedPlacesAsync(tripId);
+        }
+        
+        public string GetTripsByDate(System.DateTime date) {
+            return base.Channel.GetTripsByDate(date);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetTripsByDateAsync(System.DateTime date) {
+            return base.Channel.GetTripsByDateAsync(date);
         }
     }
 }

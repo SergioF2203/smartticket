@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using Client.AdminService;
+using Newtonsoft.Json;
 
 
 namespace Client
@@ -147,6 +144,19 @@ namespace Client
 		public void DeleteOrder(int id)
 		{
 			adminProxy.DeleteOrder(id);
+		}
+
+		// === Trips ===
+		/**
+		 *	Return all Trips (include Bus, Derection)
+		 */
+		public ObservableCollection<Trip> GetAllTrips()
+		{
+			var str = adminProxy.GetAllTrips();
+
+			var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(str);
+
+			return trips;
 		}
 	}
 }

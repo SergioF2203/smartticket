@@ -31,6 +31,6 @@ namespace BusStationService.Lib
 		[DataMember]
 		public Bus Bus { get; set; }
 		[DataMember]
-		public ICollection<Order> Orders;
+		public ICollection<Order> Orders { get; set; }
 	}
 }
