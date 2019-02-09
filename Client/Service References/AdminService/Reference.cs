@@ -759,6 +759,54 @@ namespace Client.AdminService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteOrder", ReplyAction="http://tempuri.org/IAdminService/DeleteOrderResponse")]
         System.Threading.Tasks.Task DeleteOrderAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllTrips", ReplyAction="http://tempuri.org/IAdminService/GetAllTripsResponse")]
+        string GetAllTrips();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAllTrips", ReplyAction="http://tempuri.org/IAdminService/GetAllTripsResponse")]
+        System.Threading.Tasks.Task<string> GetAllTripsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripsByDate", ReplyAction="http://tempuri.org/IAdminService/GetTripsByDateResponse")]
+        Client.AdminService.Trip[] GetTripsByDate(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripsByDate", ReplyAction="http://tempuri.org/IAdminService/GetTripsByDateResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Trip[]> GetTripsByDateAsync(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteTrip", ReplyAction="http://tempuri.org/IAdminService/DeleteTripResponse")]
+        void DeleteTrip(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/DeleteTrip", ReplyAction="http://tempuri.org/IAdminService/DeleteTripResponse")]
+        System.Threading.Tasks.Task DeleteTripAsync(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddTrip", ReplyAction="http://tempuri.org/IAdminService/AddTripResponse")]
+        void AddTrip(Client.AdminService.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/AddTrip", ReplyAction="http://tempuri.org/IAdminService/AddTripResponse")]
+        System.Threading.Tasks.Task AddTripAsync(Client.AdminService.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripById", ReplyAction="http://tempuri.org/IAdminService/GetTripByIdResponse")]
+        Client.AdminService.Trip GetTripById(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetTripById", ReplyAction="http://tempuri.org/IAdminService/GetTripByIdResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Trip> GetTripByIdAsync(int tripId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveTrip", ReplyAction="http://tempuri.org/IAdminService/SaveTripResponse")]
+        void SaveTrip(Client.AdminService.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/SaveTrip", ReplyAction="http://tempuri.org/IAdminService/SaveTripResponse")]
+        System.Threading.Tasks.Task SaveTripAsync(Client.AdminService.Trip trip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableDirections", ReplyAction="http://tempuri.org/IAdminService/GetAvailableDirectionsResponse")]
+        Client.AdminService.Direction[] GetAvailableDirections();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableDirections", ReplyAction="http://tempuri.org/IAdminService/GetAvailableDirectionsResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Direction[]> GetAvailableDirectionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableBuses", ReplyAction="http://tempuri.org/IAdminService/GetAvailableBusesResponse")]
+        Client.AdminService.Bus[] GetAvailableBuses(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdminService/GetAvailableBuses", ReplyAction="http://tempuri.org/IAdminService/GetAvailableBusesResponse")]
+        System.Threading.Tasks.Task<Client.AdminService.Bus[]> GetAvailableBusesAsync(System.DateTime date);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -922,6 +970,70 @@ namespace Client.AdminService {
         
         public System.Threading.Tasks.Task DeleteOrderAsync(int id) {
             return base.Channel.DeleteOrderAsync(id);
+        }
+        
+        public string GetAllTrips() {
+            return base.Channel.GetAllTrips();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetAllTripsAsync() {
+            return base.Channel.GetAllTripsAsync();
+        }
+        
+        public Client.AdminService.Trip[] GetTripsByDate(System.DateTime date) {
+            return base.Channel.GetTripsByDate(date);
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Trip[]> GetTripsByDateAsync(System.DateTime date) {
+            return base.Channel.GetTripsByDateAsync(date);
+        }
+        
+        public void DeleteTrip(int tripId) {
+            base.Channel.DeleteTrip(tripId);
+        }
+        
+        public System.Threading.Tasks.Task DeleteTripAsync(int tripId) {
+            return base.Channel.DeleteTripAsync(tripId);
+        }
+        
+        public void AddTrip(Client.AdminService.Trip trip) {
+            base.Channel.AddTrip(trip);
+        }
+        
+        public System.Threading.Tasks.Task AddTripAsync(Client.AdminService.Trip trip) {
+            return base.Channel.AddTripAsync(trip);
+        }
+        
+        public Client.AdminService.Trip GetTripById(int tripId) {
+            return base.Channel.GetTripById(tripId);
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Trip> GetTripByIdAsync(int tripId) {
+            return base.Channel.GetTripByIdAsync(tripId);
+        }
+        
+        public void SaveTrip(Client.AdminService.Trip trip) {
+            base.Channel.SaveTrip(trip);
+        }
+        
+        public System.Threading.Tasks.Task SaveTripAsync(Client.AdminService.Trip trip) {
+            return base.Channel.SaveTripAsync(trip);
+        }
+        
+        public Client.AdminService.Direction[] GetAvailableDirections() {
+            return base.Channel.GetAvailableDirections();
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Direction[]> GetAvailableDirectionsAsync() {
+            return base.Channel.GetAvailableDirectionsAsync();
+        }
+        
+        public Client.AdminService.Bus[] GetAvailableBuses(System.DateTime date) {
+            return base.Channel.GetAvailableBuses(date);
+        }
+        
+        public System.Threading.Tasks.Task<Client.AdminService.Bus[]> GetAvailableBusesAsync(System.DateTime date) {
+            return base.Channel.GetAvailableBusesAsync(date);
         }
     }
 }

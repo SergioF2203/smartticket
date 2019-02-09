@@ -232,6 +232,9 @@
     <None Include="Service References\AdminService\Client.AdminService.Order.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\AdminService\Client.AdminService.Trip.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\AdminService\item.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -259,7 +262,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\qrc.jpg" />
@@ -399,6 +404,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\Trips\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\backClickButtonMain.png" />
+    <Resource Include="Resources\backHoverButtonMain.png" />
+    <Resource Include="Resources\backStartStateButtonMain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\exitClickButton.png" />
+    <Resource Include="Resources\exitHoverButton.png" />
+    <Resource Include="Resources\exitStartStateButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
