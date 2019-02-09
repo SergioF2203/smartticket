@@ -36,8 +36,10 @@ namespace Client
         //test 47 places Bus window
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BusShema47 bs47 = new BusShema47();
-            bs47.Show();
+            //BusShema47 bs47 = new BusShema47();
+            //bs47.Show();
+            SelectTrip selectTrip = new SelectTrip();
+            selectTrip.Show();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -49,7 +51,7 @@ namespace Client
         {
             Admin.AdminLogin al = new AdminLogin();
             al.Show();
-            this.Close();
+            Close();
         }
 
         private void replaceRadiobuttonOnForm()
@@ -70,6 +72,7 @@ namespace Client
                             thickness.Left = dlc.ToCoordinates(drct.Coordinates)[0];
                             thickness.Top = dlc.ToCoordinates(drct.Coordinates)[1];
                             rdbt.Margin = thickness;
+                            rdbt.IsEnabled = drct.IsActive;
                         }
                     }
                 }
@@ -77,5 +80,11 @@ namespace Client
             }
 
         }
+
+        private void Rdiobutton_Click(object sender, RoutedEventArgs e)
+        {
+            nextButton.IsEnabled = true;
+        }
+
     }
 }
