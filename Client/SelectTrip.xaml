@@ -5,18 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="SelectTrip" Height="450" Width="800">
+        Title="SelectTrip" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"></RowDefinition>
+            <RowDefinition Height="315*"></RowDefinition>
+            <RowDefinition Height="56*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="184*"></ColumnDefinition>
             <ColumnDefinition Width="415*"></ColumnDefinition>
             <ColumnDefinition Width="193*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <DatePicker Grid.Column="0" x:Name="dateTrip" HorizontalAlignment="Left" Margin="33,30,0,0" VerticalAlignment="Top" Text="adddd" SelectedDateChanged="DateTrip_SelectedDateChanged" FirstDayOfWeek="Monday" Height="24" Width="102"/>
-        <ListView Grid.Column="1" HorizontalAlignment="Left" Height="405" Margin="5,5,0,0" VerticalAlignment="Top" Width="405" ItemsSource="{Binding Trips}" SelectedItem="{Binding Path=SelectedTrip}">
+        </Grid.ColumnDefinitions>-->
+        <DatePicker Grid.Row="0" x:Name="dateTrip" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Text="adddd" SelectedDateChanged="DateTrip_SelectedDateChanged" FirstDayOfWeek="Monday" Height="24" Width="102"/>
+        <ListView Grid.Row="1" HorizontalAlignment="Left" Height="300" Margin="5,5,0,0" VerticalAlignment="Top" Width="777" ItemsSource="{Binding Trips}" SelectedItem="{Binding Path=SelectedTrip}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="50" Header="Date" DisplayMemberBinding="{Binding Date}"/>
+                    <GridViewColumn Width="300" Header="Departure" DisplayMemberBinding="{Binding Departure}"/>
+                    <GridViewColumn Width="100" Header="RegNum" DisplayMemberBinding="{Binding Bus.RegNumber}"/>
+                    <GridViewColumn Width="70" Header="Capacity" DisplayMemberBinding="{Binding Bus.Capacity}"/>
+                    <GridViewColumn Width="170" Header="Model" DisplayMemberBinding="{Binding Bus.Model}"/>
+                    <GridViewColumn Width="60" Header="Free Pl"/>
                 </GridView>
             </ListView.View>
         </ListView>
