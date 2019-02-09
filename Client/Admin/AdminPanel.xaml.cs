@@ -13,7 +13,7 @@ namespace Client.Admin
 	public partial class AdminPanel : Window, INotifyPropertyChanged
 	{
 
-		private  DLAdmin _dlAdmin;
+		private DLAdmin _dlAdmin;
 		private ObservableCollection<Bus> _buses;
         private ObservableCollection<Customer> _customers;
         private ObservableCollection<Order> _orders;
@@ -22,7 +22,8 @@ namespace Client.Admin
         private Bus selectedItem;
         public Bus SelectedItem
         {
-            get => selectedItem;
+	        get { return selectedItem; }
+			//get => selectedItem;
             set
             {
 
@@ -55,7 +56,8 @@ namespace Client.Admin
 		}
         public ObservableCollection<Customer> Customers
         {
-            get => _customers;
+			get { return _customers;}
+			//get => _customers;
             set
             {
                 _customers = value;
@@ -64,7 +66,8 @@ namespace Client.Admin
         }
         public ObservableCollection<Order> Orders
         {
-            get => _orders;
+			get { return _orders;}
+			//get => _orders;
             set
             {
                 _orders = value;
@@ -73,7 +76,8 @@ namespace Client.Admin
         }
         public ObservableCollection<Direction> Directions
         {
-            get => _directions;
+			get { return _directions;}
+			//get => _directions;
             set
             {
                 _directions = value;
@@ -100,7 +104,6 @@ namespace Client.Admin
         {
             BusCrud bc = new BusCrud();
             bc.Show();
-            
         }
 
         private void CustomersListView_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
