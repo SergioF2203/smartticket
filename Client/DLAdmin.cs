@@ -75,8 +75,8 @@ namespace Client
 			adminProxy.SaveDirections(directions.ToArray());
 		}
 
-		// === Customers ===
-		public void AddCustomer(Customer customer)
+        // === Customers ===
+        public void AddCustomer(Customer customer)
 		{
 			adminProxy.AddCustomer(customer);
 		}
