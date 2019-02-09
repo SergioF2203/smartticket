@@ -18,12 +18,13 @@ namespace Client.Admin
         private ObservableCollection<Customer> _customers;
         private ObservableCollection<Order> _orders;
         private ObservableCollection<Direction> _directions;
-		public event PropertyChangedEventHandler PropertyChanged;
+        private ObservableCollection<Trip> _trips;
+        public event PropertyChangedEventHandler PropertyChanged;
         private Bus selectedItem;
         public Bus SelectedItem
         {
 	        get { return selectedItem; }
-			//get => selectedItem;
+            //get => selectedItem; // ai ai ai
             set
             {
 
@@ -41,6 +42,7 @@ namespace Client.Admin
             _customers = new ObservableCollection<Customer>();
             _orders = new ObservableCollection<Order>();
             _directions = new ObservableCollection<Direction>();
+            _trips = new ObservableCollection<Trip>();
 			DataContext = this;
 
         }
@@ -57,7 +59,7 @@ namespace Client.Admin
         public ObservableCollection<Customer> Customers
         {
 			get { return _customers;}
-			//get => _customers;
+			//get => _customers; 
             set
             {
                 _customers = value;
@@ -84,8 +86,18 @@ namespace Client.Admin
                 OnPropertyChanged(nameof(Directions));
             }
         }
+        public ObservableCollection<Trip> Trips
+        {
+            get { return _trips; }
+            //get => _directions;
+            set
+            {
+                _trips = value;
+                OnPropertyChanged(nameof(Trips));
+            }
+        }
 
-		private void ExitButton_Click(object sender, RoutedEventArgs e)
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
 		{
 			this.Close();
 		}
@@ -95,6 +107,8 @@ namespace Client.Admin
             Customers = _dlAdmin.GetAllCustomers();
             Directions = _dlAdmin.GetAllDirections();
             Orders = _dlAdmin.GetAllOrders();
+            Trips = _dlAdmin.GetAllTrips();
+
 		}
 		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{

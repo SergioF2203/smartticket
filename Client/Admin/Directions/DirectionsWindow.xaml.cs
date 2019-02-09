@@ -1,18 +1,6 @@
 ﻿using Client.AdminService;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
 namespace Client.Admin.Directions
 {
     /// <summary>
@@ -35,9 +23,14 @@ namespace Client.Admin.Directions
         private void OkButton_Click(object sender, RoutedEventArgs e)
         {
             AdminPanel ap = (AdminPanel)App.Current.MainWindow;
-            var dir_new =  (Direction)ap.DirectionListView.SelectedItem;
-            dir_new.IsActive = IsEnabledCheckbox.IsEnabled;
-            //dl.SaveDirections(dir_new);
+            var dir_new = (Direction)ap.DirectionListView.SelectedItem;
+            dir_new.IsActive = IsEnabledCheckbox.IsChecked.Value ;
+            var Newlist = new List<Direction>();
+            foreach(var d in ap.Directions)
+            {
+                Newlist.Add(d);
+            }
+            dl.SaveDirections(Newlist);
             this.Close();
         }
         private void fill()
