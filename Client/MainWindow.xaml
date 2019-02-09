@@ -18,35 +18,35 @@
         <Canvas x:Name="mainCanvas" Grid.Row="1" Width="790" Height="537" Margin="5,0">
             <Image Grid.Row="1" Source="Resources/mapUkraine.png" Width="780" Margin="5,0" Height="513" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <RadioButton x:Name="Uzhorod" Style="{StaticResource customUzhorodStyle}" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Lutsk" Style="{StaticResource customLutskStyle}" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53"/>
-            <RadioButton x:Name="Lviv" Style="{StaticResource customLvivStyle}" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54"/>
-            <RadioButton x:Name="Frank" Style="{StaticResource customIFStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114"/>
-            <RadioButton x:Name="Ternopil" Style="{StaticResource customTernopilStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76"/>
-            <RadioButton x:Name="Chernivtsy" Style="{StaticResource customChernivtsyStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="78" Height="32"/>
-            <RadioButton x:Name="Rivne" Style="{StaticResource customRivneStyle}"  Height="15" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Khmel" Style="{StaticResource customKhmelStyle}" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Vinnitsya" Style="{StaticResource customVinnStyle}"  Height="26" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Zhitomyr" Style="{StaticResource customZhitStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Odesa" Style="{StaticResource customOdesaStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Kiev" Style="{StaticResource customKievStyle}"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="63"/>
-            <RadioButton x:Name="Chernihiv" Style="{StaticResource customChernStyle}" Height="33" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Cherkassy" Style="{StaticResource customCherkasStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Mykholaiv" Style="{StaticResource customMykhStyle}"  Height="36" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Kherson" Style="{StaticResource customKhersonStyle}" Height="18" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Simf" Style="{StaticResource customSimfStyle}"  Height="33" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Poltava" Style="{StaticResource customPoltavaStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Kirovograd" Style="{StaticResource customKirovogStyle}"  Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Sumy" Style="{StaticResource customSumStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Dnepr" Style="{StaticResource customDneprStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Kharkiv" Style="{StaticResource customKharkStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Donetsk" Style="{StaticResource customDonetskStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="Lugansk" Style="{StaticResource customLuganskStyle}"  Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="Uzhorod" Style="{StaticResource customUzhorodStyle}" Height="16" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Lutsk" Style="{StaticResource customLutskStyle}" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Lviv" Style="{StaticResource customLvivStyle}" Height="31" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Frank" Style="{StaticResource customIFStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Ternopil" Style="{StaticResource customTernopilStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Chernivtsy" Style="{StaticResource customChernivtsyStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="78" Height="32" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Rivne" Style="{StaticResource customRivneStyle}"  Height="15" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Khmel" Style="{StaticResource customKhmelStyle}" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Vinnitsya" Style="{StaticResource customVinnStyle}"  Height="26" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Zhitomyr" Style="{StaticResource customZhitStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Odesa" Style="{StaticResource customOdesaStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Kiev" Style="{StaticResource customKievStyle}"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="63" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Chernihiv" Style="{StaticResource customChernStyle}" Height="33" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Cherkassy" Style="{StaticResource customCherkasStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Mykholaiv" Style="{StaticResource customMykhStyle}"  Height="36" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Kherson" Style="{StaticResource customKhersonStyle}" Height="18" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Simf" Style="{StaticResource customSimfStyle}"  Height="33" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Poltava" Style="{StaticResource customPoltavaStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Kirovograd" Style="{StaticResource customKirovogStyle}"  Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Sumy" Style="{StaticResource customSumStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Dnepr" Style="{StaticResource customDneprStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Kharkiv" Style="{StaticResource customKharkStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Donetsk" Style="{StaticResource customDonetskStyle}"  Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
+            <RadioButton x:Name="Lugansk" Style="{StaticResource customLuganskStyle}"  Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Rdiobutton_Click"/>
 
         </Canvas>
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Button Style="{StaticResource customButtonExit}" Width="45" Height="45" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" FontFamily="Calibri" FontSize="10"  Click="ExitButton_Click" Panel.ZIndex="10"/>
-            <Button Style="{StaticResource customButtonMain}" Width="45" Height="45" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="690,0,0,0" FontFamily="Calibri" FontSize="10"  Click="Button_Click" Panel.ZIndex="10">
+            <Button x:Name="nextButton" Style="{StaticResource customButtonMain}" Width="45" Height="45" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="690,0,0,0" FontFamily="Calibri" FontSize="10"  Click="Button_Click" Panel.ZIndex="10" IsEnabled="False">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
