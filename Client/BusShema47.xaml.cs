@@ -22,6 +22,33 @@ namespace Client
         public BusShema47()
         {
             InitializeComponent();
+            OccupiedPlaces();
+        }
+
+        private void OccupiedPlaces()
+        {
+            DLCustomer dLCustomer = new DLCustomer();
+            List<int> places = dLCustomer.GetOccupiedPlaces(1);
+            List<string> places_s = new List<string>();
+            foreach(var pl in places)
+            {
+                string temp = pl.ToString();
+                places_s.Add(temp);
+            }
+            foreach (var chbx in busCanvas.Children)
+            {
+                if (chbx is CheckBox)
+                {
+                    CheckBox checkBox = chbx as CheckBox;
+                    foreach (var plc in places_s)
+                    {
+                        if (checkBox.Name == "place" + plc)
+                        {
+                            checkBox.IsEnabled = false;
+                        }
+                    }
+                }
+            }
         }
     }
 }
