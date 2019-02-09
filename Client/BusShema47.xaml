@@ -23,7 +23,7 @@
             </Button.RenderTransform>
         </Button>
 
-        <Canvas Grid.Row="0" Panel.ZIndex="1" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Canvas x:Name="busCanvas" Grid.Row="0" Panel.ZIndex="1" VerticalAlignment="Top" HorizontalAlignment="Left">
             <Image Margin="10" Source="Resources/Bus_47.png" Height="245" Width="899"/>
 
             <CheckBox x:Name="place1" Style="{StaticResource customCheckBoxPlace}" Canvas.Left="684" Canvas.Top="156" Opacity="0.5"/>

@@ -60,6 +60,49 @@
             </Setter>
         </Style>
 
+        <Style x:Key="customButtonMain" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="ButtonStateMain" Source="Resources/backStartStateButtonMain.png" Height="45"/>
+                            <ContentPresenter/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonStateMain" Property="Source" Value="Resources/backHoverButtonMain.png"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonStateMain" Property="Source" Value="Resources/backClickButtonMain.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="customButtonExit" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="ButtonStateExit" Source="Resources/exitStartStateButton.png" Height="35"/>
+                            <ContentPresenter/>
+                        </StackPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonStateExit" Property="Source" Value="Resources/exitHoverButton.png"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonStateExit" Property="Source" Value="Resources/exitClickButton.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
 
         <Style x:Key="customKievStyle" TargetType="{x:Type RadioButton}">
             <Setter Property="Template">

@@ -109,6 +109,54 @@
   <wsdl:message name="IAdminService_DeleteOrder_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteOrderResponse" />
   </wsdl:message>
+  <wsdl:message name="IAdminService_GetAllTrips_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTrips" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAllTrips_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTripsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetTripsByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripsByDate" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetTripsByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTrip" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_DeleteTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTrip" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_AddTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetTripById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripById" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetTripById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTripByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SaveTrip_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTrip" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_SaveTrip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTripResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAvailableDirections_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableDirections" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAvailableDirections_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableDirectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAvailableBuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableBuses" />
+  </wsdl:message>
+  <wsdl:message name="IAdminService_GetAvailableBuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableBusesResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAdminService">
     <wsdl:operation name="AddBus">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddBus" message="tns:IAdminService_AddBus_InputMessage" />
@@ -177,6 +225,38 @@
     <wsdl:operation name="DeleteOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/DeleteOrder" message="tns:IAdminService_DeleteOrder_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/DeleteOrderResponse" message="tns:IAdminService_DeleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTrips">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetAllTrips" message="tns:IAdminService_GetAllTrips_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetAllTripsResponse" message="tns:IAdminService_GetAllTrips_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTripsByDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetTripsByDate" message="tns:IAdminService_GetTripsByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetTripsByDateResponse" message="tns:IAdminService_GetTripsByDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/DeleteTrip" message="tns:IAdminService_DeleteTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/DeleteTripResponse" message="tns:IAdminService_DeleteTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/AddTrip" message="tns:IAdminService_AddTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/AddTripResponse" message="tns:IAdminService_AddTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTripById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetTripById" message="tns:IAdminService_GetTripById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetTripByIdResponse" message="tns:IAdminService_GetTripById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/SaveTrip" message="tns:IAdminService_SaveTrip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/SaveTripResponse" message="tns:IAdminService_SaveTrip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableDirections">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetAvailableDirections" message="tns:IAdminService_GetAvailableDirections_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetAvailableDirectionsResponse" message="tns:IAdminService_GetAvailableDirections_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableBuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdminService/GetAvailableBuses" message="tns:IAdminService_GetAvailableBuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdminService/GetAvailableBusesResponse" message="tns:IAdminService_GetAvailableBuses_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAdminService" type="tns:IAdminService">
@@ -327,6 +407,78 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteOrder">
       <soap:operation soapAction="http://tempuri.org/IAdminService/DeleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTrips">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetAllTrips" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTripsByDate">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetTripsByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTrip">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/DeleteTrip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTrip">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/AddTrip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTripById">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetTripById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTrip">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/SaveTrip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableDirections">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetAvailableDirections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableBuses">
+      <soap:operation soapAction="http://tempuri.org/IAdminService/GetAvailableBuses" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
