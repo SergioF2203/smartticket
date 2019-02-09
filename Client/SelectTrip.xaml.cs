@@ -1,4 +1,4 @@
-﻿using Client.AdminService;
+﻿using Client.CustomerService;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,12 +23,15 @@ namespace Client
     /// </summary>
     public partial class SelectTrip : Window, INotifyPropertyChanged
     {
+        private DLCustomer _customer;
         private ObservableCollection<Trip> _trips;
         private Trip selectedTrip;
         public SelectTrip()
         {
             InitializeComponent();
             _trips = new ObservableCollection<Trip>();
+            DataContext = this;
+            _customer = new DLCustomer();
 
         }
         public ObservableCollection<Trip> Trips
@@ -59,7 +62,11 @@ namespace Client
 
         private void DateTrip_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            DateTime? selectedDate = dateTrip.SelectedDate;
+            DateTime selectedDate = (DateTime)dateTrip.SelectedDate;
+            if (selectedDate != null)
+            {
+                Trips = _customer.GetTripsByDate(selectedDate);
+            }
         }
     }
 }
