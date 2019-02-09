@@ -81,11 +81,14 @@ namespace TestServices
 			DateTime date = new DateTime(2019, 02, 05, 0, 0, 0);
 			string jsonResult = customer.GetTripsByDate(date);
 
+			Console.WriteLine(jsonResult);
+
 			var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(jsonResult);
 
 			foreach (var t in trips)
 			{
-				Console.WriteLine($"{t.Departure} - {t.Bus.RegNumber} - {t.Direction.City}");
+				Console.WriteLine($"{t.Bus.Model} - {t.Orders.Length}");
+				//Console.WriteLine($"{t.Departure} - {t.Bus.RegNumber} - {t.Direction.City}");
 			}
 
 

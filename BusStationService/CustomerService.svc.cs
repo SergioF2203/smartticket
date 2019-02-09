@@ -46,12 +46,10 @@ namespace BusStationService
 			using (DB db = new DB())
 			{
 				var trips = db.Trips
-					//.Where(t => t.Departure.Year == date.Year &&
-					//			t.Departure.Month == date.Month &&
-					//			t.Departure.Day == date.Day)
 					.Where(t => DbFunctions.TruncateTime(t.Departure) == date.Date)
 					.Include(t => t.Direction)
 					.Include(t => t.Bus)
+					.Include(t => t.Orders)
 					.ToList();
 
 				string json = JsonConvert.SerializeObject(trips,
