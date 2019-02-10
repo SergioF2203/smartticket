@@ -102,6 +102,12 @@
     <Compile Include="Admin\Orders\EditOrderWindow.xaml.cs">
       <DependentUpon>EditOrderWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Trips\AddTrips.xaml.cs">
+      <DependentUpon>AddTrips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Trips\CrudTrips.xaml.cs">
+      <DependentUpon>CrudTrips.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BusShema47.xaml.cs">
       <DependentUpon>BusShema47.xaml</DependentUpon>
     </Compile>
@@ -168,6 +174,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Admin\Orders\EditOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Trips\AddTrips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Trips\CrudTrips.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -412,9 +426,7 @@
     <Resource Include="Resources\backHoverButton.png" />
     <Resource Include="Resources\backStartStateButton.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\Trips\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\backClickButtonMain.png" />
     <Resource Include="Resources\backHoverButtonMain.png" />
