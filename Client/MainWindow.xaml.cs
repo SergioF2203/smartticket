@@ -83,6 +83,7 @@ namespace Client
 
         private void Rdiobutton_Click(object sender, RoutedEventArgs e)
         {
+            nextButton.Visibility = Visibility.Visible;
             nextButton.IsEnabled = true;
         }
 

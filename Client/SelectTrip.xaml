@@ -34,6 +34,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="nextSelectTrip" Grid.Row="2" Content="NEXT" HorizontalAlignment="Left" Margin="680,3,0,0"  VerticalAlignment="Top" Width="100" Height="50" Click="NextSelectTrip_Click"/>
 
     </Grid>
 </Window>
