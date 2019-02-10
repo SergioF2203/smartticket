@@ -12,7 +12,7 @@
             <RowDefinition Height="82*"></RowDefinition>
         </Grid.RowDefinitions>
         <Button x:Name="prev" Style="{StaticResource customButton}" Grid.Row="1" Width="56" Height="56" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10" Content="" Click="Prev_Click"></Button>
-        <Button x:Name="next" Style="{StaticResource customButton}" Grid.Row="1" Width="56" Height="56" VerticalAlignment="Bottom" Margin="0,0,10,10" Content="" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="next" Style="{StaticResource customButton}" Grid.Row="1" Width="56" Height="56" VerticalAlignment="Bottom" Margin="0,0,10,10" Content="" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" Click="Next_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

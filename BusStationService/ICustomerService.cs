@@ -20,5 +20,7 @@ namespace BusStationService
 
 		[OperationContract]
 		string GetTripsByDate(DateTime date);
+
+        
 	}
 }

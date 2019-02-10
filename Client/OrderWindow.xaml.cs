@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Client.CustomerService;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,16 +22,86 @@ namespace Client
     /// <summary>
     /// Логика взаимодействия для OrderWindow.xaml
     /// </summary>
-    public partial class OrderWindow : Window
+    public partial class OrderWindow : Window, INotifyPropertyChanged
     {
-        public OrderWindow()
+        private Trip _trip;
+        private string _city;
+        private string _dep;
+        private string _nPlaces;
+        private double _price;
+
+        public OrderWindow(Trip trip, List<int> places)
         {
+            Trip = trip;
+            Places = places;
+
+            City = Trip.Direction.City;
+            Dep = Trip.Departure.ToString();
+            NPlaces = places.Count.ToString();
+            Price = Trip.Direction.Price * Int32.Parse(NPlaces);
+
+            DataContext = this;
             InitializeComponent();
         }
 
+        public string City {
+            get { return _city; }
+            set
+            { _city = value;
+                OnPropertyChanged(nameof(City));
+            }
+        }
+
+        public string Dep
+        {
+            get { return _city; }
+            set
+            {
+                _dep = value;
+                OnPropertyChanged(nameof(Dep));
+            }
+        }
+
+        public string NPlaces
+        {
+            get { return _nPlaces; }
+            set
+            {
+                _nPlaces = value;
+                OnPropertyChanged(nameof(NPlaces));
+            }
+        }
+
+        public double Price
+        {
+            get { return _price; }
+            set
+            {
+                _price = value;
+                OnPropertyChanged(nameof(Price));
+            }
+        }
+
+        public Trip Trip
+        {
+            get { return _trip; }
+            set {
+                _trip = value;
+                OnPropertyChanged(nameof(Trip));
+            }
+        }
+        public List<int> Places { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void OkButton_Click(object sender, RoutedEventArgs e)
@@ -55,12 +128,28 @@ namespace Client
                 }
                 QRWindow qrwindow = new QRWindow();
                 qrwindow.Show();
-                this.Close();
+                Close();
+                
             }
             else
             {
                 MessageBox.Show("Заполните все поля!");
             }
+        }
+
+        private List<Order> CreateOrders()
+        {
+            List<Order> orders = new List<Order>();
+            foreach(var item in Places)
+            {
+                Order order = new Order
+                {
+                    TripId = Trip.Id,
+                    PlaceNumber = item
+                };
+                orders.Add(order);
+            }
+            return orders;
         }
     }
 }

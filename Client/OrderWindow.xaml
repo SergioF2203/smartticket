@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d" Height="600" Width="800" ResizeMode="NoResize" Title="Valide purchase">
-    <Grid>
+    <Grid Background="#FF002B37">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="300*"/>
@@ -13,11 +13,20 @@
         <TextBox Name="NameTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,72,0,0"/>
         <TextBox Name="PhoneNumberTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,155,0,0"/>
         <TextBox Name="EmailTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,255,0,0"/>
-        <TextBlock Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">куда едем</TextBlock>
-        <TextBlock Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,100,0,0">сколько билетов</TextBlock>
-        <TextBlock Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,150,0,0">сума $$</TextBlock>
-        <Button Grid.Column="0" Name="CancelButton" Content="Cancel" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,355,0,0" Click="CancelButton_Click"/>
-        <Button Grid.Column="0" Name="OkButton" Content="Buy" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="175,355,0,0" Click="OkButton_Click"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="57,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.5"/>
+        <TextBlock Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Text="{Binding Dep}" Margin="0,50,0,0" Foreground="#FF647D7D"></TextBlock>
+        <TextBlock Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,100,0,0" Text="{Binding NPlaces}" Foreground="#FF647D7D"></TextBlock>
+        <TextBlock Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,150,0,0" Text="{Binding Price}" Foreground="#FF647D7D"></TextBlock>
+        <Button Grid.Column="0" Name="CancelButton" Style="{StaticResource customButton}" Content="Cancel" Width="56" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,355,0,0" Click="CancelButton_Click"/>
+        <Button Grid.Column="0" Name="OkButton" Content="" Width="56" Height="56" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="175,355,0,0" Click="OkButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/dol.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="ФИО" HorizontalAlignment="Left" Margin="25,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.5" Foreground="#FF647D7D"/>
+        <Label Content="Город прибытия:" Grid.Column="1" HorizontalAlignment="Left" Margin="95,45,0,0" VerticalAlignment="Top" Background="#00647D7D" Foreground="#FF647D7D"/>
+        <Label Content="Количество билетов:" Grid.Column="1" HorizontalAlignment="Left" Margin="74,95,0,0" VerticalAlignment="Top" Foreground="#FF647D7D"/>
+        <Label Content="Стоимость:" Grid.Column="1" HorizontalAlignment="Left" Margin="128,145,0,0" VerticalAlignment="Top" Foreground="#FF647D7D"/>
+        <Label Content="Телефон" HorizontalAlignment="Left" Margin="25,124,0,0" VerticalAlignment="Top" Foreground="#FF647D7D"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="25,224,0,0" VerticalAlignment="Top" Foreground="#FF647D7D"/>
     </Grid>
 </Window>
