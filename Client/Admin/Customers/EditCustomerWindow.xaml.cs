@@ -36,10 +36,6 @@ namespace Client.Admin.Customers
         {
             AdminPanel ap = (AdminPanel)App.Current.MainWindow;
             var c_new = (Customer)ap.CustomersListView.SelectedItem;
-            //b.RegNumber = RegNumberTextBox.Text;
-            //b.Model = ModelTextBox.Text;
-            //b.Capacity = Convert.ToInt16(CapacityTextBox.Text);
-            //dl.SaveBus(b);
             c_new.Name = NameTextBox.Text;
             c_new.Phone = PhoneTextBox.Text;
             c_new.Email = EmailTextBox.Text;
