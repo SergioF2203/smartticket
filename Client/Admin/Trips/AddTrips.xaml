@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Client.Admin.Trips"
         mc:Ignorable="d"
         Title="AddTrips" Height="450" Width="800">
-    <Grid>
+    <Grid >
         <Grid.Effect>
             <DropShadowEffect Color="#FFB6B6B6"/>
         </Grid.Effect>
@@ -20,19 +20,21 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <StackPanel>
-            <TextBlock Text="DirectionId" Height="50" ></TextBlock>
-            <TextBox Name="DirectionIdTextBox" Height="50"></TextBox>
-            <TextBlock Text="BusId" Height="50"></TextBlock>
-            <TextBox Name="BusIdTextBox" Height="50"></TextBox>
-            <DatePicker VerticalAlignment="Top" Text="???"  FirstDayOfWeek="Monday" Height="24" Width="102"/>
+        <StackPanel >
+            <TextBlock Text="Direction" Height="50" ></TextBlock>
+            <ComboBox Name="DirectionComboBox"  Height="50" ItemsSource="{Binding Directions, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}"  SelectedItem="{Binding Path = SelectedItem}" DisplayMemberPath="City">
+            </ComboBox>
+            <TextBlock Text="Bus" Height="50"></TextBlock>
+            <ComboBox Name="BusComboBox" Height="50" ItemsSource="{Binding Buses, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}" DisplayMemberPath="RegNumber">
+            </ComboBox>
+           
             <StackPanel Orientation="Horizontal">
                 <Button Content="Cancel" Width="100" HorizontalAlignment="Center"  Background="Pink" Foreground="Gray"  BorderBrush="Gray">
                     <Button.Effect>
                         <DropShadowEffect Color="#FF787878"/>
                     </Button.Effect>
                 </Button>
-                <Button Content="Ok" Width="100" HorizontalAlignment="Center"  Background="Pink" Foreground="Gray"  BorderBrush="Gray">
+                <Button Content="Ok" Width="100" HorizontalAlignment="Center"  Background="Pink" Foreground="Gray"  BorderBrush="Gray" Click="Button_Click">
                     <Button.Effect>
                         <DropShadowEffect Color="#FF7C7C7C"/>
                     </Button.Effect>

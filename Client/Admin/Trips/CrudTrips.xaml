@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client.Admin.Trips"
         mc:Ignorable="d"
-        Title="CrudTrips" Height="450" Width="800">
+        Title="CrudTrips" Height="200" Width="800" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <Button Content="Add" Height="50" Name="AddButton" BorderBrush="gray" Background="Pink" Foreground="Gray" Click="AddButton_Click"></Button>

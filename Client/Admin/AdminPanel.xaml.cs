@@ -21,18 +21,18 @@ namespace Client.Admin
         private ObservableCollection<Direction> _directions;
         private ObservableCollection<Trip> _trips;
         public event PropertyChangedEventHandler PropertyChanged;
-        private Bus selectedItem;
-        public Bus SelectedItem
-        {
-	        get { return selectedItem; }
-            //get => selectedItem; // ai ai ai
-            set
-            {
+        //private Bus selectedItem;
+        //public Bus SelectedItem
+        //{
+	       // get { return selectedItem; }
+        //    //get => selectedItem; // ai ai ai
+        //    set
+        //    {
 
-                selectedItem = value;
-                OnPropertyChanged(nameof(SelectedItem));
-            }
-        }
+        //        selectedItem = value;
+        //        OnPropertyChanged(nameof(SelectedItem));
+        //    }
+        //}
 
 
         public AdminPanel()
@@ -54,7 +54,7 @@ namespace Client.Admin
 			set
 			{
 				_buses = value;
-				OnPropertyChanged(nameof(Buses));
+				OnPropertyChanged(nameof(Buses));   
 			}
 		}
         public ObservableCollection<Customer> Customers
