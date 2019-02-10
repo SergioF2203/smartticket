@@ -52,7 +52,7 @@ namespace Client
             DLCustomer dLCustomer = new DLCustomer();
             List<int> places = dLCustomer.GetOccupiedPlaces(CurrentTrip.Id);
             List<string> places_s = new List<string>();
-            foreach(var pl in places)
+            foreach (var pl in places)
             {
                 string temp = pl.ToString();
                 places_s.Add(temp);
@@ -76,6 +76,28 @@ namespace Client
         private void Prev_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            List<int> places = new List<int>();
+            foreach (var item in busCanvas.Children)
+            {
+                if (item is CheckBox)
+                {
+                    var c = item as CheckBox;
+                    if (c.IsChecked == true)
+                    {
+                        string str = c.Name;
+                        str = str.Replace("place", "");
+                        places.Add(Int32.Parse(str));
+                    }
+                }
+            }
+
+            OrderWindow orderWindow = new OrderWindow(CurrentTrip, places);
+            orderWindow.Show();
+
         }
     }
 }
