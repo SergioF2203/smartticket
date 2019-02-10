@@ -12,9 +12,9 @@ namespace BusStationService.Lib
         {
 			db.Buses.AddRange(new List<Bus>
 				{
-					new Bus {RegNumber = "АР6012ВА", Capacity = 12, Model = "Wolksvagen"},
-					new Bus {RegNumber = "АР3476ВА", Capacity = 24, Model = "Mercedes"},
-					new Bus {RegNumber = "АР5478ВА", Capacity = 18, Model = "Wolksvagen"}
+					new Bus {RegNumber = "АР6012ВА", Capacity = 47, Model = "Wolksvagen"},
+					new Bus {RegNumber = "АР3476ВА", Capacity = 47, Model = "Mercedes"},
+					new Bus {RegNumber = "АР5478ВА", Capacity = 47, Model = "Wolksvagen"}
 				});
 
 			db.Directions.AddRange(new List<Direction>

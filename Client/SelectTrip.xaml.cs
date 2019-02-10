@@ -68,5 +68,17 @@ namespace Client
                 Trips = _customer.GetTripsByDate(selectedDate);
             }
         }
+
+        private void NextSelectTrip_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show(selectedTrip.Bus.Id.ToString());
+            switch (selectedTrip.Bus.Capacity)
+            {
+                case 47:
+                    BusShema47 busShema47 = new BusShema47(selectedTrip);
+                    busShema47.Show();
+                    break;
+            }
+        }
     }
 }

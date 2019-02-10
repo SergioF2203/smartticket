@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Client.CustomerService;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,18 +20,37 @@ namespace Client
     /// <summary>
     /// Interaction logic for BusShema47.xaml
     /// </summary>
-    public partial class BusShema47 : Window
+    public partial class BusShema47 : Window, INotifyPropertyChanged
     {
-        public BusShema47()
+        private Trip currentTrip;
+        public BusShema47(Trip selectedTrip)
         {
             InitializeComponent();
+            CurrentTrip = selectedTrip;
             OccupiedPlaces();
+
         }
+        public Trip CurrentTrip
+        {
+            get { return currentTrip; }
+            set
+            {
+                currentTrip = value;
+                OnPropertyChanged(nameof(CurrentTrip));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
 
         private void OccupiedPlaces()
         {
             DLCustomer dLCustomer = new DLCustomer();
-            List<int> places = dLCustomer.GetOccupiedPlaces(1);
+            List<int> places = dLCustomer.GetOccupiedPlaces(CurrentTrip.Id);
             List<string> places_s = new List<string>();
             foreach(var pl in places)
             {
@@ -49,6 +71,11 @@ namespace Client
                     }
                 }
             }
+        }
+
+        private void Prev_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
