@@ -10,7 +10,7 @@
             <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="300*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Name="NameTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,50,0,0"/>
+        <TextBox Name="NameTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,72,0,0"/>
         <TextBox Name="PhoneNumberTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,155,0,0"/>
         <TextBox Name="EmailTextBox" Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,255,0,0"/>
         <TextBlock Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0">куда едем</TextBlock>
@@ -18,5 +18,6 @@
         <TextBlock Grid.Column="1" VerticalAlignment="Top"  HorizontalAlignment="Center" Margin="0,150,0,0">сума $$</TextBlock>
         <Button Grid.Column="0" Name="CancelButton" Content="Cancel" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,355,0,0" Click="CancelButton_Click"/>
         <Button Grid.Column="0" Name="OkButton" Content="Buy" Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="175,355,0,0" Click="OkButton_Click"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="57,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.5"/>
     </Grid>
 </Window>
