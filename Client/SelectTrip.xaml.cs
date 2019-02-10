@@ -24,6 +24,7 @@ namespace Client
     public partial class SelectTrip : Window, INotifyPropertyChanged
     {
         private DLCustomer _customer;
+        //private int _freePlaces;
         private ObservableCollection<Trip> _trips;
         private Trip selectedTrip;
         public SelectTrip()
@@ -53,6 +54,16 @@ namespace Client
             }
         }
 
+        //public int FreePlaces
+        //{
+        //    get { return _freePlaces; }
+        //    set
+        //    {
+        //        _freePlaces = value;
+        //        OnPropertyChanged(nameof(FreePlaces));
+        //    }
+        //}
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
@@ -66,6 +77,11 @@ namespace Client
             if (selectedDate != null)
             {
                 Trips = _customer.GetTripsByDate(selectedDate);
+                int count = 0;
+                for (int i = 0; i < Trips.Count; i++)
+                {
+
+                }
             }
         }
 
@@ -79,6 +95,11 @@ namespace Client
                     busShema47.Show();
                     break;
             }
+        }
+
+        private void PrevSelectTrip_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

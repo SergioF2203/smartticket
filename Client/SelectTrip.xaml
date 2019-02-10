@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
         Title="SelectTrip" Height="450" Width="800" ResizeMode="NoResize">
-    <Grid>
+    <Grid Background="#FF002B37">
         <Grid.RowDefinitions>
             <RowDefinition Height="48*"></RowDefinition>
             <RowDefinition Height="315*"></RowDefinition>
@@ -18,7 +18,7 @@
             <ColumnDefinition Width="193*"></ColumnDefinition>
         </Grid.ColumnDefinitions>-->
         <DatePicker Grid.Row="0" x:Name="dateTrip" HorizontalAlignment="Left" Margin="354,10,0,0" VerticalAlignment="Top" Text="adddd" SelectedDateChanged="DateTrip_SelectedDateChanged" FirstDayOfWeek="Monday" Height="24" Width="102"/>
-        <ListView Grid.Row="1" HorizontalAlignment="Left" Height="300" Margin="5,5,0,0" VerticalAlignment="Top" Width="777" ItemsSource="{Binding Trips}" SelectedItem="{Binding Path=SelectedTrip}">
+        <ListView Grid.Row="1" HorizontalAlignment="Left" Height="300" Margin="5,5,0,0" VerticalAlignment="Top" Width="777" ItemsSource="{Binding Trips}" SelectedItem="{Binding Path=SelectedTrip}" Background="#FF002B37" Foreground="#FF647D7D">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -30,11 +30,21 @@
                     <GridViewColumn Width="100" Header="RegNum" DisplayMemberBinding="{Binding Bus.RegNumber}"/>
                     <GridViewColumn Width="70" Header="Capacity" DisplayMemberBinding="{Binding Bus.Capacity}"/>
                     <GridViewColumn Width="170" Header="Model" DisplayMemberBinding="{Binding Bus.Model}"/>
-                    <GridViewColumn Width="60" Header="Free Pl"/>
+                    <!--<GridViewColumn Width="60" Header="Free Pl"/>-->
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="nextSelectTrip" Grid.Row="2" Content="NEXT" HorizontalAlignment="Left" Margin="680,3,0,0"  VerticalAlignment="Top" Width="100" Height="50" Click="NextSelectTrip_Click"/>
+        <Button x:Name="nextSelectTrip" Style="{StaticResource customButton}" Grid.Row="2" Content="NEXT" HorizontalAlignment="Left" Margin="727,0,0,0"  VerticalAlignment="Top" Width="56" Height="56" Click="NextSelectTrip_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="prevSelectTrip" Style="{StaticResource customButton}" Content="" HorizontalAlignment="Left" Margin="6,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="56" Height="56" Click="PrevSelectTrip_Click"/>
 
     </Grid>
 </Window>
