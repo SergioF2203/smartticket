@@ -41,24 +41,18 @@
                     </ListView>
                 </TabItem>
                 <TabItem Header="Trip">
-                    <StackPanel Orientation="Horizontal">
-                        <Calendar x:Name="calendar1" FirstDayOfWeek="Monday" Height="400">
-                            <Calendar.BlackoutDates>
-                                <CalendarDateRange Start="10/5/2013" End="10/8/2013"></CalendarDateRange>
-                            </Calendar.BlackoutDates>
-                        </Calendar>
-                        <ComboBox Name="DirectionsComboBox" VerticalAlignment="Top" Height="50" Width="200"></ComboBox>
-                        <ComboBox Name="BusesCOmboBox" VerticalAlignment="Top" Height="50" Width="200"></ComboBox>
-                        <ListView Name="TripListView" ItemsSource="{Binding Trips, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
-                                    <GridViewColumn Width="300" DisplayMemberBinding="{Binding Path=Filling}" >IsActive</GridViewColumn>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </StackPanel>
-                    
+                    <ListView Name="TripListView" ItemsSource="{Binding Trips, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}" MouseDoubleClick="TripListView_MouseDoubleClick">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="50" DisplayMemberBinding="{Binding Path=Id}">Id</GridViewColumn>
+                                <GridViewColumn Width="200" DisplayMemberBinding="{Binding Path=Direction.City}" >Diretion</GridViewColumn>
+                                <GridViewColumn Width="250" DisplayMemberBinding="{Binding Path=Bus.Model}" >Bus Model</GridViewColumn>
+                                <GridViewColumn Width="250" DisplayMemberBinding="{Binding Path=Bus.RegNumber}" >Bus Number</GridViewColumn>
+                                <GridViewColumn Width="300" DisplayMemberBinding="{Binding Path=Departure}" >Date</GridViewColumn>
+
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                 </TabItem>
                 <TabItem Header="Order">
                     <ListView Name="OrderListView" HorizontalContentAlignment="Center" ItemsSource="{Binding Orders, UpdateSourceTrigger=PropertyChanged,  Mode=TwoWay}" SelectedItem="{Binding Path = SelectedItem}" Height="400" MouseDoubleClick="OrderListView_MouseDoubleClick"  >

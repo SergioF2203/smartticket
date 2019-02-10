@@ -6,6 +6,7 @@ using System.Windows;
 using Client.Admin.Customers;
 using Client.Admin.Directions;
 using Client.Admin.Orders;
+using Client.Admin.Trips;
 using Client.AdminService;
 
 namespace Client.Admin
@@ -136,6 +137,12 @@ namespace Client.Admin
         {
             DirectionsWindow dw = new DirectionsWindow();
             dw.Show();
+        }
+
+        private void TripListView_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            CrudTrips ct = new CrudTrips();
+            ct.Show();
         }
     }
 
