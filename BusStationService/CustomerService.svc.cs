@@ -64,5 +64,26 @@ namespace BusStationService
 				return json;
 			}
 		}
+
+		public void AddOrders(List<Order> orders, Customer customer)
+		{
+			using (DB db = new DB())
+			{
+				db.Customers.Add(customer);
+
+				db.SaveChanges();
+
+				foreach (Order o in orders)
+				{
+					o.CustomerId = customer.Id;
+				}
+
+				db.Orders.AddRange(orders);
+
+				db.SaveChanges();
+
+				Helper.ShowMessage("AdminService", "AddOrders(List<Order> orders, Customer customer)");
+			}
+		}
 	}
 }

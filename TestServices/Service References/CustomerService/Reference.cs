@@ -675,6 +675,12 @@ namespace TestServices.CustomerService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/GetTripsByDate", ReplyAction="http://tempuri.org/ICustomerService/GetTripsByDateResponse")]
         System.Threading.Tasks.Task<string> GetTripsByDateAsync(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/AddOrders", ReplyAction="http://tempuri.org/ICustomerService/AddOrdersResponse")]
+        void AddOrders(TestServices.CustomerService.Order[] orders, TestServices.CustomerService.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerService/AddOrders", ReplyAction="http://tempuri.org/ICustomerService/AddOrdersResponse")]
+        System.Threading.Tasks.Task AddOrdersAsync(TestServices.CustomerService.Order[] orders, TestServices.CustomerService.Customer customer);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -726,6 +732,14 @@ namespace TestServices.CustomerService {
         
         public System.Threading.Tasks.Task<string> GetTripsByDateAsync(System.DateTime date) {
             return base.Channel.GetTripsByDateAsync(date);
+        }
+        
+        public void AddOrders(TestServices.CustomerService.Order[] orders, TestServices.CustomerService.Customer customer) {
+            base.Channel.AddOrders(orders, customer);
+        }
+        
+        public System.Threading.Tasks.Task AddOrdersAsync(TestServices.CustomerService.Order[] orders, TestServices.CustomerService.Customer customer) {
+            return base.Channel.AddOrdersAsync(orders, customer);
         }
     }
 }

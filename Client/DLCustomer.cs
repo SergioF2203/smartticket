@@ -39,6 +39,11 @@ namespace Client
 			return trips;
 		}
 
+		public void AddOrders(List<Order> orders, Customer customer)
+		{
+			customerProxy.AddOrders(orders.ToArray(), customer);
+		}
+
 
 
 

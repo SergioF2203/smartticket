@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Client.CustomerService;
 
 namespace Client
 {
@@ -24,7 +25,9 @@ namespace Client
     /// </summary>
     public partial class OrderWindow : Window, INotifyPropertyChanged
     {
-        private Trip _trip;
+	    private DLCustomer _dlCustomer;
+
+		private Trip _trip;
         private string _city;
         private string _dep;
         private string _nPlaces;
@@ -41,6 +44,9 @@ namespace Client
             Price = Trip.Direction.Price * Int32.Parse(NPlaces);
 
             DataContext = this;
+
+			_dlCustomer = new DLCustomer();
+
             InitializeComponent();
         }
 
@@ -108,7 +114,16 @@ namespace Client
         {
             if(NameTextBox.Text != "" && PhoneNumberTextBox.Text != "" && EmailTextBox.Text != "")
             {
-                try // тут мы писмо отправляем с нашего имейла
+				Customer customer = new Customer
+				{
+					Name = NameTextBox.Text,
+					Phone = PhoneNumberTextBox.Text,
+					Email = EmailTextBox.Text
+				};
+
+				_dlCustomer.AddOrders(CreateOrders(), customer);
+
+				try // тут мы писмо отправляем с нашего имейла
                 {
                     MailAddress from = new MailAddress("vnsitcorp@gmail.com", "VNSteam");
                     MailAddress to = new MailAddress(EmailTextBox.Text);

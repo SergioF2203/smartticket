@@ -21,6 +21,9 @@ namespace BusStationService
 		[OperationContract]
 		string GetTripsByDate(DateTime date);
 
-        
+		[OperationContract]
+		void AddOrders(List<Order> orders, Customer customer);
+
+
 	}
 }

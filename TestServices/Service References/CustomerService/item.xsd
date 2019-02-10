@@ -42,4 +42,17 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BusStationService.Lib" minOccurs="0" name="orders" nillable="true" type="q3:ArrayOfOrder" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BusStationService.Lib" minOccurs="0" name="customer" nillable="true" type="q4:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrdersResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

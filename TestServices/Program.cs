@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using TestServices.AdminServiceClient;
+//using TestServices.AdminServiceClient;
+using TestServices.CustomerService;
 using Newtonsoft.Json;
 
 
@@ -10,7 +11,7 @@ namespace TestServices
 	{
 		static void Main(string[] args)
 		{
-			var customer = new CustomerService.CustomerServiceClient();
+			var customerProxi = new CustomerService.CustomerServiceClient();
 			var admin = new AdminServiceClient.AdminServiceClient();
 
 			//var res = customer.GetDirections();
@@ -78,19 +79,27 @@ namespace TestServices
 			//	Console.WriteLine($"{trip.Bus.Model}");
 			//}
 
-			DateTime date = new DateTime(2019, 02, 05, 0, 0, 0);
-			string jsonResult = customer.GetTripsByDate(date);
+			//DateTime date = new DateTime(2019, 02, 05, 0, 0, 0);
+			//string jsonResult = customer.GetTripsByDate(date);
 
-			Console.WriteLine(jsonResult);
+			//Console.WriteLine(jsonResult);
 
-			var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(jsonResult);
+			//var trips = JsonConvert.DeserializeObject<ObservableCollection<Trip>>(jsonResult);
 
-			foreach (var t in trips)
+			//foreach (var t in trips)
+			//{
+			//	Console.WriteLine($"{t.Bus.Model} - {t.Orders.Length}");
+			//	//Console.WriteLine($"{t.Departure} - {t.Bus.RegNumber} - {t.Direction.City}");
+			//}
+
+			var c = new Customer
 			{
-				Console.WriteLine($"{t.Bus.Model} - {t.Orders.Length}");
-				//Console.WriteLine($"{t.Departure} - {t.Bus.RegNumber} - {t.Direction.City}");
-			}
+				Email = "lkjsldkfj@kjdkfj.com",
+				Name = "VASIA",
+				Phone = "80952121212121"
+			};
 
+			customerProxi.AddOrders(null, c);
 
 		}
 	}
